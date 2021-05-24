@@ -1,6 +1,7 @@
 name: "daniel-banki"
 title: "Daniel Banki's blog"
 base_url: https://danielbanki.com
+google_analytics: "UA-156540290-1"
 output_dir: "_site"
 navbar:
   right:
