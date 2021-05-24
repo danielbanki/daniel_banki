@@ -1,6 +1,0 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-.httr-oauth
-**/geostat_2011.csv
