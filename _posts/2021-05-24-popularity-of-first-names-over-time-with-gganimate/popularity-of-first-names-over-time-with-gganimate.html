@@ -1515,7 +1515,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Then, we import the data files, combine them, and organise them into a tidy data format. For better readability, the code chunk that contains the data cleaning is hidden by default. <br> <br></p>
 <details>
 <summary>
-<p>Show data cleaning</p>
+Show data cleaning
 </summary>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1585,7 +1585,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </div>
 </details>
-<p><br> <br> The tidy output looks like this:</p>
+<p><br> The tidy output looks like this:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>name_stock</span><span class='op'>)</span>
@@ -1625,7 +1625,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <span class='fu'>geom_col</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>count_1000</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>geom_text</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>y <span class='op'>=</span> <span class='fl'>0</span>, label <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>name</span>, <span class='st'>" "</span><span class='op'>)</span><span class='op'>)</span>,
             vjust <span class='op'>=</span> <span class='fl'>0.2</span>,
-            hjust <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span>
+            hjust <span class='op'>=</span> <span class='fl'>1</span>, 
+            size <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>coord_flip</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>, expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>scale_x_reverse</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='co'># transition part with gganimate</span>
