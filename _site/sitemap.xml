@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://danielbanki.com/about.html</loc>
+    <lastmod>2021-05-24T19:13:40+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://danielbanki.com/</loc>
+    <lastmod>2021-05-24T23:00:50+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://danielbanki.com/projects.html</loc>
+    <lastmod>2021-05-24T19:28:51+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/</loc>
+    <lastmod>2021-05-25T00:37:32+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://danielbanki.com/posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest/</loc>
+    <lastmod>2021-05-25T00:34:31+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://danielbanki.com/posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones/</loc>
+    <lastmod>2021-05-25T00:42:47+02:00</lastmod>
+  </url>
+</urlset>

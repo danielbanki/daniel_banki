@@ -1,0 +1,26 @@
+---
+title: "Projects"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Shiny apps
+
+```{r include=FALSE}
+library(gt)
+library(dplyr)
+
+project_table <- dplyr::tribble(
+  ~Name, ~Description,
+  "[Barcelona house price explorer](https://danielbanki.shinyapps.io/barcelona-house-prices-explorer/)", "A simple app to visualise house prices in Barcelona."
+)
+```
+
+
+```{r echo=FALSE}
+project_table %>% 
+  knitr::kable()
+
+```

@@ -1,0 +1,204 @@
+---
+title: "Popularity of first names over time with gganimate"
+author:
+  - name: Daniel Banki
+    url: https://twitter.com/banki_daniel
+date: 07-31-2020
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+    highlight: default
+    highlight_downlit: true
+creative_commons: CC BY
+categories:
+  - gganimate
+preview: preview.png  
+---
+
+# Introduction
+
+When I was researching my family tree some time ago, I was surprised to encounter the same couple of first names over and over again. My feeling was that this trend has changed over the years and that there is now more variability in first names. Getting data on the popularity of first names in, say, the 18th century was not very realistic. So I chose a somewhat less ambitious goal and collected data on Hungarian first names between 2004 and 2020. To show how first name popularity changed over this period, I created an animation using the R package `gganimate`. Although the period I looked at is quite short (and recent), it seems that the distribution of first names at the end of the period is indeed less unequal than at the beginning.
+
+# Data import & cleaning
+
+The data I used is publicly available [here](https://nyilvantarto.hu/hu/statisztikak) and [here](https://nyilvantarto.hu/archiv_honlap/kozos/index.php?k=statisztikai_adatok_lakossagi_legutonevek_hu_archiv)---the authority responsible for publishing this information changed its website some years ago, hence the two sources. Data from each year is stored in a separate excel file; the structure of the files is very similar, but some data cleaning is required.
+
+First, we load the necessary libraries:
+
+```{r}
+# libraries # 
+
+
+library(tidyverse)
+library(conflicted)
+library(here)
+library(readxl)
+library(gganimate)
+library(gapminder)
+
+
+conflict_prefer("View", "gganimate")
+conflict_prefer("filter", "dplyr")
+
+
+```
+
+Then, we import the data files, combine them, and organise them into a tidy data format. For better readability, the code chunk that contains the data cleaning is hidden by default. <br> <br>
+
+<details>
+
+<summary>
+
+Show data cleaning
+
+</summary>
+
+```{r, eval = FALSE}
+
+# data path - one excel file for each year
+
+data_path <- paste0(here(), "/first_names_data/")
+paths <- dir(path = data_path, pattern = "*.xls")
+
+
+
+# read files into list
+
+all <- map(paste0(data_path, paths), read_excel)
+names(all) <- parse_number(paths)
+
+
+
+# convert list into dataframe; add year as extra column
+
+all_df = bind_rows(all, .id = "id") %>% 
+  discard(~all(is.na(.))) %>% 
+  select(matches('id|utón')) %>% 
+  select(-matches("Második"))
+
+
+# name columns---needed for some later cleaning
+
+names(all_df) <- c("year", "male_names1", "male_counts",
+                   "female_names1", "female_counts1", "female_counts2",
+                   "female_names2", "male_names2")
+
+
+# required values need to be pulled from various columns
+
+all_df <- all_df %>% 
+  mutate_at(c("female_counts1", "female_counts2"), as.character)
+
+all_df <- all_df %>% 
+  unite("male",
+        c("male_names1", "male_names2"),
+        na.rm = TRUE) %>% 
+  unite("female",
+        c("female_names1", "female_names2"),
+        na.rm = TRUE) %>% 
+  unite("female_counts",
+        c("female_counts1", "female_counts2"),
+        na.rm = TRUE)
+
+
+# organise into tidy data
+
+name_stock <- all_df %>%
+  pivot_longer(cols = 
+    c("male", "female"),
+    names_to = "gender",
+    values_to = "name") %>% 
+  mutate(
+    count = ifelse(
+      gender == "male",
+      as.numeric(male_counts),
+      as.numeric(female_counts)), 
+    year = as.numeric(year)) %>% 
+  select(-female_counts, -male_counts)
+
+save(name_stock, file = "name_stock.RData")
+
+```
+
+</details>
+
+```{r include = FALSE}
+load("name_stock.RData")
+```
+
+<br> <br> The tidy output looks like this:
+
+```{r}
+head(name_stock)
+```
+
+For example, in 2004 there were 442 192 women named Mária in Hungary---which is remarkable in a country of around 10 million people.
+
+Although the 100 most common names (both male and female) are available for each year, for the purposes of the animation I will focus only on the 25 most common female names.
+
+```{r}
+women <- name_stock %>% 
+  filter(gender == "female") %>%
+  group_by(year) %>% 
+  mutate(
+    rank = min_rank(-count) * 1, 
+    count_1000 = count / 1000) %>% 
+  slice(1:25) %>% 
+  ungroup()
+```
+
+# Animation with gganimate
+
+In the next step, we create the animation with [`gganimate`](https://gganimate.com/index.html). Broadly speaking, we need three parts for the animation: the static part, the transition part, and the design part. In the static part, we determine what we need on each frame (or snapshot)---just like with a regular ggplot2 plot. For example, we want to flip the two axes, order names by their popularity, etc. In the transition part, we use `gganimate` to move from one snapshot to the next. In this case, we are interested in how first name popularity changed over the years, so we use the variable 'year' to transition between snapshots. The third part, design, is optional; its purpose is to make the animation look a bit nicer.
+
+```{r}
+p <- ggplot(women, aes(rank, group = name)) + 
+  # static part
+  geom_col(aes(y = count_1000)) +
+  geom_text(aes(y = 0, label = paste(name, " ")),
+            vjust = 0.2,
+            hjust = 1) +
+  coord_flip(clip = "off", expand = FALSE) +
+  scale_x_reverse() +
+  # transition part with gganimate
+  transition_states(year, 
+                    transition_length = 4,
+                    state_length = 1) +
+  ease_aes('cubic-in-out') + 
+  labs(title = "Popularity of Hungarian female names between 2004 and 2020",
+       y = "Count (000s)",
+       x = "",
+       subtitle = 'Year: {closest_state}') +
+  # design part
+  theme_bw() + 
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    plot.margin = unit(c(5.5, 5.5, 5.5, 60), "points"),
+    plot.title = element_text(
+      size = 14,
+      hjust = 0.5,
+      vjust = 0.5, 
+      margin = margin(t = 20, b = 20)),
+    plot.subtitle = element_text(
+      size = 14,
+      hjust = 0.5,
+      vjust = 0.5, 
+      margin = margin(b = 10)
+      )
+    )
+
+
+```
+
+<br> Let's see the animation:
+
+```{r dev = 'jpeg'}
+animate(p, nframes = 100)
+```
+
+# Conclusion
+
+The animation shows that the popularity of the most common first names decreased over time. This means that we are less likely to encounter a Mária or an Erzsébet than some years ago, while many, previously uncommon names are becoming more popular. This trend suggests that we are unlikely to observe a handful of extremely popular names in the future, because people seem to choose from an increasingly large set of names, which results in a less unequal distribution of names.

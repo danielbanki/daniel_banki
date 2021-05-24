@@ -1,0 +1,277 @@
+---
+title: "Estimating ambulance waiting times with isochrones"
+author:
+  - name: Daniel Banki
+    url: https://twitter.com/banki_daniel
+base_url: https://danielbanki.com     
+date: 01-19-2020
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+    highlight: default
+    highlight_downlit: true
+creative_commons: CC BY
+categories:
+  - leaflet
+  - maps
+  - R
+preview: preview.png  
+---
+
+# Project description
+
+Emergency medical services always work against the clock. Though arrival time requirements for ambulances vary across countries, the objective in all cases is for help to arrive as soon as possible. But to know how to improve arrival times, we need to understand the realities of the current infrastructure. For example, if ambulance stations are located far away from certain areas, adding extra personnel or resources won't improve health outcomes.
+
+Using the existing infrastructure, I estimate what percentage of the Hungarian population lives more than 15 minutes away from an ambulance station. This estimate is not an accurate representation of people's access to medical emergency services---I think about it rather as a starting point that can generate some valuable insights.
+
+A couple of notes before we proceed:
+
+-   I'm not an expert in working with geographic data. Fortunately, some people are. They are also kind enough to share their knowledge: I provide links to useful resources [here](#useful-resources).
+-   Data: to fully reproduce this project, you will need two datasets and an API key from the location platform HERE. I provide details at the relevant steps.
+
+```{r include = FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+# Getting started
+
+What percentage of Hungarians live more than 15 minutes away from an ambulance station?
+
+We need two pieces of information to answer this question:
+
+-   The areas that cannot be reached by an ambulance from an ambulance station within 15 minutes---I will refer to these areas as underserved areas.
+-   The number of people who live in these underserved areas.
+
+First of all, let's load the necessary packages:
+
+```{r}
+
+library(here)
+library(conflicted)
+library(tidyverse)
+library(readxl)
+
+# packages related to handling geographic data, mapping, etc.
+library(rgdal)
+library(sf)
+library(hereR)
+library(sp)
+library(raster)
+library(leaflet)
+library(FRK)
+library(rgeos)
+library(widgetframe)
+
+
+# which package to prefer when a function is available in two packages
+conflict_prefer("select", "dplyr")
+conflict_prefer("filter", "dplyr")
+conflict_prefer("extract", "raster")
+```
+
+# Identifying underserved areas
+
+If we want to identify underserved areas, first we need to know where ambulance stations are located---first physically, then using geographic coordinates. Then we can draw drive-time maps (so called isochrone maps) around each ambulance station. The areas that are not covered by any of these maps are the underserved areas.
+
+## Addresses of ambulance stations
+
+I collected the physical addresses of ambulance stations from the Országos Mentőszolgálat (Hungarian Ambulance Service, the state provider of emergency medical care). As of 2019, Hungary had 255 ambulance stations. Since the [official map](https://www.mentok.hu/mentoallomasok/) on the Országos Mentőszolgálat's website contained fewer than 255 stations, I added some ambulance stations manually. The output of this process was an excel file (available on my Github page), which I used as the basis for geocoding. (My list actually contains one extra station---I couldn't identify which station was duplicated or is no longer operational.)
+
+```{r}
+# import manually cleaned addresses
+addresses <- read_excel("amb_stations.xlsx")
+```
+
+## Geocoding
+
+Once we have the physical addresses of ambulance stations, we need to convert them into geographic coordinates. This is a process called geocoding. To do this I used an API from the HERE platform. I chose this option because you can make a large number of requests for free, and there is an R package called `hereR` that provides an interface to it. If you plan to use their services, you need to create an account with them and generate an authentication key ([create an account here](https://developer.here.com/)). We use the `geocode` function from the `hereR` package to get the geographic coordinates. Though many alternatives exist, using the same package for geocoding and in later steps requires fewer changes in the data format.
+
+```{r eval=FALSE}
+# secret API key from my .Rprofile; otherwise you don't need the line below
+key <- getOption("key")
+
+# replace "key" by your generated API key
+set_key(key)
+
+gc <- geocode(addresses$address)
+```
+
+```{r include=FALSE}
+# I wrote the geocodes to a local file so I don't have to rerun the queries every time I make changes in the .Rmd file
+# write_rds(gc, paste0(path, "gc.rds"))
+gc <- read_rds("gc.rds")
+```
+
+Let's now plot the all the ambulance stations in the country using the `leaflet` function (from the `leaflet` package). As an optional step, I created a custom marker icon. (The icon was made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).)
+
+```{r out.width = "100%"}
+# create a new marker icon for mapping --- optional step
+ambulanceIcon <- makeIcon(
+  iconUrl = "ambulance.png",
+  iconWidth = 15, iconHeight = 15
+)
+
+# use manually set map bounds from EPSG:4237
+leaflet() %>%
+  fitBounds(lng1 = 16.11, lat1 = 45.74, lng2 = 22.9, lat2 = 48.58) %>%
+  addProviderTiles("CartoDB.Positron", group = "Greyscale") %>%
+  addMarkers(data = gc, icon = ambulanceIcon)
+```
+
+At first glance, the map looks reasonable---all the points seem to be located in the country, and their spatial distribution is also feasible.
+
+## Isochrones (drive-time maps)
+
+Now that we know the location of each ambulance station in the country, it's time we calculated their corresponding drive-time maps, using the `isoline` function from the `hereR` package. We specify that we require 15-minute (900-second) isochrones using the fastest route, where we travel by car, and traffic is disabled. What we get is a list of polygons, which may or may not intersect. Going forward, I will refer to this list of polygons as the isochrones polygon.
+
+```{r eval=FALSE}
+# use geocodes to get isochrones
+
+poly <- isoline(gc,
+  range_type = "time", mode = "car",
+  type = "fastest", range = 900
+)
+```
+
+```{r include = FALSE}
+# I wrote the geocodes to a local file so I don't have to rerun the queries every time I make changes in the .Rmd file
+# write_rds(poly, paste0(path, "poly.rds"))
+
+poly <- read_rds("poly.rds")
+```
+
+Let's visualize the isochrones polygon:
+
+```{r}
+leaflet() %>%
+  fitBounds(lng1 = 16.11, lat1 = 45.74, lng2 = 22.9, lat2 = 48.58) %>%
+  addProviderTiles("CartoDB.Positron", group = "Greyscale") %>%
+  addPolygons(data = poly, weight = 1) %>%
+  addMarkers(data = gc, icon = ambulanceIcon)
+```
+
+Though the area covered by the isochrones looks rather small, this should not be surprising: one can only drive on roads, which don't take up a large area. At the same time, the population is distributed unequally---most people live close to roads, so many areas outside the isochrones are uninhabited.
+
+Once we have these isochrones, we have two choices. We can either get the number of people living within these isochrones, and subtract this number from the country's population. Alternatively, we can get the underserved areas first, and then calculate the number of people who live in those areas. The two approaches should yield very similar results; here I identify the underserved areas first, and work with the population data only after that.
+
+To get the underserved areas, we do three things. First, we get geographic data for Hungary (i.e., a polygon, the shape of which is determined by Hungary's border line). Second, we make sure that the two polygons (isochrones and Hungary) have the same coordinate reference system (CRS). Third, we subtract the isochrones polygon from Hungary's polygon.
+
+```{r}
+# get the polygon for Hungary
+hu <- getData("GADM", country = "Hungary", level = 0)
+```
+
+```{r}
+# check that we indeed get Hungary's map
+leaflet() %>%
+  fitBounds(lng1 = 16.11, lat1 = 45.74, lng2 = 22.9, lat2 = 48.58) %>%
+  addProviderTiles("CartoDB.Positron", group = "Greyscale") %>%
+  addPolygons(data = hu, color = "#8CBA51")
+```
+
+```{r}
+# set CRS for the isochrones polygon --- its CRS should be the same as that of Hungary
+poly_sp <- as_Spatial(poly)
+
+proj4string(poly_sp) <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
+```
+
+```{r}
+# get the underserved areas polygon:
+# the function first takes the union of all the individual isochrones,
+# then it subtracts this new polygon from Hungary's polygon.
+diff <- gDifference(hu, poly_sp)
+```
+
+Let's plot the underserved areas in red:
+
+```{r}
+leaflet() %>%
+  fitBounds(lng1 = 16.11, lat1 = 45.74, lng2 = 22.9, lat2 = 48.58) %>%
+  addProviderTiles("CartoDB.Positron", group = "Greyscale") %>%
+  addPolygons(data = diff, color = "#FF5D6C", weight = 1)
+```
+
+Now that we have these areas, it's time to get Hungary's population data.
+
+# Population data
+
+The population data comes from the GEOSTAT 2011 project, which is a European initiative to collect population data for each 1 km^2^ area in Europe (Data source population grid information: Eurostat, EFGS). The dataset can be downloaded from [here](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/population-distribution-demography/geostat).
+
+Intuitively, one can think of these data as cells in a large table, where each cell has a numerical value (i.e. population) attached to it. Note that this representation of the data differs from how the data were represented in the first half of this project. A further difference is that this dataset doesn't use the same coordinate reference system. Intuitively, if we fail to correct for this latter difference, then a point with the same longitude and latitude values may describe a different physical location on two maps.
+
+```{r}
+# read in the downloaded dataset
+pop_data <- read_csv("geostat_2011.csv")
+
+# population data for Hungary
+pop_data <- pop_data %>%
+  filter(CNTR_CODE == "HU") %>%
+  select(TOT_P, GRD_ID)
+
+
+# prepare the dataset so it can be later transformed into a more suitable format
+pop_data <- pop_data %>% mutate(
+  lat = as.numeric(gsub(".*N([0-9]+)[EW].*", "\\1", GRD_ID)),
+  lon = as.numeric(gsub(".*[EW]([0-9]+)", "\\1", GRD_ID)) * ifelse(gsub(".*([EW]).*", "\\1", GRD_ID) == "W", -1, 1)
+)
+
+
+pop_data$lat <- pop_data$lat * 1000
+
+pop_data$lon <- pop_data$lon * 1000
+
+pop_data_to_r <- pop_data %>%
+  select(lon, lat, TOT_P) %>%
+  rename(x = lon, y = lat, z = TOT_P)
+
+# put the data into a raster object: a table-like structure to store geographic data
+df_raster <- rasterFromXYZ(pop_data_to_r, res = 1000, crs = "+init=epsg:3035")
+
+diff_proj <- diff
+
+# transform the underserved areas polygon to EPSG:3035; the polygon and the raster object must have the same CRS
+diff_proj <- spTransform(diff_proj, "+init=epsg:3035")
+```
+
+After having prepared the data, we use the `extract` function from the `raster` package to get the number of people who are more than 15 minutes away from an ambulance station.
+
+```{r}
+uncovered_pop <- extract(df_raster, diff_proj)
+
+sum(uncovered_pop[[1]], na.rm = TRUE)
+```
+
+# Results and some thoughts
+
+We find that approximately 2.7 million people (or 27% of the population) live more than 15 minutes away from an ambulance station. But how realistic is this result?
+
+It is difficult to say, but two pieces of information from Hungary might give us an idea. For example, a similar project in 2014 estimated that ambulances cannot reach 14% of the population within 15 minutes. The spokesperson for the Országos Mentőszolgálat (Hungarian Ambulance Service) claimed in an interview that emergency medical help arrived within 15 minutes in 77-78% of all cases (the source is available in Hungarian [here](https://hvg.hu/itthon/20141021_Nezze_meg_mennyi_ido_alatt_erne_ki_onhoz)). What matters ultimately is the time it takes for emergency medical help to arrive. Using isochrones to answer this important question is a good starting point, but we have made many implicit assumptions along the way. Let's make some of these assumptions explicit and speculate a bit about what happens if a particular assumption is violated.
+
+## Location and availability of ambulances
+
+If an ambulance is available, it can be either at the station or somewhere else (e.g., returning from a task). If an ambulance is not at its station, then its effective arrival time will differ from its predicted arrival time. Furthermore, ambulances need to be available at the time of the emergency call: capacity constraints can be a significant problem, and I suspect they often are. The situation is probably worse in sparsely populated areas, which often only have one ambulance station nearby.
+
+## Isochrone and timing assumptions
+
+In this project, we used isochrones that didn't take traffic conditions into account. In reality, ambulances can arrive more slowly (e.g., in Budapest, during rush hours) or more quickly (e.g., in rural areas, where ambulances can be driven faster than the speed limit). We further assumed that the duration of both the emergency call and the ambulance's leaving the station is zero.
+
+The size of the affected population is quite sensitive to changes in the time we use for the isochrones. For example, rerunning the analysis with 20-minute isochrones yielded an underserved population of approximately 1.2 million people. Some assumptions probably make us underestimate the time needed for an ambulance to arrive: that ambulances can leave without delay; that there is no traffic in a traffic-heavy area; or that ambulances are available. Conversely, imposing other assumptions such as adhering to speed limits can mean that ambulances actually arrive sooner than predicted by our isochrones.
+
+## GEOSTAT data
+
+The GEOSTAT data give us a snapshot of Hungarian's registered addresses in 2011. It is possible that some people migrated since then to other areas in the country, or even left the country. Furthermore, being registered at an address doesn't mean that the individual actually lives there or spends most of her time there. For example, a person from a smaller town may be registered in her home town in an underserved area, but she works, attends university, or spends her leisure time in a place with better emergency access. Taken together, I suspect that at the time of an emergency people are actually closer to emergency services than the GEOSTAT population data suggest.
+
+# Conclusion
+
+Using isochrone maps to estimate the arrival times of ambulances is a good starting point. It would be useful, however, to know more about how robust these estimates are to changes in the various assumptions underlying this approach.
+
+# Useful resources {#useful-resources}
+
+-   [Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow
+
+-   [RSpatial](https://www.rspatial.org/)
+
+-   [Coordinate Reference Systems in R](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf)

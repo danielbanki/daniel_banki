@@ -1,0 +1,17 @@
+name: "daniel-banki"
+title: "Daniel Banki's blog"
+base_url: https://danielbanki.com
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Projects"
+      href: projects.html
+    - icon: fa fa-twitter
+      href: https://twitter.com/banki_daniel
+    - icon: fa fa-github
+      href: https://github.com/danielbanki
+output: distill::distill_article
