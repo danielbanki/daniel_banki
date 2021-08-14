@@ -1,5 +1,28 @@
 [
   {
+    "path": "posts/2021-08-12-around-the-world-1-ecuador/",
+    "title": "Around the world 1: Ecuador",
+    "description": "In this post, I visualise the number of hospital beds in the provinces of Ecuador.",
+    "author": [
+      {
+        "name": "Daniel Banki",
+        "url": "https://twitter.com/banki_daniel"
+      }
+    ],
+    "date": "2021-08-12",
+    "categories": [
+      "R",
+      "ggplot2",
+      "Around the world"
+    ],
+    "contents": "\r\n\r\nContents\r\nData\r\nVisualisation\r\nLessons\r\n\r\nThe number of hospital beds is an important measure of a country’s health care system. In this post, I visualise this statistic in Ecuador. Country-level statistics are informative (available on the WHO’s website), but they might hide substantial variation within a country.\r\nI wanted to find out if this is indeed the case in Ecuador, a geographically and culturally diverse country.\r\nData\r\nEcuador is divided into 24 provinces (23 on the mainland plus Galápagos Islands). The data sources we need are as follows:\r\nShapefiles for the provinces\r\nNumber of hospital beds in each province\r\nPopulation in each province\r\nThe number of hospital beds is usually reported per 1000 people. I follow this convention here and calculate this statistic from (2) and (3).\r\nVisualisation\r\n\r\n\r\n\r\nFigure 1: Number of hospital beds per 1000 people in the provinces of Ecuador (excluding Galápagos Islands). Notes: The left-hand side shows this statistic on the map; the right-hand side shows the names of the provinces, ordered along the y-axis by this statistic (the dispersion of labels along the x-axis has no inherent meaning, its only goal is to avoid overlapping labels).\r\n\r\n\r\n\r\nLessons\r\nThere seems to be some variation in the number of hospital beds. I don’t know, however, if this variation is large relative to other countries, or how much of it reflects real differences in health care standards.\r\nThis post is part of the series “Around the world.” In each post, I pick a new country, find an interesting (and publicly available) data set, and create a visualisation. My goals are to (1) learn more about a country, (2) understand a topic better, (3) and play around with visualisations. I publish the source code and all materials I used in the post on my Github page. I’m not an expert on most countries or topics, so please feel free to reach out if you have any feedback, suggestions, or corrections.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-08-12-around-the-world-1-ecuador/preview.png",
+    "last_modified": "2021-08-14T17:35:55+02:00",
+    "input_file": "around-the-world-1-ecuador.knit.md",
+    "preview_width": 950,
+    "preview_height": 512
+  },
+  {
     "path": "posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/",
     "title": "Popularity of first names over time with gganimate",
     "description": {},
