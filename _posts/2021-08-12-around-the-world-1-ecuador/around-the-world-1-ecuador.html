@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["around-the-world-1-ecuador_files/anchor-4.2.2/anchor.min.js","around-the-world-1-ecuador_files/bowser-1.9.3/bowser.min.js","around-the-world-1-ecuador_files/distill-2.2.21/template.v2.js","around-the-world-1-ecuador_files/header-attrs-2.8/header-attrs.js","around-the-world-1-ecuador_files/jquery-1.11.3/jquery.min.js","around-the-world-1-ecuador_files/popper-2.6.0/popper.min.js","around-the-world-1-ecuador_files/tippy-6.2.7/tippy-bundle.umd.min.js","around-the-world-1-ecuador_files/tippy-6.2.7/tippy-light-border.css","around-the-world-1-ecuador_files/tippy-6.2.7/tippy.css","around-the-world-1-ecuador_files/tippy-6.2.7/tippy.umd.min.js","around-the-world-1-ecuador_files/webcomponents-2.0.0/webcomponents.js","data_cleaning/camas_2020.csv","data_cleaning/data_cleaning_readme.txt","data_cleaning/ecuador_data_cleaning.R","data_cleaning/gadm36_ECU_1_sf.rds","data_cleaning/population.csv","ecuador.png","ecuador_flag.png","preview.png"]}
+  {"type":"character","attributes":{},"value":["around-the-world-1-ecuador_files/anchor-4.2.2/anchor.min.js","around-the-world-1-ecuador_files/bowser-1.9.3/bowser.min.js","around-the-world-1-ecuador_files/distill-2.2.21/template.v2.js","around-the-world-1-ecuador_files/header-attrs-2.8/header-attrs.js","around-the-world-1-ecuador_files/jquery-1.11.3/jquery.min.js","around-the-world-1-ecuador_files/popper-2.6.0/popper.min.js","around-the-world-1-ecuador_files/tippy-6.2.7/tippy-bundle.umd.min.js","around-the-world-1-ecuador_files/tippy-6.2.7/tippy-light-border.css","around-the-world-1-ecuador_files/tippy-6.2.7/tippy.css","around-the-world-1-ecuador_files/tippy-6.2.7/tippy.umd.min.js","around-the-world-1-ecuador_files/webcomponents-2.0.0/webcomponents.js","data_cleaning/camas_2020.csv","data_cleaning/data_cleaning_readme.txt","data_cleaning/ecuador_data_cleaning.R","data_cleaning/gadm36_ECU_1_sf.rds","data_cleaning/population.csv","ecuador.png","ecuador_flag.png","preview.png","session_info.txt"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1504,6 +1504,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ol>
 <p>The number of hospital beds is usually reported per 1000 people. I follow this convention here and calculate this statistic from (2) and (3).</p>
 <h1 id="visualisation">Visualisation</h1>
+<p>I used <code>ggplot2</code> (and some other packages) to create the visualisation. My idea was to show the variation across provinces using a choropleth map: as Ecuador has three distinct geographical regions, I thought there might emerge a clear visual pattern along regional lines if there exists one. Besides the map, I decided to add all data points (with the names of provinces as labels) to show the variation better and to make comparing individual provinces easier.</p>
+<p>This is what I did in the end:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:show-plot"></span>
 <img src="ecuador.png" alt="Number of hospital beds per 1000 people in the provinces of Ecuador (excluding Galápagos Islands). 
@@ -1514,8 +1516,9 @@ Figure 1: Number of hospital beds per 1000 people in the provinces of Ecuador (e
 </div>
 </div>
 <h1 id="lessons">Lessons</h1>
-<p>There seems to be some variation in the number of hospital beds. I don’t know, however, if this variation is large relative to other countries, or how much of it reflects real differences in health care standards.</p>
-<p><br> <br> <em>This post is part of the series “Around the world.” In each post, I pick a new country, find an interesting (and publicly available) data set, and create a visualisation. My goals are to (1) learn more about a country, (2) understand a topic better, (3) and play around with visualisations. I publish the source code and all materials I used in the post on my <a href="https://github.com/danielbanki/daniel_banki">Github page</a>. I’m not an expert on most countries or topics, so please feel free to reach out if you have any feedback, suggestions, or corrections.</em></p>
+<p>There seems to be some variation (range: 0.9 - 2) across provinces, with most of them having between 1 and 1.5 hospital beds per 1000 people. Is this variation large relative to other countries? It’s difficult to know for sure, but the variation doesn’t seem particularly large. For example, the same statistic ranges from 1.7 to 4.8 in <a href="https://www.kff.org/other/state-indicator/total-hospital-beds/">US states</a>.</p>
+<p>Most important, however, than a mere statistic is what this variability reflects about access to health care services in different parts of Ecuador. Unfortunately, this data doesn’t speak to this issue—maybe that’s something to look into in a future post.</p>
+<p><br> <br> <em>This post is part of the series “Around the world.” In each post, I pick a new country, find an interesting (and publicly available) data set, and create a visualisation. My goals are to (1) learn more about a country, (2) understand a topic better, (3) and play around with visualisations in R. I publish the source code and all materials I used in the post on my <a href="https://github.com/danielbanki/daniel_banki">Github page</a>. I’m not an expert on most countries or topics, so please feel free to reach out if you have any feedback, suggestions, or corrections.</em></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
