@@ -165,7 +165,7 @@ showtext::showtext_auto(FALSE)
 
 Chile is the world's leading producer and exporter of copper. As I knew rather little about copper mining, I thought it would be an interesting topic to look into. Copper being an important contributor to the country's economy, I expected to find some data sets and maybe a general description about the mining process; instead, what I found was a very impressive collection of all kinds of copper-related resources. For example, [this website (in Spanish)](https://www.codelcoeduca.cl/codelcoeduca/site/edic/base/port/inicio.html) provides educational materials to the general public about the stages involved in copper production---the difficulty of the content is even tailored to various age groups. [Another one (in Spanish)](https://consejominero.cl/chile-pais-minero/mineria-en-numeros/) explains the Chilean mining industry with beautiful illustrations. In light of the wealth of information about mining, I was only moderately surprised to find out that Chile even has a [Ministry of Mining](https://www.gob.cl/en/ministries/ministry-of-mining/). 
 
-The more resources I read about this topic, the more difficult it seemed to pick only one aspect, being so many interesting ones to choose from. In the end, I decided to focus on (1) how much copper individual mines produced each year between 1960 and 2018; and (2) how Chile's production fares internationally over the same time period. 
+The more resources I read about this topic, the more difficult it seemed to pick only one aspect, being so many interesting ones to choose from. In the end, I decided to focus on (1) how much copper individual mines produced each year between 1960 and 2018; and (2) how Chile's production fares internationally over the same period. 
 
 # Data
 
@@ -191,7 +191,7 @@ world_gif
 # Thoughts
 
 
-Chile's copper production slowly but steadily increased until the early 1990s. In the next 10-15 years it underwent a rapid increase; since then it stayed around the same level. What can explain this rapid increase in the 1990s? Was it the result of increased demand, adopting a new technology, legislative changes, or something else?
+Chile's copper production slowly but steadily increased until the early 1990s. In the next 10-15 years it underwent a rapid increase; since then it stayed around the same level. What can explain this rapid increase in the 1990s? Was it the result of increased demand, adopting new technology, legislative changes, or something else?
 
 Here I speculate about factors that affect production, leaving aside questions about how demand for copper may have changed in this period. For overall production to increase, individual mines need to produce more, new mines need to be created, or both. The production of individual mines doesn't seem to change much over time. This pattern can arise even when there is technological innovation: for example, it might be the case that existing mines cannot be transformed to take advantage of new technology (i.e., productivity gains would only show up at new mines), or a mine has almost depleted its copper reserves, and technology can only slow the decline in production. 
 
