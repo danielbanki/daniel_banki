@@ -1,11 +1,11 @@
 ---
 title: "Around the world 2: Chile"
 description: |
-  In this post, I visualise Chilean copper production.
+  In this post, I visualise copper production in Chile.
 author:
   - name: Daniel Banki
     url: https://twitter.com/banki_daniel
-date: 08-27-2021
+date: 09-16-2021
 output:
   distill::distill_article:
     toc: true
@@ -17,8 +17,9 @@ creative_commons: CC BY
 categories:
   - R
   - ggplot2
+  - gganimate
   - Around the world
-draft: true
+draft: false
 ---
 
 
@@ -31,7 +32,7 @@ knitr::opts_chunk$set(
 ```
 
 
-```{r libraries}
+```{r packages}
 
 library(readr)
 library(dplyr)
@@ -39,37 +40,34 @@ library(tidyr)
 library(stringr)
 library(ggplot2)
 library(gganimate)
-library(ragg)
-library(magick)
 library(forcats)
-
+library(showtext)
 ```
 
 ```{r add-fonts}
 
 
 sysfonts::font_add_google("Pompiere", "pompiere")
-
 ```
 
 
 ```{r import-prepare}
+
 data <- read_csv("chile.csv", col_types = cols(.default = "c"), na = c("", "-"))
 
-data <- data %>% 
+data <- data %>%
   pivot_longer(!c(site, owner, unit), names_to = "year", values_to = "production")
 
-
-
-data <- data %>% 
-  mutate(across(c("site", "owner", "year"), ~as.factor(.))) %>% 
+data <- data %>%
+  mutate(across(c("site", "owner", "year"), ~ as.factor(.))) %>%
   mutate(production = ifelse(is.na(production), as.numeric(0), as.numeric(production)))
 
 comparison <- c("Total Codelco", "Total Chile", "Total world")
 
-chilean_mines_production <- data %>% filter(!site %in% comparison) %>% 
-  filter(production != 0) %>% 
- group_by(year) %>% 
+chilean_mines_production <- data %>%
+  filter(!site %in% comparison) %>%
+  filter(production != 0) %>%
+  group_by(year) %>%
   mutate(rank = row_number(-production))
 
 global_production <- data %>% filter(site %in% comparison)
@@ -82,93 +80,127 @@ global_production <- data %>% filter(site %in% comparison)
 
 # to add imported font automatically
 showtext::showtext_auto()
-chile_plot <- ggplot(chilean_mines_production, aes(rank, group = site)) + 
+chile_plot <- ggplot(chilean_mines_production, aes(rank, group = site)) +
   geom_col(aes(y = production, fill = owner), width = 0.5, position = position_dodge(0.7)) +
   geom_text(aes(y = -50, label = site),
-            vjust = 0.2,
-            hjust = 1,
-            size = 4) +
+    vjust = 0.2,
+    hjust = 1,
+    size = 4
+  ) +
   coord_flip(clip = "off", expand = FALSE) +
   scale_x_reverse() +
   transition_states(year, transition_length = 1, state_length = 2) +
   ease_aes("quartic-in") +
-    labs(title = 'Year: {next_state}') +
+  labs(title = "Year: {next_state}") +
   scale_fill_manual(values = c("#e77a19", "#433b35"), guide = guide_legend(title = "Owner")) +
   theme(
     plot.title = element_text(margin = margin(0, 0, 20, 0), hjust = 0.2),
+    plot.margin = unit(c(1, 5, 1, 5), "cm"),
+    panel.background = element_rect(fill = "white"),
+    panel.grid.major.x = element_line(colour = "lightgray"),
     axis.text.y = element_blank(),
     axis.ticks = element_blank(),
     axis.title.x = element_text(margin = margin(20, 0, 0, 0), hjust = 0.35),
-    panel.background = element_rect(fill = "white"),
-    panel.grid.major.x = element_line(colour = "lightgray"),
-    plot.margin = unit(c(1, 5, 1, 5), "cm"),
-  legend.position = c(1.2, .50)) +
+
+
+    legend.position = c(1.2, .50)
+  ) +
   scale_y_continuous(breaks = c(0, 500, 1000, 1500), limits = c(-50, 1500)) +
-  labs(x = "", y = "Production (1000 metric tons)") 
+  labs(x = "", y = "Production (1000 metric tons)")
 
 
-chile_gif <- animate(chile_plot, nframes = 2 * length(unique(chilean_mines_production$year)), fps = 5, 
-                 width = 624, height = 624)
+chile_gif <- animate(chile_plot,
+  nframes = 2 * length(unique(chilean_mines_production$year)), fps = 5,
+  width = 624, height = 624
+)
 
 anim_save("chile.gif", chile_gif)
 
-fig_caption_chile <-  "Chile plot"
+fig_caption_chile <- "Copper production of the largest mines in Chile between 1960 and 2018."
 
 showtext::showtext_auto(FALSE)
-
 ```
 
 ```{r global-plot}
 
 
-global_production$site <- global_production$site %>% fct_drop() %>% fct_relevel(c("Total world", "Total Chile", "Total Codelco"))
+global_production$site <- global_production$site %>%
+  fct_drop() %>%
+  fct_relevel(c("Total world", "Total Chile", "Total Codelco"))
 
 showtext::showtext_auto()
-global_plot <- ggplot(global_production, aes(x = as.Date(year, format = "%Y"), y = production, color = site)) + geom_line(size = 1.3) + transition_reveal(as.numeric(year)) +
-  scale_y_continuous(labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
+global_plot <- ggplot(global_production, aes(x = as.Date(year, format = "%Y"), y = production, color = site)) +
+  geom_line(size = 1.3) +
+  transition_reveal(as.numeric(year)) +
+  scale_y_continuous(labels = function(x) format(x, big.mark = " ", scientific = FALSE)) +
   labs(x = "", y = "Production (1000 metric tons)") +
-  scale_color_manual(guide = guide_legend(title = ""),
-                     values = c("#663046", "#2c9c91", "#e77a19"), labels = c("World", "Chile", "CODELCO")) + 
+  scale_color_manual(
+    guide = guide_legend(title = ""),
+    values = c("#663046", "#2c9c91", "#e77a19"), labels = c("World", "Chile", "CODELCO")
+  ) +
   theme(
+    plot.margin = unit(c(1, 1, 1, 1), "cm"),
     panel.background = element_rect(fill = "white"),
     panel.grid.major = element_line(colour = "lightgray"),
-     axis.ticks = element_blank(),
+    axis.ticks = element_blank(),
     axis.title.y = element_text(margin = margin(0, 20, 0, 0)),
-    legend.key.width = unit(1,"cm"),
+    legend.key.width = unit(1, "cm"),
     legend.key = element_blank(),
-    plot.margin = unit(c(1, 1, 1, 1), "cm")
-    
-    
   )
-  
 
-world_gif <- animate(global_plot, nframes = 2 * length(unique(global_production$year)), fps = 10, 
-                 width = 624, height = 624)
+
+world_gif <- animate(global_plot,
+  nframes = 2 * length(unique(global_production$year)), fps = 10,
+  width = 624, height = 624
+)
 
 anim_save("world.gif", world_gif)
 
-fig_caption_world <-  "World plot"
-  
-showtext::showtext_auto(FALSE) 
+fig_caption_world <- "Copper production in CODELCO's mine, in Chile, and globally between 1960 and 2018."
 
-
-
+showtext::showtext_auto(FALSE)
 ```
 
+# Introduction
 
+Chile is the world's leading producer and exporter of copper. As I knew rather little about copper mining, I thought it would be an interesting topic to look into. Copper being an important contributor to the country's economy, I expected to find some data sets and maybe a general description about the mining process; instead, what I found was a very impressive collection of all kinds of copper-related resources. For example, [this website (in Spanish)](https://www.codelcoeduca.cl/codelcoeduca/site/edic/base/port/inicio.html) provides educational materials to the general public about the stages involved in copper production---the difficulty of the content is even tailored to various age groups. [Another one (in Spanish)](https://consejominero.cl/chile-pais-minero/mineria-en-numeros/) explains the Chilean mining industry with beautiful illustrations. In light of the wealth of information about mining, I was only moderately surprised to find out that Chile even has a [Ministry of Mining](https://www.gob.cl/en/ministries/ministry-of-mining/). 
+
+The more resources I read about this topic, the more difficult it seemed to pick only one aspect, being so many interesting ones to choose from. In the end, I decided to focus on (1) how much copper individual mines produced each year between 1960 and 2018; and (2) how Chile's production fares internationally over the same time period. 
+
+# Data
+
+The production data for individual mines is available [here](https://www.cochilco.cl/Paginas/Estadisticas/Bases%20de%20Datos/Producci%C3%B3n-Minera.aspx). I added which company owns each mine:  [CODELCO](https://consejominero.cl/quienes-somos/socios/codelco/) (the largest, state-owned mining company in Chile) or another one (labelled 'Other'). More details about the data preparation process are available on the source repository.
+
+# Visualisations
 
 
 ```{r show-chile, include = TRUE, echo=FALSE, out.width="100%", fig.cap=fig_caption_chile}
 
 chile_gif
-
-
 ```
+
+
 
 
 ```{r show-world, include = TRUE, echo=FALSE, out.width="100%", fig.cap=fig_caption_world}
 
 world_gif
+```
 
 
+# Thoughts
+
+
+Chile's copper production slowly but steadily increased until the early 1990s. In the next 10-15 years it underwent a rapid increase; since then it stayed around the same level. What can explain this rapid increase in the 1990s? Was it the result of increased demand, adopting a new technology, legislative changes, or something else?
+
+Here I speculate about factors that affect production, leaving aside questions about how demand for copper may have changed in this period. For overall production to increase, individual mines need to produce more, new mines need to be created, or both. The production of individual mines doesn't seem to change much over time. This pattern can arise even when there is technological innovation: for example, it might be the case that existing mines cannot be transformed to take advantage of new technology (i.e., productivity gains would only show up at new mines), or a mine has almost depleted its copper reserves, and technology can only slow the decline in production. 
+
+Whatever technological progress took place during the 1990s, the establishment of new mines seems to have contributed more to the country's overall production. From the new mines that emerged during this period, one deserves special mention: Escondida. This mine, established in 1990, emerged as the largest copper producer over the years. And, unlike CODELCO, it is privately owned. Private ownership of mines was made possible by a [law that was approved in 1981](https://es.wikipedia.org/wiki/Gran_Miner%C3%ADa_del_Cobre_en_Chile). As finding new mining sites (and investors) takes a long time, it seems reasonable that new mines would emerge roughly 10-15 years after the law came into effect.
+
+
+<br> <br> *This post is part of the series "Around the world." In each post, I pick a new country, find an interesting (and publicly available) data set, and create a visualisation. My goals are to (1) learn more about a country, (2) understand a topic better, (3) and play around with visualisations in R. I publish the source code and all materials I used in the post on my [Github page](https://github.com/danielbanki/daniel_banki). I'm not an expert on most countries or topics, so please feel free to reach out if you have any feedback, suggestions, or corrections.*
+
+```{r session-info}
+
+sessionInfo() %>% capture.output(file = "session_info.txt")
 ```

@@ -1,0 +1,11 @@
+
+# 1. https://www.cochilco.cl/Paginas/Estadisticas/Bases%20de%20Datos/Producci%C3%B3n-Minera.aspx
+# (a) Producción cobre de mina por empresa & (b) Producción cobre de mina mundial y Chile
+# manually collate the two; time period: 1960-2018
+# 
+# 2. Add ownership manually in a new column, only for CODELCO, call others "others"; 
+# https://consejominero.cl/quienes-somos/socios/codelco/
+
+# 3. Cosmetic changes: rename columns; remove footnotes, change 'otros' to others
+
+# 4. Save as chile.csv -> use this for the visualisations
