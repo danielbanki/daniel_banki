@@ -1,0 +1,9 @@
+---
+title: "around-the-world-disclaimer"
+author: "Daniel Banki"
+date: "30/10/2021"
+output: html_document
+---
+
+<br><br><br>
+*This post is part of the series "Around the world." In each post, I pick a new country, find an interesting (and publicly available) data set, and create a visualisation. My goals are to (1) learn more about a country, (2) understand a topic better, (3) and play around with visualisations in R. I publish the source code and all materials I used in the post on my [Github page](https://github.com/danielbanki/daniel_banki). I'm not an expert on most countries or topics, so please feel free to reach out if you have any feedback, suggestions, or corrections.*
