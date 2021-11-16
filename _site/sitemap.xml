@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://danielbanki.com/about.html</loc>
-    <lastmod>2021-08-14T18:36:14+02:00</lastmod>
+    <lastmod>2021-11-16T16:53:43+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/</loc>
@@ -14,23 +14,23 @@
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-10-30-around-the-world-3-armenia/</loc>
-    <lastmod>2021-10-31T15:03:16+01:00</lastmod>
+    <lastmod>2021-10-31T15:03:18+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-09-29-one-book-at-least-one-idea-1-complications-by-atul-gawande/</loc>
-    <lastmod>2021-09-29T21:34:07+02:00</lastmod>
+    <lastmod>2021-11-16T17:27:58+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-08-27-around-the-world-2-chile/</loc>
-    <lastmod>2021-09-16T12:59:58+02:00</lastmod>
+    <lastmod>2021-09-16T13:00:00+02:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-08-12-around-the-world-1-ecuador/</loc>
-    <lastmod>2021-08-21T19:10:14+02:00</lastmod>
+    <lastmod>2021-08-21T19:10:15+02:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/</loc>
-    <lastmod>2021-05-25T01:31:08+02:00</lastmod>
+    <lastmod>2021-11-16T17:27:39+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest/</loc>
@@ -38,6 +38,6 @@
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones/</loc>
-    <lastmod>2021-05-25T00:42:49+02:00</lastmod>
+    <lastmod>2021-11-16T17:25:42+01:00</lastmod>
   </url>
 </urlset>

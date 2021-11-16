@@ -14,6 +14,7 @@ output:
 creative_commons: CC BY
 categories:
   - gganimate
+  - R
 preview: preview.png  
 ---
 
@@ -47,7 +48,13 @@ conflict_prefer("filter", "dplyr")
 
 Then, we import the data files, combine them, and organise them into a tidy data format. For better readability, the code chunk that contains the data cleaning is hidden by default. <br> <br>
 
-<details><summary>Show data cleaning</summary>
+<details>
+
+<summary>
+
+Show data cleaning
+
+</summary>
 
 ```{r, eval = FALSE}
 

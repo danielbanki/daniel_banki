@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Daniel Banki
 
 * PhD in Economics, Finance and Management (Universitat Pompeu Fabra, 2020-)
-* MRes in Economics, Finance and Management (Universitat Pompeu Fabra, 2019)
+* MRes in Economics, Finance and Management (Universitat Pompeu Fabra, 2020)
 * MSc in Behavioural and Economic Science (University of Warwick, 2017)
 * MA in Economics (University of Glasgow, 2016)
 

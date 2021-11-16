@@ -14,9 +14,7 @@ output:
     highlight_downlit: true
 creative_commons: CC BY
 categories:
-  - Budapest
-  - tidyverse
-  - Wikipedia
+  - R
 preview: preview.png  
 ---
 

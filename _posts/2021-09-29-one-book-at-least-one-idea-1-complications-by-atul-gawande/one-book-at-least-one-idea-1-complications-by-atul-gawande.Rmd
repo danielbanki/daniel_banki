@@ -15,7 +15,7 @@ output:
     highlight_downlit: true
 creative_commons: CC BY
 categories:
-- BOOK REFLECTIONS
+- book reflections
 draft: false
 editor_options: 
   markdown: 
@@ -23,7 +23,7 @@ editor_options:
 preview: complications-book-cover.jpg    
 ---
 
-In his book *[Complications: A Surgeon's Notes on an Imperfect Science](<http://atulgawande.com/book/complications/>)*, Atul Gawande writes about some delicate ethical issues in surgery (and medicine more broadly).
+In his book [*Complications: A Surgeon's Notes on an Imperfect Science*](http://atulgawande.com/book/complications/), Atul Gawande writes about some delicate ethical issues in surgery (and medicine more broadly).
 It's common to find books that include the magical words 'ethical issues.' It's a lot less common (and very refreshing indeed) when one of the recurrent themes in such a book is a candid discussion of trade-offs: situations in which to get more of one thing you value, you must give up something else you value.
 I focus on trade-offs in this reflection because they seem to be so rarely discussed relative to how central they are to many important decisions.
 There is no easy way to categorize the types of trade-offs surgeons face; I opted to categorize them based on whether they are related to (1) who should perform the operation, (2) which treatment or procedure to use, (3) who should choose the treatment.

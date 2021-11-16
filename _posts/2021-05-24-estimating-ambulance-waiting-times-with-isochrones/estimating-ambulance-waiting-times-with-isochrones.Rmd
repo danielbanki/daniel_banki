@@ -15,7 +15,6 @@ output:
 creative_commons: CC BY
 categories:
   - leaflet
-  - maps
   - R
 preview: preview.png  
 ---

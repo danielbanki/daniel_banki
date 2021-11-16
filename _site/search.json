@@ -4,22 +4,22 @@
       "path": "about.html",
       "title": "About this blog",
       "author": [],
-      "contents": "\r\nDaniel Banki\r\nPhD in Economics, Finance and Management (Universitat Pompeu Fabra, 2020-)\r\nMRes in Economics, Finance and Management (Universitat Pompeu Fabra, 2019)\r\nMSc in Behavioural and Economic Science (University of Warwick, 2017)\r\nMA in Economics (University of Glasgow, 2016)\r\nWhat I do\r\nI’m a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making.\r\nContact\r\nPlease feel free to reach out to me at @banki_daniel.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-14T18:36:35+02:00"
+      "contents": "\r\nDaniel Banki\r\nPhD in Economics, Finance and Management (Universitat Pompeu Fabra, 2020-)\r\nMRes in Economics, Finance and Management (Universitat Pompeu Fabra, 2020)\r\nMSc in Behavioural and Economic Science (University of Warwick, 2017)\r\nMA in Economics (University of Glasgow, 2016)\r\nWhat I do\r\nI’m a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making.\r\nContact\r\nPlease feel free to reach out to me at @banki_daniel.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-11-16T17:24:04+01:00"
     },
     {
       "path": "index.html",
       "title": "Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-14T18:36:39+02:00"
+      "last_modified": "2021-11-16T17:24:05+01:00"
     },
     {
       "path": "projects.html",
       "title": "Projects",
       "author": [],
       "contents": "\r\nShiny apps\r\n\r\nName\r\nDescription\r\nBarcelona house price explorer\r\nA simple app to visualise house prices in Barcelona.\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-14T18:36:41+02:00"
+      "last_modified": "2021-11-16T17:24:08+01:00"
     }
   ],
   "collections": ["posts/posts.json"]

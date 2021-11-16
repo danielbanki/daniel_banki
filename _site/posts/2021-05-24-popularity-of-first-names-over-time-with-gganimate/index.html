@@ -125,7 +125,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output","creative_commons","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Popularity of first names over time with gganimate"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Daniel Banki"]},{"type":"character","attributes":{},"value":["https://twitter.com/banki_daniel"]}]}]},{"type":"character","attributes":{},"value":["07-31-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","self_contained","highlight","highlight_downlit"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["default"]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["gganimate"]},{"type":"character","attributes":{},"value":["preview.png"]},{"type":"character","attributes":{},"value":["https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/"]},{"type":"character","attributes":{},"value":["https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output","creative_commons","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Popularity of first names over time with gganimate"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Daniel Banki"]},{"type":"character","attributes":{},"value":["https://twitter.com/banki_daniel"]}]}]},{"type":"character","attributes":{},"value":["07-31-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","self_contained","highlight","highlight_downlit"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["default"]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["gganimate","R"]},{"type":"character","attributes":{},"value":["preview.png"]},{"type":"character","attributes":{},"value":["https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/"]},{"type":"character","attributes":{},"value":["https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2065,13 +2065,6 @@ document.addEventListener('DOMContentLoaded', function() {
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-<script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=UA-156540290-1"></script>
-<script type="text/javascript" cookie-consent="tracking">
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-156540290-1');
-</script>
 <!--/radix_placeholder_site_in_header-->
 
 
@@ -2116,6 +2109,7 @@ gtag('config', 'UA-156540290-1');
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:gganimate" class="dt-tag">gganimate</a>
+  <a href="../../index.html#category:R" class="dt-tag">R</a>
 </div>
 <!--/radix_placeholder_categories-->
 
@@ -2165,7 +2159,7 @@ gtag('config', 'UA-156540290-1');
 <p>Then, we import the data files, combine them, and organise them into a tidy data format. For better readability, the code chunk that contains the data cleaning is hidden by default. <br> <br></p>
 <details>
 <summary>
-Show data cleaning
+<p>Show data cleaning</p>
 </summary>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2280,10 +2274,10 @@ Show data cleaning
   <span class='fu'>coord_flip</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>, expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>scale_x_reverse</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='co'># transition part with gganimate</span>
-  <span class='fu'><a href='https://gganimate.com/reference/transition_states.html'>transition_states</a></span><span class='op'>(</span><span class='va'>year</span>, 
+  <span class='fu'><a href='https://rdrr.io/pkg/gganimate/man/transition_states.html'>transition_states</a></span><span class='op'>(</span><span class='va'>year</span>, 
                     transition_length <span class='op'>=</span> <span class='fl'>4</span>,
                     state_length <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://gganimate.com/reference/ease_aes.html'>ease_aes</a></span><span class='op'>(</span><span class='st'>'cubic-in-out'</span><span class='op'>)</span> <span class='op'>+</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/gganimate/man/ease_aes.html'>ease_aes</a></span><span class='op'>(</span><span class='st'>'cubic-in-out'</span><span class='op'>)</span> <span class='op'>+</span> 
   <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Popularity of Hungarian female names between 2004 and 2020"</span>,
        y <span class='op'>=</span> <span class='st'>"Count (000s)"</span>,
        x <span class='op'>=</span> <span class='st'>""</span>,
@@ -2312,7 +2306,7 @@ Show data cleaning
 <p><br> Let’s see the animation:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://gganimate.com/reference/animate.html'>animate</a></span><span class='op'>(</span><span class='va'>p</span>, nframes <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/gganimate/man/animate.html'>animate</a></span><span class='op'>(</span><span class='va'>p</span>, nframes <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span>
 </code></pre>
 </div>
 <p><img src="popularity-of-first-names-over-time-with-gganimate_files/figure-html5/unnamed-chunk-7-1.gif" /><!-- --></p>
