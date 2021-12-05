@@ -1,0 +1,100 @@
+---
+title: "One book, (at least) one idea: Book wars by John B. Thompson"
+description: |
+  A reflection about hindsight bias and what we can do about it.
+author:
+  - name: Daniel Banki
+    url: https://twitter.com/banki_daniel
+date: 12-05-2021
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+    highlight: default
+    highlight_downlit: true
+creative_commons: CC BY
+categories:
+- book reflections
+draft: false
+editor_options: 
+  markdown: 
+    wrap: sentence
+preview: book-wars-book-cover.jpg  
+---
+
+# Introduction
+
+[Book wars](https://www.amazon.com/Book-Wars-Digital-Revolution-Publishing/dp/1509546782) tells the story of how digital technology changed the book publishing industry.
+It provides an in-depth review of various new developments, such as audiobooks, self-publishing, or the new market for ebook rights for already published books.
+Crucially, it explains how these developments transformed (or failed to transform) the industry.
+After each chapter, I had the same feeling: I could have predicted the trend described in the chapter before the events unfolded.
+At the same time, I routinely fail to predict outcomes in domains that are significantly less complex than the book publishing industry.
+
+The most likely explanation for this apparent contradiction is that I was overly optimistic about my predictive abilities.
+In other words, I've likely just fallen victim to [hindsight bias](https://en.wikipedia.org/wiki/Hindsight_bias), which is the tendency to perceive past events as having been more predictable than they actually were.
+Most probably, I couldn't have predicted these trends, and I had this feeling only because everything seems to make sense after the fact.
+This bias is especially dangerous because we have no way of directly refuting it.
+Even if all circumstantial evidence points to the contrary, we're left with the lingering feeling that this time was different and we actually predicted the true outcome.
+
+# Antidote to hindsight bias 1: Counterfactual narratives
+
+Letting go of the feeling that we knew it all along is difficult, but there's something we can do to make it easier.
+We can imagine that the counterfactual happened (i.e., the opposite of what actually happened) and generate reasons why the counterfactual outcome was fully expected.
+The goal of this thought experiment is to make us more aware that more than one outcome can seem predictable.
+If this is the case, however, then our confidence in having predicted the true outcome should be reduced.
+Let me illustrate how this could work in practice through two examples.
+
+## Prediction 1: Ebooks as apps will become popular
+
+The idea of ebooks as apps is simple: you take an ebook and turn it into an app.
+This has the benefit that you can add some interactive elements---for example, custom background music for each page or interactive images.
+
+My narrative if the idea became popular: *Readers want an immersive experience, and a good way to achieve that is to add interactive elements. Imagine that you want to understand how the heart looks and works. If you read a traditional anatomy book, you must rely on 10 illustrations from different angles and collate them into a 3D image in your mind. In contrast, when the same textual content is structured as an app, you can play around with a fully interactive 3D representation of the heart. This creates a lot of value (e.g., by saving medical students time or communicating complex information better to a lay audience), so I'm not surprised the idea proved so popular.*
+
+My narrative if the idea didn't become popular: *Although in theory ebooks structured as apps could generate some value, only a small subset of them will eventually be profitable. Developing these apps takes a lot of time, and software engineers' time is not cheap. Even a small number of failures is enough to make a business go bankrupt. Other than that, most regular apps are either free or cost a couple of dollars in the app store. Trying to sell an app for over 10 dollars doesn't seem very viable even if it provides some value. I'm not surprised the idea failed to gain traction.*
+
+## Prediction 2: Ebooks will overtake print books
+
+My narrative if ebooks overtook print books: *Ebooks are significantly more convenient than traditional books. For example, an e-reader is lightweight, you can store as many ebooks on it as you want, you can download ebooks when you need them, and they even cost less in many cases. People gravitate towards what's convenient and easy, so it only makes sense that they gradually switched to ebooks.*
+
+My narrative if ebooks didn't overtake print books: *Ebooks are great, but it was quite clear they wouldn't outsell print books. They cannot be easily resold, you cannot take notes as smoothly while you read them, you can't show them to your friends when they come over, you can't give them as gifts to your loved ones, and it's not even clear what rights you acquire when you 'buy' an ebook. There are simply too many factors that speak against ebooks. The dominance of print books is here to stay.*
+
+# Antidote to hindsight bias 2: Verifiable ex-ante predictions
+
+Maybe accurately predicting the outcome in these cases was easy, and I'm just overly pessimistic about what can be predicted.
+It can certainly be the case.
+But it doesn't matter how convincing an ex-post narrative sounds, it's quite difficult to rule out hindsight bias when someone didn't make a quantitative prediction that can be later verified.
+
+To verify a prediction, we first need to unambiguously define what we're predicting.
+The astute reader will notice that the predictions I used as examples would fail this criterion (i.e., what does it mean for something to become popular?).
+We also need to agree on how the 'truth' will be determined.
+For example, imagine that we make the prediction that disputed territory X will be held by country Y on a given date.
+We need to use an independent, credible source to verify this prediction---the countries involved in the dispute are unlikely to come to the same 'truth'.
+
+# Conclusion
+
+To sum it up, the best antidote against hindsight bias is a clearly defined, verifiable prediction.
+Fortunately, there are many good ways to practice making predictions: you can participate in forecasting competitions (e.g., [Good Judgment Open](https://www.gjopen.com/)), bet on event outcomes (e.g., [Kalshi](https://kalshi.com/)), keep a public log of your predictions (e.g., [Bryan Caplan's bets](https://docs.google.com/document/d/1qShKedFJptpxfTHl9MBtHARAiurX-WK6ChrMgQRQz-0/edit)), or just keep track of your predictions privately in a spreadsheet.
+
+We make a large number of predictions on a daily basis; it would be impossible (and even undesirable) to keep track of all of them.
+With this limitation in mind, I aspire to follow a different strategy depending on the importance of a future event.
+If the event is very important and lends itself to a prediction, I want to make a verifiable prediction about it.
+If it's moderately important, I don't want to make a prediction about it, but I try to reduce my hindsight bias by creating a coherent narrative about the counterfactual outcome.
+If it's not important at all, I want to forget about the existence of hindsight bias and feel good about my having predicted the right outcome once again.
+
+```{r include=FALSE}
+
+book_disclaimer <- paste0(here::here(), "/_disclaimers/one-book-one-idea-disclaimer.Rmd")
+
+
+
+```
+
+```{r disclaimer, child = book_disclaimer}
+
+
+
+
+
+```
