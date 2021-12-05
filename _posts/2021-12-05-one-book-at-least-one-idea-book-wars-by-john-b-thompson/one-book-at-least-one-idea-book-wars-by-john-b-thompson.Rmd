@@ -34,7 +34,7 @@ At the same time, I routinely fail to predict outcomes in domains that are signi
 The most likely explanation for this apparent contradiction is that I was overly optimistic about my predictive abilities.
 In other words, I've likely just fallen victim to [hindsight bias](https://en.wikipedia.org/wiki/Hindsight_bias), which is the tendency to perceive past events as having been more predictable than they actually were.
 Most probably, I couldn't have predicted these trends, and I had this feeling only because everything seems to make sense after the fact.
-This bias is especially dangerous because we have no way of directly refuting it.
+This bias is especially dangerous because we've no way of directly refuting it.
 Even if all circumstantial evidence points to the contrary, we're left with the lingering feeling that this time was different and we actually predicted the true outcome.
 
 # Antidote to hindsight bias 1: Counterfactual narratives
@@ -50,7 +50,7 @@ Let me illustrate how this could work in practice through two examples.
 The idea of ebooks as apps is simple: you take an ebook and turn it into an app.
 This has the benefit that you can add some interactive elements---for example, custom background music for each page or interactive images.
 
-My narrative if the idea became popular: *Readers want an immersive experience, and a good way to achieve that is to add interactive elements. Imagine that you want to understand how the heart looks and works. If you read a traditional anatomy book, you must rely on 10 illustrations from different angles and collate them into a 3D image in your mind. In contrast, when the same textual content is structured as an app, you can play around with a fully interactive 3D representation of the heart. This creates a lot of value (e.g., by saving medical students time or communicating complex information better to a lay audience), so I'm not surprised the idea proved so popular.*
+My narrative if the idea became popular: *Readers want an immersive experience, and a good way to achieve that is to add interactive elements. Imagine that you want to understand how the heart looks and works. If you read a traditional anatomy book, you must rely on 10 illustrations from different angles and combine them into a 3D image in your mind. In contrast, when the same textual content is structured as an app, you can play around with a fully interactive 3D representation of the heart. This creates a lot of value (e.g., by saving medical students time or communicating complex information better to a lay audience), so I'm not surprised the idea proved so popular.*
 
 My narrative if the idea didn't become popular: *Although in theory ebooks structured as apps could generate some value, only a small subset of them will eventually be profitable. Developing these apps takes a lot of time, and software engineers' time is not cheap. Even a small number of failures is enough to make a business go bankrupt. Other than that, most regular apps are either free or cost a couple of dollars in the app store. Trying to sell an app for over 10 dollars doesn't seem very viable even if it provides some value. I'm not surprised the idea failed to gain traction.*
 
@@ -58,7 +58,7 @@ My narrative if the idea didn't become popular: *Although in theory ebooks struc
 
 My narrative if ebooks overtook print books: *Ebooks are significantly more convenient than traditional books. For example, an e-reader is lightweight, you can store as many ebooks on it as you want, you can download ebooks when you need them, and they even cost less in many cases. People gravitate towards what's convenient and easy, so it only makes sense that they gradually switched to ebooks.*
 
-My narrative if ebooks didn't overtake print books: *Ebooks are great, but it was quite clear they wouldn't outsell print books. They cannot be easily resold, you cannot take notes as smoothly while you read them, you can't show them to your friends when they come over, you can't give them as gifts to your loved ones, and it's not even clear what rights you acquire when you 'buy' an ebook. There are simply too many factors that speak against ebooks. The dominance of print books is here to stay.*
+My narrative if ebooks didn't overtake print books: *Ebooks are great, but it was quite clear they wouldn't outsell print books. They can't be easily resold, you can't take notes as smoothly while you read them, you can't show them to your friends when they come over, you can't give them as gifts to your loved ones, and it's not even clear what rights you acquire when you 'buy' an ebook. There are simply too many factors that speak against ebooks. The dominance of print books is here to stay.*
 
 # Antidote to hindsight bias 2: Verifiable ex-ante predictions
 
@@ -81,7 +81,7 @@ We make a large number of predictions on a daily basis; it would be impossible (
 With this limitation in mind, I aspire to follow a different strategy depending on the importance of a future event.
 If the event is very important and lends itself to a prediction, I want to make a verifiable prediction about it.
 If it's moderately important, I don't want to make a prediction about it, but I try to reduce my hindsight bias by creating a coherent narrative about the counterfactual outcome.
-If it's not important at all, I want to forget about the existence of hindsight bias and feel good about my having predicted the right outcome once again.
+If it's not important at all, I want to forget about the existence of hindsight bias and just feel good about my having predicted the right outcome once again.
 
 ```{r include=FALSE}
 
