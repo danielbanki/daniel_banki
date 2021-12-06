@@ -74,14 +74,14 @@ We need to use an independent, credible source to verify this prediction---the c
 
 # Conclusion
 
-To sum it up, the best antidote against hindsight bias is a clearly defined, verifiable prediction.
-Fortunately, there are many good ways to practice making predictions: you can participate in forecasting competitions (e.g., [Good Judgment Open](https://www.gjopen.com/)), bet on event outcomes (e.g., [Kalshi](https://kalshi.com/)), keep a public log of your predictions (e.g., [Bryan Caplan's bets](https://docs.google.com/document/d/1qShKedFJptpxfTHl9MBtHARAiurX-WK6ChrMgQRQz-0/edit)), or just keep track of your predictions privately in a spreadsheet.
-
 We make a large number of predictions on a daily basis; it would be impossible (and even undesirable) to keep track of all of them.
 With this limitation in mind, I aspire to follow a different strategy depending on the importance of a future event.
+
 If the event is very important and lends itself to a prediction, I want to make a verifiable prediction about it.
-If it's moderately important, I don't want to make a prediction about it, but I try to reduce my hindsight bias by creating a coherent narrative about the counterfactual outcome.
-If it's not important at all, I want to forget about the existence of hindsight bias and just feel good about my having predicted the right outcome once again.
+Fortunately, there are many good ways to practice making predictions: you can participate in forecasting competitions (e.g., [Good Judgment Open](https://www.gjopen.com/)), bet on event outcomes (e.g., [Kalshi](https://kalshi.com/)), keep a public log of your predictions (e.g., [Bryan Caplan's bets](https://docs.google.com/document/d/1qShKedFJptpxfTHl9MBtHARAiurX-WK6ChrMgQRQz-0/edit)), or just keep track of your predictions privately in a spreadsheet.
+
+If the event is moderately important, I don't want to make a prediction about it, but I try to reduce my hindsight bias by creating a coherent narrative about the counterfactual outcome.
+Finally, if it's not important at all, I want to forget about the existence of hindsight bias and just feel good about my having predicted the right outcome once again.
 
 ```{r include=FALSE}
 
