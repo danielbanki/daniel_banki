@@ -1,5 +1,5 @@
 ---
-title: "One book, (at least) one idea: Book wars by John B. Thompson"
+title: "One book, (at least) one idea 2: Book wars by John B. Thompson"
 description: |
   A reflection about hindsight bias and what we can do about it.
 author:
