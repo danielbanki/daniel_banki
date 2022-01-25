@@ -1,0 +1,43 @@
+R version 4.0.3 (2020-10-10)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19043)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United Kingdom.1252 
+[2] LC_CTYPE=English_United Kingdom.1252   
+[3] LC_MONETARY=English_United Kingdom.1252
+[4] LC_NUMERIC=C                           
+[5] LC_TIME=English_United Kingdom.1252    
+system code page: 1250
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods  
+[7] base     
+
+other attached packages:
+ [1] here_1.0.0      forcats_0.5.0   stringr_1.4.0   dplyr_1.0.2    
+ [5] purrr_0.3.4     readr_1.4.0     tidyr_1.1.2     tibble_3.0.4   
+ [9] ggplot2_3.3.2   tidyverse_1.3.0
+
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.1.0  xfun_0.29         bslib_0.3.1      
+ [4] haven_2.3.1       colorspace_2.0-0  vctrs_0.3.5      
+ [7] generics_0.1.0    htmltools_0.5.2   yaml_2.2.1       
+[10] rlang_0.4.12      jquerylib_0.1.4   pillar_1.4.7     
+[13] withr_2.3.0       glue_1.4.2        DBI_1.1.0        
+[16] dbplyr_2.0.0      modelr_0.1.8      readxl_1.3.1     
+[19] lifecycle_1.0.1   munsell_0.5.0     gtable_0.3.0     
+[22] cellranger_1.1.0  rvest_1.0.2       evaluate_0.14    
+[25] knitr_1.37        fastmap_1.1.0     fansi_0.4.1      
+[28] highr_0.8         broom_0.7.2       Rcpp_1.0.7       
+[31] backports_1.2.0   scales_1.1.1      jsonlite_1.7.1   
+[34] fs_1.5.0          distill_1.2       hms_0.5.3        
+[37] digest_0.6.27     stringi_1.5.3     rprojroot_2.0.2  
+[40] grid_4.0.3        cli_3.1.0         tools_4.0.3      
+[43] magrittr_2.0.1    sass_0.4.0        crayon_1.3.4     
+[46] pkgconfig_2.0.3   downlit_0.2.1     ellipsis_0.3.1   
+[49] xml2_1.3.2        reprex_0.3.0      lubridate_1.7.9.2
+[52] rstudioapi_0.13   assertthat_0.2.1  rmarkdown_2.8    
+[55] httr_1.4.2        R6_2.5.0          compiler_4.0.3   

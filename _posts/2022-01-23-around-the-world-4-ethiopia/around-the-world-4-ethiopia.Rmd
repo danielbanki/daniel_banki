@@ -1,0 +1,133 @@
+---
+title: "Around the world 4: Ethiopia"
+description: |
+  Ethiopian long-distance runners at the Olympics.
+author:
+  - name: Daniel Banki
+    url: https://twitter.com/banki_daniel
+date: 01-23-2022
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+    highlight: default
+    highlight_downlit: true
+creative_commons: CC BY
+categories:
+  - R
+  - ggplot2
+  - Around the world
+draft: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Introduction
+
+I rarely watch sports. When I do, it's probably because 4 years have passed again and it's time for the Olympics, which I watch almost religiously. Something that strikes me every time is the dominance of a handful of countries in some events. Some examples: I take it as a given that Koreans will win medals in archery, South European countries in water polo, and China will dominate table tennis. Similarly, I always expect to see Ethiopian medals in long-distance running. 
+
+Ethiopia first participated in the Olympic Games in 1956. Its athletes won a remarkable number of medals in long-distance running events (marathon, 10,000 metres, and 5000 metres) over the years. My goal with this interactive visualization is to make these extraordinary performances a bit more visible. 
+
+The source of the data is [this](https://en.wikipedia.org/wiki/Ethiopia_at_the_Olympics) Wikipedia page. For each Olympics Ethiopia participated in, you can see two things: (1) its athletes who won medals in long-distance running events at the selected Olympics and (2) the total number of medals its athletes won up to (and including) the selected Olympics. 
+
+
+```{r packages}
+
+library(tidyverse)
+library(here)
+
+```
+
+```{r get-table, eval=FALSE}
+
+
+library(rvest)
+
+# scrape medal table from Wikipedia
+url <- "https://en.wikipedia.org/wiki/Ethiopia_at_the_Olympics"
+tables <- read_html(url) %>% html_table()
+data <- tables[[6]]
+
+# only keep long-distance competitions
+data <- data %>%
+  mutate(
+    gender = ifelse(str_detect(Event, "Women's"), "woman", "man"),
+    event = case_when(
+      str_detect(Event, "10,000") ~ "10K",
+      str_detect(Event, "5000") ~ "5K",
+      str_detect(Event, "marathon") ~ "marathon",
+      TRUE ~ "not long distance"
+    )
+  ) %>%
+  select(-Sport, -Event) %>%
+  filter(event != "not long distance")
+
+
+# expand grid to cover all games-events pair for both genders
+data_expanded <- expand_grid(unique(data$Games), unique(data$gender), unique(data$event))
+colnames(data_expanded) <- c("Games", "gender", "event")
+
+data_to_plot <- left_join(data_expanded, data, by = c("Games", "gender", "event"))
+
+data_female <- data_to_plot %>% filter(gender == "woman")
+data_male <- data_to_plot %>% filter(gender == "man")
+
+data_wide <- left_join(data_female, data_male, by = c("Games", "event"), suffix = c("_female", "_male")) %>%
+  group_by(Games, event) %>%
+  mutate_at(vars("Medal_male", "Name_male"), ~ replace(., duplicated(.), NA)) %>%
+  group_by(Games, event) %>%
+  mutate_at(vars("Medal_female", "Name_female"), ~ replace(., duplicated(.), NA)) %>%
+  ungroup() %>%
+  select(-contains("gender"))
+
+write_csv(data_wide, "ethiopia-data.csv")
+# I made some manual (non-reproducible), cosmetic changes in the excel file after the export (affecting 2000 and 2004) - the resulting file is then used as the basis for the shiny app
+
+```
+
+# Interactive visualization
+
+```{r include-app}
+
+knitr::include_app("https://danielbanki.shinyapps.io/ethiopia/", height = "1000px")
+```
+
+
+# Conclusion
+
+
+After playing around with this visualization, I find myself returning to the issue I mentioned at the beginning: How can a country sustain such a great performance for 60 years? This seems especially noteworthy in a sport that has a large talent pool to draw from (i.e., many people compete in running events all over the world, while much fewer people do that in, say, archery).
+
+When there are remarkable successes in any human endeavor---be it successful businesses or Ethiopian runners---, there are always people who claim to have discovered the secret behind them. Whatever the causes behind the success of Ethiopian runners may be, the country has undoubtedly given extraordinary runners to the world. I'm looking forward to seeing what they're up to in 2024.
+
+
+```{r session-info}
+
+sessionInfo() %>% capture.output(file = "session_info.txt")
+```
+
+
+```{r}
+
+disclaimer <- paste0("../../_disclaimers/around-the-world-disclaimer.Rmd")
+
+
+
+```
+
+```{r disclaimer, child = disclaimer}
+
+
+
+
+
+```
+
+
+
+
