@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://danielbanki.com/about.html</loc>
-    <lastmod>2021-11-16T16:53:43+01:00</lastmod>
+    <lastmod>2022-01-25T16:08:06+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2022-01-23-around-the-world-4-ethiopia/</loc>
-    <lastmod>2022-01-25T14:46:25+01:00</lastmod>
+    <lastmod>2022-01-25T14:46:26+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-12-05-one-book-at-least-one-idea-book-wars-by-john-b-thompson/</loc>
-    <lastmod>2022-01-25T15:16:10+01:00</lastmod>
+    <lastmod>2022-01-25T15:16:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-10-30-around-the-world-3-armenia/</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-09-29-one-book-at-least-one-idea-1-complications-by-atul-gawande/</loc>
-    <lastmod>2021-11-16T17:27:58+01:00</lastmod>
+    <lastmod>2021-11-16T17:27:59+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-08-27-around-the-world-2-chile/</loc>
@@ -38,14 +38,14 @@
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/</loc>
-    <lastmod>2021-11-16T17:27:39+01:00</lastmod>
+    <lastmod>2021-11-16T17:27:41+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest/</loc>
-    <lastmod>2021-11-16T17:35:15+01:00</lastmod>
+    <lastmod>2021-11-16T17:35:16+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones/</loc>
-    <lastmod>2021-11-16T17:25:42+01:00</lastmod>
+    <lastmod>2021-11-16T17:25:53+01:00</lastmod>
   </url>
 </urlset>

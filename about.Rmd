@@ -7,18 +7,8 @@ title: "About this blog"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Daniel Banki
 
-* PhD in Economics, Finance and Management (Universitat Pompeu Fabra, 2020-)
-* MRes in Economics, Finance and Management (Universitat Pompeu Fabra, 2020)
-* MSc in Behavioural and Economic Science (University of Warwick, 2017)
-* MA in Economics (University of Glasgow, 2016)
-
-
-
-## What I do
-
-I'm a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making. 
+I'm Daniel Banki, a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making. I use this blog to share some of the things I work on in my free time. 
 
 ## Contact
 
