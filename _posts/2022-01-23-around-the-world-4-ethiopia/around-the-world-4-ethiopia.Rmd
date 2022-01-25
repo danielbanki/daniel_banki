@@ -19,6 +19,7 @@ categories:
   - ggplot2
   - Around the world
 draft: false
+preview: "preview-ethiopia.jpg"
 ---
 
 
