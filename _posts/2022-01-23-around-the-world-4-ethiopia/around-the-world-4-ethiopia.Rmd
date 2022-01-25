@@ -18,6 +18,7 @@ categories:
   - R
   - ggplot2
   - Around the world
+  - shiny
 draft: false
 preview: "preview-ethiopia.jpg"
 ---
