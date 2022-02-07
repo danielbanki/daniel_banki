@@ -1,0 +1,102 @@
+---
+title: "One book, (at least) one idea 3: Fariña by Nacho Carretero"
+description: |
+  A reflection about the Matthew effect in an unexpected place.
+author:
+  - name: Daniel Banki
+    url: https://twitter.com/banki_daniel
+date: 02-07-2022
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+    highlight: default
+    highlight_downlit: true
+creative_commons: CC BY
+categories:
+- book reflections
+editor_options: 
+  markdown: 
+    wrap: sentence
+preview: farina-book-cover.jpg  
+draft: false
+---
+
+# Introduction
+
+This [book](<https://www.amazon.com/gp/product/8416001464/ref=x_gr_w_bb_sout?ie=UTF8&tag=x_gr_w_bb_sout-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=8416001464&SubscriptionId=1MGPYB6YW3HWK55XCGG2>) is about the history of the drug trade in Galicia, a coastal region in the northwestern part of Spain.
+Many drug shipments enter Europe through Galicia.
+But why there?
+
+The simplified story goes as follows: Galicia has rugged coastlines, which makes smuggling more difficult to detect (i.e., ideal geography).
+Simultaneously, there is a group of Galicians who had previous experience with smuggling goods (i.e., existing human capital).
+When the Colombian drug cartels were looking to export their drugs to Europe, Galicia seemed to offer them the combination of geography and human capital (and probably other factors) that was difficult to match elsewhere.
+
+Let's take this already simplified story and focus on only one of these factors: human capital accumulation.
+What helped the Galician clans accumulate sufficient smuggling experience that would make them look credible in the eyes of the Colombians?
+It's difficult to know, but it probably didn't hurt that they had previous smuggling experience with contraband cigarettes.
+And how could they enter the cigarette business?
+Well, by having accumulated a lot of experience over the years smuggling other items through the Spanish-Portuguese border.
+
+# Matthew effect
+
+If we take a step back from the specifics of the drug trade, the accumulation mechanism I described above can also be observed in many other walks of life.
+Let's look at one such example from a distant domain: schooling.
+
+Imagine that children can enroll in a primary school based on where they live.
+A child who lives in a neighborhood with a better school has an initial advantage over other children.
+She then has a higher chance of being admitted to a good high school, which in turn increases her likelihood of making it to a good university.
+Graduating from a good university, in turn, makes it more likely that she will find a good job.
+Although the initial difference between this child and her friend in an adjacent neighborhood is small, their outcomes diverge over the years, resulting in potentially large differences by the time they reach adulthood.
+
+This accumulation mechanism is called the Matthew effect.
+Named after a parable from the Gospel of Matthew, it sometimes appears in public discourse as the adage "the rich get richer, and the poor get poorer".
+
+Let's now turn our attention back to the drug trade and see how the Matthew effect has helped Galician clans accumulate both money and skills.
+
+## Matthew effect in money
+
+When it comes to accumulating money, a smuggler who has an initial financial advantage over other smugglers can become very rich over time.
+To see why, suppose he is a local smuggler and wants to smuggle cigarettes internationally.
+Cigarette smuggling is a capital-intensive business: he may have to buy some expensive equipment, hire some bodyguards, maintain an infrastructure of support services (e.g., pay people who unload items, repair vehicles, etc.), and bribe some local officials.
+
+He can only afford all this if he has accumulated some money as a local smuggler, for example, by having started the trade a bit earlier than others or by having done it slightly better.
+When he eventually makes the jump to cigarette smuggling, the potential gains are much higher than before.
+The cycle is then repeated when he transitions from cigarettes to drugs.
+
+The takeaway is that, like a traditional investor with extra funds, a well-off smuggler is better placed to take advantage of an opportunity when it arises.
+
+## Matthew effect in skills
+
+When it comes to accumulating skills, an initial experience with smuggling can give him further knowledge about the trade and better people skills.
+First, he learns more about the operational aspects of the trade: which smuggling routes are safer, how to package the items, and how to set his prices.
+Even more important, perhaps, is learning about the human element: whom to trust, whose silence to buy, whom to intimidate, and whose wrath to avoid.
+He can then use this knowledge to choose his business partners wisely and minimize the chances of going out of business (e.g., by death, imprisonment, bankruptcy, etc.).
+
+For if he is a bad judge of people's character and he tries to bribe an incorruptible official, or his money is stolen by one of his subordinates, then his involvement in the trade isn't likely to last long.
+So, he needs a method to identify those people who would cause him trouble.
+And the best way to get better at that is to predict others' behavior repeatedly in high-stake interactions and receive direct feedback.
+This is where previous experience in, for example, having negotiated shipments of contraband cigarettes proves valuable for a prospective drug smuggler.
+
+# Conclusion
+
+To sum it up, the history of the drug trade in Galicia can be understood at least in part through the Matthew effect.
+Some smugglers have a small initial advantage over others, due to a combination of geography, luck, talent, and some other factors.
+This initial advantage is then magnified through the Matthew effect, allowing a small group of smugglers to become extremely wealthy.
+
+```{r include=FALSE}
+
+book_disclaimer <- paste0(here::here(), "/_disclaimers/one-book-one-idea-disclaimer.Rmd")
+
+
+
+```
+
+```{r disclaimer, child = book_disclaimer}
+
+
+
+
+
+```
