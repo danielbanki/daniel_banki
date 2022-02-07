@@ -25,7 +25,7 @@ draft: false
 
 # Introduction
 
-This [book](<https://www.amazon.com/gp/product/8416001464/ref=x_gr_w_bb_sout?ie=UTF8&tag=x_gr_w_bb_sout-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=8416001464&SubscriptionId=1MGPYB6YW3HWK55XCGG2>) is about the history of the drug trade in Galicia, a coastal region in the northwestern part of Spain.
+This [book](https://www.amazon.com/gp/product/8416001464/ref=x_gr_w_bb_sout?ie=UTF8&tag=x_gr_w_bb_sout-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=8416001464&SubscriptionId=1MGPYB6YW3HWK55XCGG2) is about the history of the drug trade in Galicia, a coastal region in the northwestern part of Spain.
 Many drug shipments enter Europe through Galicia.
 But why there?
 
@@ -46,9 +46,9 @@ Let's look at one such example from a distant domain: schooling.
 
 Imagine that children can enroll in a primary school based on where they live.
 A child who lives in a neighborhood with a better school has an initial advantage over other children.
-She then has a higher chance of being admitted to a good high school, which in turn increases her likelihood of making it to a good university.
-Graduating from a good university, in turn, makes it more likely that she will find a good job.
-Although the initial difference between this child and her friend in an adjacent neighborhood is small, their outcomes diverge over the years, resulting in potentially large differences by the time they reach adulthood.
+He then has a higher chance of being admitted to a good high school, which in turn increases his likelihood of making it to a good university.
+Graduating from a good university, in turn, makes it more likely that he will find a good job.
+Although the initial difference between this child and his friend in an adjacent neighborhood is small, their outcomes diverge over the years, resulting in potentially large differences by the time they reach adulthood.
 
 This accumulation mechanism is called the Matthew effect.
 Named after a parable from the Gospel of Matthew, it sometimes appears in public discourse as the adage "the rich get richer, and the poor get poorer".
