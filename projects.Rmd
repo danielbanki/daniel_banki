@@ -14,7 +14,9 @@ library(dplyr)
 
 project_table <- dplyr::tribble(
   ~Name, ~Description,
-  "[Barcelona house price explorer](https://danielbanki.shinyapps.io/barcelona-house-prices-explorer/)", "A simple app to visualise house prices in Barcelona."
+  "[NameguessR](https://nameguessr.herokuapp.com/)", "A game where you guess a person's nationality from their name.",
+  "[Barcelona house price explorer](https://danielbanki.shinyapps.io/barcelona-house-prices-explorer/)", "An interactive app to visualise house prices in Barcelona."
+  
 )
 ```
 

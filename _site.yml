@@ -1,6 +1,8 @@
 name: "daniel-banki"
 title: "Daniel Banki's blog"
-base_url: https://danielbanki.com
+description: |
+  Daniel Banki's blog
+base_url: https://danielbanki.com/
 output_dir: "_site"
 navbar:
   right:
