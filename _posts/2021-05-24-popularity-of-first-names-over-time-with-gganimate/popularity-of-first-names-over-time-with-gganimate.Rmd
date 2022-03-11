@@ -1,5 +1,7 @@
 ---
 title: "Popularity of first names over time with gganimate"
+description: |
+  How popular are the popular names?
 author:
   - name: Daniel Banki
     url: https://twitter.com/banki_daniel

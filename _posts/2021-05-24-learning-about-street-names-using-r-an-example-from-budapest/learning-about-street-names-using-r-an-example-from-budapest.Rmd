@@ -1,5 +1,7 @@
 ---
-title: "Learning about street names using R: an example from Budapest"
+title: "Learning about street names using R"
+description: |
+  A tale about street names in Budapest.
 author:
   - name: Daniel Banki
     url: https://twitter.com/banki_daniel

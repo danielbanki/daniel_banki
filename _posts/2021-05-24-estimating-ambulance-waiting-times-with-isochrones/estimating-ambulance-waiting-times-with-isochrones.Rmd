@@ -1,5 +1,7 @@
 ---
 title: "Estimating ambulance waiting times with isochrones"
+description: |
+  How quickly does emergency medical help arrive in Hungary?
 author:
   - name: Daniel Banki
     url: https://twitter.com/banki_daniel

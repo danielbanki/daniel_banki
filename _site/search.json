@@ -5,21 +5,21 @@
       "title": "About this blog",
       "author": [],
       "contents": "\r\nI’m Daniel Banki, a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making. I use this blog to share some of the things I work on in my free time.\r\nContact\r\nPlease feel free to reach out to me at @banki_daniel.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-03-10T15:34:11+01:00"
+      "last_modified": "2022-03-11T19:30:56+01:00"
     },
     {
       "path": "index.html",
       "title": "Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-03-10T13:44:32+01:00"
+      "last_modified": "2022-03-11T19:30:57+01:00"
     },
     {
       "path": "projects.html",
       "title": "Projects",
       "author": [],
       "contents": "\r\nShiny apps\r\n\r\nName\r\nDescription\r\nNameguessR\r\nA game where you guess a person’s nationality from their name.\r\nBarcelona house price explorer\r\nAn interactive app to visualise house prices in Barcelona.\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-03-10T15:18:42+01:00"
+      "last_modified": "2022-03-11T19:31:02+01:00"
     }
   ],
   "collections": ["posts/posts.json"]

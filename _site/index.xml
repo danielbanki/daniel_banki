@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Daniel Banki's blog</title>
+    <link>https://danielbanki.com/</link>
+    <atom:link href="https://danielbanki.com/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Daniel Banki's blog
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Mon, 07 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>One book, (at least) one idea 3: Fariña by Nacho Carretero</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2022-02-07-one-book-at-least-one-idea-3-faria-by-nacho-carretero</link>
+      <description>A reflection about the Matthew effect in an unexpected place.</description>
+      <category>book reflections</category>
+      <guid>https://danielbanki.com/posts/2022-02-07-one-book-at-least-one-idea-3-faria-by-nacho-carretero</guid>
+      <pubDate>Mon, 07 Feb 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2022-02-07-one-book-at-least-one-idea-3-faria-by-nacho-carretero/farina-book-cover.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Around the world 4: Ethiopia</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2022-01-23-around-the-world-4-ethiopia</link>
+      <description>Ethiopian long-distance runners at the Olympics.</description>
+      <category>R</category>
+      <category>ggplot2</category>
+      <category>Around the world</category>
+      <category>shiny</category>
+      <guid>https://danielbanki.com/posts/2022-01-23-around-the-world-4-ethiopia</guid>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2022-01-23-around-the-world-4-ethiopia/preview-ethiopia.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>One book, (at least) one idea 2: Book wars by John B. Thompson</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-12-05-one-book-at-least-one-idea-book-wars-by-john-b-thompson</link>
+      <description>A reflection about hindsight bias and what we can do about it.</description>
+      <category>book reflections</category>
+      <guid>https://danielbanki.com/posts/2021-12-05-one-book-at-least-one-idea-book-wars-by-john-b-thompson</guid>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-12-05-one-book-at-least-one-idea-book-wars-by-john-b-thompson/book-wars-book-cover.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Around the world 3: Armenia</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-10-30-around-the-world-3-armenia</link>
+      <description>What can we learn from brandy exports?</description>
+      <category>R</category>
+      <category>ggplot2</category>
+      <category>Around the world</category>
+      <guid>https://danielbanki.com/posts/2021-10-30-around-the-world-3-armenia</guid>
+      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-10-30-around-the-world-3-armenia/world-export-plot.png" medium="image" type="image/png" width="2816" height="1564"/>
+    </item>
+    <item>
+      <title>One book, (at least) one idea 1: Complications by Atul Gawande</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-09-29-one-book-at-least-one-idea-1-complications-by-atul-gawande</link>
+      <description>A reflection about trade-offs in surgery.</description>
+      <category>book reflections</category>
+      <guid>https://danielbanki.com/posts/2021-09-29-one-book-at-least-one-idea-1-complications-by-atul-gawande</guid>
+      <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-09-29-one-book-at-least-one-idea-1-complications-by-atul-gawande/complications-book-cover.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Around the world 2: Chile</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-08-27-around-the-world-2-chile</link>
+      <description>In this post, I visualise copper production in Chile.</description>
+      <category>R</category>
+      <category>ggplot2</category>
+      <category>gganimate</category>
+      <category>Around the world</category>
+      <guid>https://danielbanki.com/posts/2021-08-27-around-the-world-2-chile</guid>
+      <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-08-27-around-the-world-2-chile/around-the-world-2-chile_files/figure-html5/show-chile-1.gif" medium="image" type="image/gif"/>
+    </item>
+    <item>
+      <title>Around the world 1: Ecuador</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-08-12-around-the-world-1-ecuador</link>
+      <description>In this post, I visualise the number of hospital beds in the provinces of Ecuador.</description>
+      <category>R</category>
+      <category>ggplot2</category>
+      <category>Around the world</category>
+      <guid>https://danielbanki.com/posts/2021-08-12-around-the-world-1-ecuador</guid>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-08-12-around-the-world-1-ecuador/preview.png" medium="image" type="image/png" width="950" height="512"/>
+    </item>
+    <item>
+      <title>Popularity of first names over time with gganimate</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate</link>
+      <description>How popular are the popular names?</description>
+      <category>gganimate</category>
+      <category>R</category>
+      <guid>https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate</guid>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/preview.png" medium="image" type="image/png" width="1021" height="545"/>
+    </item>
+    <item>
+      <title>Learning about street names using R</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest</link>
+      <description>A tale about street names in Budapest.</description>
+      <category>R</category>
+      <guid>https://danielbanki.com/posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest</guid>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest/preview.png" medium="image" type="image/png" width="1344" height="960"/>
+    </item>
+    <item>
+      <title>Estimating ambulance waiting times with isochrones</title>
+      <dc:creator>Daniel Banki</dc:creator>
+      <link>https://danielbanki.com/posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones</link>
+      <description>How quickly does emergency medical help arrive in Hungary?</description>
+      <category>leaflet</category>
+      <category>R</category>
+      <guid>https://danielbanki.com/posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones</guid>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://danielbanki.com/posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones/preview.png" medium="image" type="image/png" width="899" height="497"/>
+    </item>
+  </channel>
+</rss>
