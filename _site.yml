@@ -1,5 +1,6 @@
 name: "daniel-banki"
 title: "Daniel Banki's blog"
+theme: theme.css
 description: |
   Daniel Banki's blog
 base_url: https://danielbanki.com/
@@ -18,4 +19,9 @@ navbar:
       href: https://github.com/danielbanki
     - icon: fa fa-rss
       href: index.xml
+collections:
+  posts:
+    share: [twitter, linkedin]
+    citations: false
+    subscribe: _subscribe.html
 output: distill::distill_article
