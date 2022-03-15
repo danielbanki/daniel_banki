@@ -14,7 +14,7 @@ library(dplyr)
 
 project_table <- dplyr::tribble(
   ~Name, ~Description,
-  "[NameguessR](https://nameguessr.herokuapp.com/)", "A game where you guess a person's nationality from their name.",
+  "[NameguessR](https://nameguessr.herokuapp.com/)", "A game in which you guess a person's nationality from their name.",
   "[Barcelona house price explorer](https://danielbanki.shinyapps.io/barcelona-house-prices-explorer/)", "An interactive app to visualise house prices in Barcelona."
   
 )
@@ -23,6 +23,26 @@ project_table <- dplyr::tribble(
 
 ```{r echo=FALSE}
 project_table %>% 
+  knitr::kable()
+
+```
+
+## Other things
+```{r include=FALSE}
+
+
+other_project_table <- dplyr::tribble(
+  ~Name, ~Description,
+  "[One day, one country](one-day.html)", "I read and write about a new country every day."
+  )
+  
+
+
+
+```
+
+```{r echo=FALSE}
+other_project_table %>% 
   knitr::kable()
 
 ```

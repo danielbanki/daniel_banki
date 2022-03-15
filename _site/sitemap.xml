@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
+    <loc>https://danielbanki.com/about.html</loc>
+    <lastmod>2022-03-14T21:33:47+01:00</lastmod>
+  </url>
+  <url>
     <loc>https://danielbanki.com/</loc>
     <lastmod>2021-05-24T23:00:50+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://danielbanki.com/one-day.html</loc>
+    <lastmod>2022-03-15T23:02:06+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://danielbanki.com/projects.html</loc>
+    <lastmod>2022-03-15T23:03:31+01:00</lastmod>
   </url>
   <url>
     <loc>https://danielbanki.com/posts/2022-02-07-one-book-at-least-one-idea-3-faria-by-nacho-carretero/</loc>

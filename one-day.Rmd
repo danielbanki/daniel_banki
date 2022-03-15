@@ -1,0 +1,36 @@
+---
+title: "One day, one country"
+---
+
+# Project description
+
+Every day I randomly pick a new country, then I read and write a bit about it. The idea is to learn something new every day about the world and get into the habit of writing regularly. As I write about a new country every day, I don't have time to research things carefully. This means there may be many inaccuracies and outright errors. Please feel free to point them out to me if you encounter any. I primarily think of these notes as a public diary in which I keep track in (almost) real-time of the things I found interesting and the questions I had as I was learning about a new country.
+
+# Overview
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r prepare-table}
+posts <- tidyr::tribble(
+  ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 1", "Kenya", "Africa", "[See notes for Kenya](#kenya)"
+)
+```
+
+```{r display-table}
+knitr::kable(posts)
+```
+
+# Notes
+
+## Kenya
+
+I've heard about the Maasai before, but I haven't realized they are one of the largest ethnic groups in Kenya. It turns out that Kenya's flag even features a Maasai shield. A note to my future self: checking out the symbols on a flag can give me some interesting leads. Another ethnic group I found interesting are the Kalenjin: many of the famous Kenyan middle- and long-distance runners are from this ethnic group. It would be interesting to know why.
+
+I also learned that the largest urban slum in Africa is a place called Kibera, on the outskirts of Nairobi, Kenya's capital. My questions: (1) Why there? In other words, is there a geographic, legal, or other reason why the slum is there, or is its location just the result of a random process?; (2) Did its residents move there from a particular region in Kenya (or East Africa)?
+
+Ngũgĩ wa Thiong'o is one of the most popular Kenyan writers. He has a short story (*The Upright Revolution: Or Why Humans Walk Upright*) that has been translated into 100 languages. Maybe it's time for me to read some Kenyan literature.
+
+While I was reading about Kenya, I noticed many names and concepts that start with the letter K---for example, Kenya itself, or the aforementioned Kalenjin and Kibera. Is this a coincidence, or is the letter K indeed common in some or all the languages Kenyans use?
