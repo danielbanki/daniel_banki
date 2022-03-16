@@ -15,7 +15,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 2", "Uganda", "Africa", "[See notes for Uganda](#uganda)",
   "Day 1", "Kenya", "Africa", "[See notes for Kenya](#kenya)"
+
 )
 ```
 
@@ -24,6 +26,27 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Uganda
+
+Uganda is named after Buganda, its largest region. Buganda is in the southern part of the
+country, and approximately 25% of the country's 45 million residents live there---many
+of them in the capital, Kampala. People from Buganda are collectively called
+the Baganda (or Ganda), while a single person from this group is a Muganda. They
+speak a language called Luganda.
+
+In yesterday's post about Kenya, I mentioned that flags may contain useful information about a
+country. So, I duly checked Uganda's flag. It depicts a grey crowned crane,
+Uganda's national bird. So far so good. Today's revelation (or reminder,
+rather) is that names can also contain interesting pieces of information.
+
+Suspecting that Buganda, Luganda, and Baganda may have something to do with the country's name didn't require a lot of effort because the words are almost identical. Without knowing
+too much about the country's history, one would guess that the Baganda people must have played an important role in shaping Uganda's past and
+present.
+
+Detecting that some words share a common root is not always as straightforward as in
+Uganda's case. Had the words been a bit more different from one
+another, I could have easily overlooked the link between the country's name and its most important region.
 
 ## Kenya
 
