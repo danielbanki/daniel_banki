@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 3", "Burundi", "Africa", "[See notes for Burundi](#burundi)",
   "Day 2", "Uganda", "Africa", "[See notes for Uganda](#uganda)",
   "Day 1", "Kenya", "Africa", "[See notes for Kenya](#kenya)"
 
@@ -26,6 +27,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Burundi
+
+Countries in the same region tend to have many things in common. One of the aspects in which Burundi is similar to some other countries in the region (Tanzania, in particular, comes to mind) is that it has recently changed its capital city. Historically, the capital of the pre-colonial Kingdom of Burundi was Gitega, which is now the second-largest city in Burundi. Around the time Burundi gained its independence from Belgium, Bujumbura became its capital city. Now it’s the country’s largest and economically most important city, conveniently located on the shore of Lake Tanganyika. A couple of years ago, Burundi’s then-president announced that the capital would be Gitega again.
+
+I’ve always wondered why countries change their capitals. I assume sometimes there is a purely political reason, such as moving to a politically more welcoming region. Other times, changing the capital can reflect, among other things, a genuine shift in the importance of certain regions within a country.
+
+Finally, let me mention two things briefly in which Burundi is a bit atypical in sub-Saharan Africa. First, Burundi is linguistically more homogeneous than most other countries in the region: almost everyone speaks Kirundi, while in other countries there is usually a large degree of linguistic diversity. Second, the current country’s territory occupies that of the pre-colonial Kingdom of Burundi. This is rare in that most current borders in the region don’t coincide with those of pre-colonial states. 
+
 
 ## Uganda
 
