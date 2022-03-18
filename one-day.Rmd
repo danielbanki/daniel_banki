@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 4", "Suriname", "South America", "[See notes for Suriname](#suriname)",
   "Day 3", "Burundi", "Africa", "[See notes for Burundi](#burundi)",
   "Day 2", "Uganda", "Africa", "[See notes for Uganda](#uganda)",
   "Day 1", "Kenya", "Africa", "[See notes for Kenya](#kenya)"
@@ -27,6 +28,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Suriname
+
+Suriname has enormous ethnic diversity for a country of only 600 thousand people.  To understand why this is the case, let’s briefly look at some of its history. Some areas of today’s Suriname were inhabited by indigenous tribes, the largest one of which were the Arawak. When Suriname became a Dutch colony in the second half of the 17th century, new plantations could be created in the fertile Guiana plains, which required a lot of human labor. Initially, this labor was provided by slaves from sub-Saharan Africa. Many of them managed to escape from the plantations and find refuge in the adjacent rainforest. The descendants of these people are the Maroons and constitute around 22% of the Surinamese.
+
+After the Dutch abolished slavery in 1863, the labor-intensive plantations had to find another source of labor. Contract and indentured (i.e., people working without a salary for some years) workers were brought in primarily from today’s Indonesia and India. Like Suriname, Indonesia was also a Dutch colony, which made transporting people to Suriname easier. Organizing the transport of Indian workers was a bit more involved because, India being under British colonial rule, arrangements needed to be made with the British. Today around 15% of the population have Javanese (from Java in Indonesia) ancestry and around 27% have Indian ancestry. We also find people with Creole, Chinese, and Brazilian heritage among the country’s residents. 
+
+To sum it up, Suriname’s current ethnic composition offers a glimpse of its history: the slave trade from Africa, contract and indentured workers from Asia, and recent voluntary migration from places such as Brazil. 
+
 
 ## Burundi
 
