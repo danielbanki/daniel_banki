@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 5", "Uzbekistan", "Asia", "[See notes for Uzbekistan](#uzbekistan)",
   "Day 4", "Suriname", "South America", "[See notes for Suriname](#suriname)",
   "Day 3", "Burundi", "Africa", "[See notes for Burundi](#burundi)",
   "Day 2", "Uganda", "Africa", "[See notes for Uganda](#uganda)",
@@ -28,6 +29,17 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Uzbekistan
+
+Historically, cotton has played an important role in Uzbekistan. For instance, all the emblems the country had in the last roughly 100 years featured a cotton plant. Cotton production greatly increased during the Soviet era: around 70% of the Soviet Union’s entire production came from the Uzbek SSR. Although cotton production is now lower than it was in the Soviet era, Uzbekistan is still among the largest producers and exporters of cotton. Nicknamed as “white gold”, cotton has undoubtedly contributed to the country’s economy, but its production also brought with it some problems. Let’s briefly mention three of them.
+
+First, cotton is a water-intensive crop. The water for its irrigation was supplied in part by the Aral Sea. Furthermore, rivers feeding the Aral Sea (Amu Darya and Syr Darya) were diverted for Soviet irrigation projects. As a result of all this, the Aral Sea started shrinking in the 1960s and lost around 90% of its original size, creating the world’s most recent desert (Aralkum Desert) in the dried-up basin.
+
+Second, the environmental damage was exacerbated by the extensive use of fertilizers and other chemical products, which caused soil contamination and public health problems. For example, a defoliant called Butifos (since outlawed) was blamed by locals for [higher than usual infant mortality and birth defects]( https://www.newscientist.com/article/mg12416910-800-soviet-cotton-threatens-a-regions-sea-and-its-children/). 
+
+Finally, some reports claim that cotton production in Uzbekistan is rife with human rights abuses. According to a 2020 [Bureau of International Labor Affairs report](https://www.dol.gov/agencies/ilab/reports/child-labor/list-of-goods), forced labor is still used, and some earlier reports documented child labor as well.
+
 
 ## Suriname
 
