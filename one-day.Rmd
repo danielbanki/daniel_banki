@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 6", "Malta", "Europe", "[See notes for Malta](#malta)",
   "Day 5", "Uzbekistan", "Asia", "[See notes for Uzbekistan](#uzbekistan)",
   "Day 4", "Suriname", "South America", "[See notes for Suriname](#suriname)",
   "Day 3", "Burundi", "Africa", "[See notes for Burundi](#burundi)",
@@ -29,6 +30,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Malta
+
+Maltese is one of the two official languages in Malta. It is a Semitic language, making Malta the only country in the European Union to use one. How did Maltese become Malta’s official language? To answer this question, we need to take a step back and briefly consider Malta’s geographic location and history.
+
+The most widely spoken Semitic language is Arabic. The Arab world is geographically close (around 300 km) to Malta, with Tunisia to its west and Libya to its south. By the beginning of the 10th century, the Arabs conquered Sicily, located to the north of Malta, and created the Emirate of Sicily, which also included Malta. The conquerors spoke a variety of Arabic called Siculo-Arabic. This language is now extinct, but it served as the starting point for the evolution of Maltese.
+
+In 1091, Norman forces conquered Malta, and the island’s re-Christianisation began. The language went through a process of Latinisation: the formerly spoken language was written down in Latin script. It’s the only Semitic language written exclusively with Latin characters, albeit it has some extra, diacritically altered letters such as ċ. Over the centuries, Italian and Sicilian had a large influence over it. As a result, its vocabulary does not only contain words of Arabic origin but also many loanwords from these two languages and, more recently, English. It has been Malta’s official language since 1934, and around 97% of the population consider it their mother tongue.
+
 
 ## Uzbekistan
 
