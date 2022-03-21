@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 7", "Seychelles", "Africa", "[See notes for Seychelles](#seychelles)",
   "Day 6", "Malta", "Europe", "[See notes for Malta](#malta)",
   "Day 5", "Uzbekistan", "Asia", "[See notes for Uzbekistan](#uzbekistan)",
   "Day 4", "Suriname", "South America", "[See notes for Suriname](#suriname)",
@@ -30,6 +31,19 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Seychelles
+
+For a small country of around 100 thousand inhabitants, one wouldn’t expect a lot of political turmoil. We would be wrong in this case. Since Seychelles gained its independence from the United Kingdom in 1976, it saw, among other things, a successful coup d’état, various failed ones, a one-party state, the murder of an opposition leader in London, and a peaceful transition of power. 
+
+One year into its independence, the country’s elected president was deposed while attending a conference outside the country. In a virtually bloodless coup, around 200 armed men took over strategic positions on Mahé, the main island. Based on a contemporary [New York Times article]( https://www.nytimes.com/1977/06/07/archives/seychelles-capital-is-calm-after-coup-insurgents-secretive-about.html) that describes the aftermath of the events, one comes away with the impression that the inhabitants’ lives hadn’t been upended in significant ways. For example, the article notes that tourists on the island were a bit annoyed they couldn’t buy alcohol temporarily and that six British officers were arrested and flown back to Europe. After this coup, the person who served as the prime minister under the deposed president formed a new government and quickly instituted a one-party state.
+
+Four years later, in 1981, the country saw an unsuccessful coup attempt, led by an Irish mercenary and orchestrated by South Africa. A group of 44 mercenaries flew into Mahé, under the pretext that they were rugby players on holiday. Their identity was quickly discovered when a baggage search produced an AK-47, and the coup attempt failed. 
+
+In 1991, the same president who introduced the one-party state announced a return to a multiparty system. He won several elections before voluntarily turning over his presidency to another politician from his party. In 2020, the elections were won by the opposition party that hadn’t been in power since 1977.
+
+In sum, Seychellois politics of the last couple of decades produced many rather unexpected (and occasionally bizarre) episodes.
+
 
 ## Malta
 
