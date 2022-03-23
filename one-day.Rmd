@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 8", "Germany", "Europe", "[See notes for Germany](#germany)",
   "Day 7", "Seychelles", "Africa", "[See notes for Seychelles](#seychelles)",
   "Day 6", "Malta", "Europe", "[See notes for Malta](#malta)",
   "Day 5", "Uzbekistan", "Asia", "[See notes for Uzbekistan](#uzbekistan)",
@@ -31,6 +32,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Germany
+
+If we had traveled through what is now Germany some centuries ago, we would have found a large number of sovereign, independent states. They comprised a loose political entity called the Holy Roman Empire, which existed for around 1000 years and was finally dissolved in 1806. A decade later, in 1815, it was replaced by another federation of states, the German Confederation. A primarily military alliance, it was formed by 39 independent states, including Prussia and Austria. 
+
+Being the two most powerful states, Prussia and Austria were rivals in the quest for power. The tensions between them culminated in the Seven Weeks’ War in 1866, which was won by Prussia and led to the dissolution of the Confederation. The now dominant Prussia created the North German Confederation. Shortly after, a dispute between the this newly formed entity and France escalated into the Franco-Prussian war, which induced Southern German states to join the Prussia-led Confederation.
+
+With the Confederation now involving both northern and southern states, the unification was essentially complete: in 1871, the German Empire was born, with Prussia at the helm. The mastermind behind the rise of Prussia and the main driving force behind Germany becoming a nation-state was Otto von Bismarck. He became the first Chancellor of the Empire, holding this position until 1890.
+
 
 ## Seychelles
 
