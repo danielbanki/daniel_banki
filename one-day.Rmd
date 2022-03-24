@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes, 
+  "Day 9", "South Sudan", "Africa", "[See notes for South Sudan](#south-sudan)",
   "Day 8", "Germany", "Europe", "[See notes for Germany](#germany)",
   "Day 7", "Seychelles", "Africa", "[See notes for Seychelles](#seychelles)",
   "Day 6", "Malta", "Europe", "[See notes for Malta](#malta)",
@@ -32,6 +33,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## South Sudan
+
+In 2011, the UN admitted South Sudan as its most recent, 193rd member. The country gained its independence from Sudan after two prolonged civil wars, each lasting around 20 years. This means that a person born in the southern part of Sudan in 1955 (the year Sudan itself became independent) had to survive around 40 years of devastating civil wars before he could celebrate his 56th birthday in an independent South Sudan.
+
+Living that long wasn’t very likely, however, if we consider that life expectancy at birth in 1960 was around 48 years in Sudan and 32 years in South Sudan, [according to the World Bank]( https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SS-SD). (It’s unclear how the World Bank calculated life expectancy in 1960 for a country that hadn’t existed back then.)
+
+A mere two years into its independence, the country descended into a new civil war that lasted 7 years. During this civil war, an estimated 400,000 people were killed, and millions were displaced internally or had to flee to neighboring countries. Ethnic conflict soared, one particularly gruesome episode of which was the 2014 Bentiu massacre. Even more recently, the country experienced widespread famine, caused both by the war and a pest outbreak. In 2020, the sides agreed to a peace deal. 
+
 
 ## Germany
 
