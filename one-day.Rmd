@@ -14,7 +14,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```{r prepare-table}
 posts <- tidyr::tribble(
-  ~Day, ~Country, ~Continent, ~Notes, 
+  ~Day, ~Country, ~Continent, ~Notes,
+  "Day 11", "Chad", "Africa", "[See notes for Chad](#chad)",
   "Day 10", "Lesotho", "Africa", "[See notes for Lesotho](#lesotho)",
   "Day 9", "South Sudan", "Africa", "[See notes for South Sudan](#south-sudan)",
   "Day 8", "Germany", "Europe", "[See notes for Germany](#germany)",
@@ -35,6 +36,17 @@ knitr::kable(posts)
 
 # Notes
 
+## Chad
+
+Chad is a multi-ethnic country, having around 200 ethnic groups. The largest ethnic group are the Sara people, with around 30% of the population belonging to this ethnicity. They live in the southern part of Chad, to the southeast of Lake Chad, an endorheic lake, fed primarily by the Chari River. This region is the country’s most fertile, and a relatively small, area with a large population. In contrast, the northern and central parts of Chad cover a large area but have a low population density. In the north, we find the Saharan zone while the central part is the semi-arid Sahel, a transition zone leading to the Sudanian savannah. 
+
+In multi-ethnic countries like Chad, it’s not uncommon to see different ethnic groups struggle for power. Frequently, this struggle ends in a protracted and devastating civil war. Typically, the country’s leader favors his ethnicity and commits atrocities or discriminates against other ethnicities. The other ethnic groups then feel threatened and harbor hate and resentment. When they have the chance, they try to topple this leader and settle the score. The process then starts all over again.
+
+Chad became independent in 1960. Its first leader was a man named François Tombalbaye, an ethnic Sara. An interesting side note about this leader: a photo from 1959 shows scars on his face. Not from a war-time injury or a debilitating disease but from what is called scarification, a common tradition in many African tribes. During this procedure, a person’s body is intentionally cut or burned to leave permanent scars.
+
+During his regime, Tombalbaye banned opposition parties, and inter-ethnic relations got worse, eventually leading to a civil war. He was killed in 1975. The country’s next leader was Hissène Habré, an ethnic Toubou from the north. Fifteen years later, he was deposed by one of his generals, an ethnic Zaghawa. This general ruled Chad for three decades, surviving various coup d’états and rebellions. He was killed in 2021 during a military offensive against rebel groups. 
+
+
 ## Lesotho
 
 Lesotho holds many records in geography. For instance, it’s one of only three enclave countries in the world (the other two being Vatican City and San Marino). An enclave country’s territory is fully surrounded by that of another country. In Lesotho’s case, that other country is South Africa. Furthermore, Lesotho is the only country whose entire territory lies above 1000 meters. To be more precise, its lowest point is at 1400 meters, beating the second country on the list, Rwanda, by 450 meters.
@@ -46,7 +58,7 @@ That said, even though Lesotho is an independent state, South Africa is hugely i
 
 ## South Sudan
 
-In 2011, the UN admitted South Sudan as its most recent, 193rd member. The country gained its independence from Sudan after two prolonged civil wars, each lasting around 20 years. This means that a person born in the southern part of Sudan in 1955 (the year Sudan itself became independent) had to survive around 40 years of devastating civil wars before he could celebrate his 56th birthday in an independent South Sudan.
+In 2011, the United Nations admitted South Sudan as its most recent, 193rd member. The country gained its independence from Sudan after two prolonged civil wars, each lasting around 20 years. This means that a person born in the southern part of Sudan in 1955 (the year Sudan itself became independent) had to survive around 40 years of devastating civil wars before he could celebrate his 56th birthday in an independent South Sudan.
 
 Living that long wasn’t very likely, however, if we consider that life expectancy at birth in 1960 was around 48 years in Sudan and 32 years in South Sudan, [according to the World Bank]( https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SS-SD). (It’s unclear how the World Bank calculated life expectancy in 1960 for a country that hadn’t existed back then.)
 
