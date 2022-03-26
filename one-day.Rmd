@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 12", "Kyrgyzstan", "Asia", "[See notes for Kyrgyzstan](#kyrgyzstan)",
   "Day 11", "Chad", "Africa", "[See notes for Chad](#chad)",
   "Day 10", "Lesotho", "Africa", "[See notes for Lesotho](#lesotho)",
   "Day 9", "South Sudan", "Africa", "[See notes for South Sudan](#south-sudan)",
@@ -35,6 +36,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Kyrgyzstan
+
+Issyk-Kul is a large endorheic (i.e., without outflow) mountain lake in northeastern Kyrgyzstan. Its name means “warm lake” in the Kyrgyz language. Situated in the northern Tian Shan mountains at an elevation of 1600 meters, its name doesn’t refer to the outside temperature (which can be very cold indeed) but to the fact that the lake never freezes. 
+
+The lake has significant biodiversity. It contains several fish species that aren’t found elsewhere, so-called endemic species. Some of them are endangered by overfishing and predation by other fish species that had been introduced in the 1970s. 
+
+Beyond its biodiversity, Issyk-Kul has also been an attractive spot for tourism for the last couple of decades. During Kyrgyzstan’s Soviet era, when domestic tourism within the Soviet Union was encouraged, the empire’s elite started frequenting the lake and built lavish resorts and hotels in the town of Cholpon Ata. Although there have been new developments in recent years, much of the town’s current infrastructure was built in the Soviet era. The lake’s region is responsible for 70% of all tourism in Kyrgyzstan, attracting around [1 million people a year (opens a pdf)](https://www.adb.org/sites/default/files/project-document/62284/41548-kgz-dpta-v1-cholponata.pdf). Many tourists to the region are domestic travelers or from former Soviet states, such as Kazakhstan or Uzbekistan. 
+
 
 ## Chad
 
