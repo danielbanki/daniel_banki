@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 14", "Ghana", "Africa", "[See notes for Ghana](#ghana)",
   "Day 13", "Gabon", "Africa", "[See notes for Gabon](#gabon)",
   "Day 12", "Kyrgyzstan", "Asia", "[See notes for Kyrgyzstan](#kyrgyzstan)",
   "Day 11", "Chad", "Africa", "[See notes for Chad](#chad)",
@@ -37,6 +38,17 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Ghana
+
+Nii Amon Kotei was a Ghanaian artist most renowned for designing the coat of arms of Ghana. Commissioned by the British colonial government, his design was adopted when Ghana gained independence in 1957. Unchanged to this day, it features a shield with four quarters divided by a St. Georges Cross and some other symbols. 
+
+Although all four quarters tell us something different about Ghana, let’s focus here on only two of them: a cocoa tree and a mine shaft. The cocoa tree represents the country’s wealth in agricultural products in general and cocoa in particular. Only second to its western neighbor (Ivory Coast) in [cocoa production]( https://www.statista.com/statistics/263855/cocoa-bean-production-worldwide-by-region/), the cocoa tree makes an important contribution to the country’s economy.
+
+Besides agricultural production, mining (as represented by the mine shaft) is also paramount to the Ghanaian economy. Although the country mines and exports a variety of metals, gold is by far the most important one.  It's one of the country’s top export products. But not only that: Ghana’s gold production is also significant internationally, in some years being the largest in Africa.
+
+Above the shield is a black five-pointed star, the lodestar of African freedom. Also present in Ghana’s flag (designed the same year by a different artist), it became a symbol of Pan-Africanism and anti-colonialism and served as an inspiration for other African flags.    
+
 
 ## Gabon
 
