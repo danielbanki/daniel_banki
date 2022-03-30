@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 15", "Ivory Coast", "Africa", "[See notes for Ivory Coast](#ivory-coast)",
   "Day 14", "Ghana", "Africa", "[See notes for Ghana](#ghana)",
   "Day 13", "Gabon", "Africa", "[See notes for Gabon](#gabon)",
   "Day 12", "Kyrgyzstan", "Asia", "[See notes for Kyrgyzstan](#kyrgyzstan)",
@@ -38,6 +39,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Ivory Coast
+
+Félix Houphouët-Boigny was an unusual figure in African politics. Until his death in 1993, he was Ivory Coast’s president---a period encompassing 33 years. This is no small feat in Africa where leaders tend to stay in power for much shorter periods. At the time of his death, he was the longest-serving president in Africa; even on the world stage, he was only third, after the dictators of Cuba and North Korea. 
+
+He maintained close ties with France throughout his years in power. Before he became the leader of the newly independent Ivory Coast, he had served in the French government. But his link to France was not only political but economic: he owned several high-value properties in Paris (and elsewhere). According to some sources, his wealth amounted to several billion dollars. By regional standards, Ivory Coast was a relatively stable country and had a strong economy, primarily driven by coffee and cocoa production. It’s not difficult to imagine how a president with strong executive power could financially benefit from a growing economy with little outside control. 
+
+In 1983, the country’s political capital was moved from Abidjan to Yamoussoukro, making it the fourth capital city in a century. Born in a family of tribal chiefs in Yamoussoukro, Boigny’s decision was probably motivated by factors other than purely administrative or practical ones. He set out to develop the new capital city. Its flagship construction project was the Basilica of Our Lady of Peace, one of the largest churches worldwide.
+
 
 ## Ghana
 
