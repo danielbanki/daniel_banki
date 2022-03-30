@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 16", "Namibia", "Africa", "[See notes for Namibia](#namibia)",
   "Day 15", "Ivory Coast", "Africa", "[See notes for Ivory Coast](#ivory-coast)",
   "Day 14", "Ghana", "Africa", "[See notes for Ghana](#ghana)",
   "Day 13", "Gabon", "Africa", "[See notes for Gabon](#gabon)",
@@ -39,6 +40,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Namibia
+
+The first inhabitants of Namibia were different hunter-gatherer tribes such as the San, Damara, and Nama people. Over the centuries, Bantu peoples started to arrive in the country, eventually making them a majority. At the end of the 19th century, most of the territory became a German colony under the name of German South West Africa. One exception to German rule was the port city of Walvis Bay and some offshore islands, which were under British rule.
+
+The Herero and Nama people started a rebellion against the German colonizers in 1904, eventually leading to the Battle of Waterberg. The Germans, thanks to their superior firepower, quickly won the battle and drove the fleeing Herero into the Kalahari Desert, one of the driest spots in sub-Saharan Africa. According to some estimates, tens of thousands of Herero people died of starvation and dehydration. Many of those who survived the first phase of the genocide were then sent to the Shark Island concentration camp and succumbed to diseases, malnutrition, overwork, and abuse.  It was the first genocide of the 20th century. Eventually acknowledged as a genocide, the German government is now paying reparations to the affected communities. 
+
+The Germans were defeated during World War I by the South African forces, thereby transferring control over Namibia to South Africa. Starting in the 1960s, the decolonization of Africa led to calls for Namibian self-determination. After armed insurgencies and a regional conflict, Namibia gained independence from South Africa in 1990.
+
 
 ## Ivory Coast
 
