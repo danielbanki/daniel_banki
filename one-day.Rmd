@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 18", "Guyana", "South America", "[See notes for Guyana](#guyana)",
   "Day 17", "Benin", "Africa", "[See notes for Benin](#benin)",
   "Day 16", "Namibia", "Africa", "[See notes for Namibia](#namibia)",
   "Day 15", "Ivory Coast", "Africa", "[See notes for Ivory Coast](#ivory-coast)",
@@ -41,6 +42,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Guyana
+
+Guyana neighbors three countries: Brazil, Suriname, and Venezuela. It has territorial disputes with the latter two. In the largest dispute, Venezuela claims an area of around 160,000 km2 (out of Guyana’s 215,000 km2). The territory in question is called Guayana Esequiba by Venezuela, and it concerns the territory to the west of the Essequibo River. It’s controlled and administered by Guyana, but it has been a consistent source of tension between the two countries for a long time.
+
+The origin of the conflict lies in an old territorial dispute between colonial powers. Venezuela was a Spanish colony, while Guyana was under Dutch and later British colonial rule. As is usually the case, both sides claimed the territory citing some historical and geographical reasons. After gold had been discovered in the 19th century, the dispute became more intense. In 1899, an international arbitration tribunal ruled almost fully in favor of the British, giving them most of the disputed territory. 
+
+In the early 1960s, Venezuela challenged the validity of this arbitration. The newly independent Guyana and Venezuela tried to resolve the issue---without success. In 2013, an oil exploration vessel in disputed waters (i.e., the part of the ocean that’s adjacent to the disputed territory) was seized by the Venezuelan navy. As of today, there is still no agreement about where the border should be. One thing seems certain: when a disputed territory has significant natural resources, whether it's gold in the 19th century or oil in the 21st, reaching an agreement becomes more difficult. 
+
 
 ## Benin
 
