@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 17", "Benin", "Africa", "[See notes for Benin](#benin)",
   "Day 16", "Namibia", "Africa", "[See notes for Namibia](#namibia)",
   "Day 15", "Ivory Coast", "Africa", "[See notes for Ivory Coast](#ivory-coast)",
   "Day 14", "Ghana", "Africa", "[See notes for Ghana](#ghana)",
@@ -40,6 +41,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Benin
+
+Benin became independent from France in 1960. But the name Benin was only adopted in 1975---the new country was initially called Dahomey, named after the Kingdom of Dahomey. This kingdom was an important regional power before it came under French colonial rule in the late 19th century. It’s noteworthy---among other things---for its role in the slave trade and its all-female military unit. 
+
+As a highly militarized kingdom, the Kingdom of Dahomey frequently conducted raids against other societies. During these raids, its fighters captured people who were then sold to European slave traders. The British passed the Slavery Abolition Act in 1833, which made slave ownership illegal in the British territories. As a result, the demand for slaves gradually disappeared. This Act and other factors contributed to the kingdom’s decline. After some territorial disputes and two wars with France, the kingdom was incorporated into French West Africa. 
+
+Frequent wars require a large number of military-age men. High casualties in this population led to an unusual proposition---an all-female military unit. Named the Dahomey Amazons, they were recruited from free Dahomean women and captives. They went through rigorous training and made up about a third of the army.
+
 
 ## Namibia
 
