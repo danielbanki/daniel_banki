@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 19", "Sri Lanka", "Asia", "[See notes for Sri Lanka](#sri-lanka)",
   "Day 18", "Guyana", "South America", "[See notes for Guyana](#guyana)",
   "Day 17", "Benin", "Africa", "[See notes for Benin](#benin)",
   "Day 16", "Namibia", "Africa", "[See notes for Namibia](#namibia)",
@@ -42,6 +43,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Sri Lanka
+
+In the first half of the 19th century, Sri Lanka was exporting large amounts of coffee. By the end of the century, its coffee plantations were largely wiped out by a disease, Hemileia vastatrix. This disease (a fungus) covers the leaves of a plant with spores or causes them to fall. It spread quickly---instead of just affecting a local plantation, the country’s entire coffee production was affected: it dropped from around 100 million pounds in 1870 to only 5 million [a mere 20 years later]( https://www.apsnet.org/edcenter/apsnetfeatures/Pages/ICPP98CoffeeRust.aspx).
+
+While the disease was destroying coffee plants, tea (another plantation crop) was introduced into the country. A Scottish tea planter, James Taylor, set up a small tea plantation in the central part of the country (then called British Ceylon). After visiting the island, a fellow Scotsman, Thomas Lipton, started buying Ceylon tea from Taylor's plantation. His surname might ring familiar to some: he was the founder of the famous tea company Lipton. 
+Today, Sri Lanka is the [fourth largest exporter of tea](https://www.statista.com/statistics/264188/production-of-tea-by-main-producing-countries-since-2006/).
+
+Another of its important export products is cinnamon. Globally, there are only three countries (Indonesia, China, and Vietnam) that produce more cinnamon. Cinnamomum verum (translated as true cinnamon tree) is native to Sri Lanka; some claim it has a subtler flavor than other cinnamon species.
 
 ## Guyana
 
