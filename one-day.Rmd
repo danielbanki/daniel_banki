@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 20", "Mauritania", "Africa", "[See notes for Mauritania](#mauritania)",
   "Day 19", "Sri Lanka", "Asia", "[See notes for Sri Lanka](#sri-lanka)",
   "Day 18", "Guyana", "South America", "[See notes for Guyana](#guyana)",
   "Day 17", "Benin", "Africa", "[See notes for Benin](#benin)",
@@ -43,6 +44,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Mauritania
+
+Mauritania abolished slavery in 1981, the last country to do so in the world. Despite being banned, owning slaves was only criminalized in 2007. Even today, the law is rarely enforced. Although the exact number of enslaved people in the country cannot be known, the 2018 Global Slavery Index estimated the currently enslaved population to be around [90 000 people]( https://www.globalslaveryindex.org/), or approximately 2% of the population. When we see a statistic like this, it’s important to bear in mind that the prevalence of slavery is difficult to estimate. This difficulty is multiplied when the country in question is located almost entirely in a vast desert. 
+
+Furthermore, slavery doesn’t manifest itself in only one way. For instance, a U.S Department of State page mentions [7 forms of modern slavery]( https://www.state.gov/what-is-modern-slavery/), including forced labor, domestic servitude, and bonded labor. In Mauritania, chattel slavery is common. In this form of slavery, the enslaved person is the slave owner's property and can be, among other things, sold or rented out to others.
+
+Besides the inhumane treatment of enslaved people, there is also a racial undertone in slavery in Mauritania. The country is multi-ethnic, with both lighter-skinned and darker-skinned ethnic groups. The former group, called Bidhan, are of Arab or Berber descent and comprise most slave owners; the latter group, called Haratin, are descendants of former sub-Saharan slaves and comprise most currently enslaved people.
+
+Slavery is still a significant problem in Mauritania. Nonetheless, the last couple of decades saw a lot of progress on this issue. Anti-slavery organizations, such as the Initiative for the Resurgence of the Abolitionist Movement, increased the visibility of this human rights issue, frequently at significant personal cost. 
 
 ## Sri Lanka
 
