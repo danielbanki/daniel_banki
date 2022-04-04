@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 21", "Libya", "Africa", "[See notes for Libya](#libya)",
   "Day 20", "Mauritania", "Africa", "[See notes for Mauritania](#mauritania)",
   "Day 19", "Sri Lanka", "Asia", "[See notes for Sri Lanka](#sri-lanka)",
   "Day 18", "Guyana", "South America", "[See notes for Guyana](#guyana)",
@@ -44,6 +45,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Libya
+
+When the major European powers set their eyes on colonizing Africa at the end of the 19th century, Italy also started a search for potential colonies. Besides the Horn of Africa, today’s Libya would belong to its sphere of influence. In the early years of the 20th century, Libya was under the rule of the significantly weakened Ottoman Empire.
+
+In 1911, Italy invaded the territory. The Italo-Turkish War, as it came to be known, lasted around a year and led to the establishment of two colonies: Italian Tripolitania and Italian Cyrenaica. Notable for its military innovations, this was the first war in which a military carried out an aerial reconnaissance operation and an aerial bombardment. To put things in perspective, the bombardment meant dropping 4 grenades of around 2 kilograms each from a very simple airplane. 
+
+In 1923, a conflict between the Italian military and rebel forces associated with the Senussi broke out. Led by Omar al-Mukhtar, the Senussi were a political-religious order seeking to reform the lives of Bedouin tribesmen in the eastern part of the country. This conflict, sometimes called the Pacification of Libya, ended in 1932 after the capture and execution of al-Mukhtar. A bit of a misnomer, the war was anything but pacific. The Italian military used chemical weapons, deported a large part of Cyrenaica’s (the eastern part of the country) population from their land, and confined them to concentration camps. 
+
+Libya remained an Italian colony until 1943. Conquered by the Allies in the North African Campaign, it was administered by British and French forces until its independence in 1951. 
 
 ## Mauritania
 
