@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 22", "Jordan", "Asia", "[See notes for Jordan](#jordan)",
   "Day 21", "Libya", "Africa", "[See notes for Libya](#libya)",
   "Day 20", "Mauritania", "Africa", "[See notes for Mauritania](#mauritania)",
   "Day 19", "Sri Lanka", "Asia", "[See notes for Sri Lanka](#sri-lanka)",
@@ -45,6 +46,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Jordan
+
+When a war breaks out in a country, people try to flee to a safer, typically neighboring one. Jordan has been relatively safe by regional standards for the last seven decades. This means that whenever the security situation worsened in one of its neighbors, a large wave of refugees arrived in the country.
+
+The first wave of refugees were Palestinians who fled during the Arab-Israeli War in 1948. Followed by subsequent waves, most Palestinians received Jordanian citizenship. According to some estimates, the number of Palestinian refugees in the country is approximately [2 million]( https://www.unrwa.org/where-we-work/jordan). Around one in five live in refugee camps. 
+
+More recently, during the Iraq War in 2003, up to 1 million Iraqis found shelter in Jordan. Most of them have since returned, with around 130 thousand remaining in the country. Since the start of the Syrian civil war, an estimated 1.4 million Syrian refugees have arrived in Jordan, with around half of them being registered refugees. Some live in two large refugee camps, but most live among the local population. 
+
+Jordan has a population of around 10 million people. Providing help to over a million refugees is a sizeable undertaking for a country its size. Aside from the problems of unemployment, lack of access to healthcare, and poverty, the refugee population also suffers from a lack of clean water. The country, being one of the most water-scarce countries on earth, has a hard time providing water even to its citizens, let alone to a more marginalized refugee population.
 
 ## Libya
 
