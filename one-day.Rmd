@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 23", "Brazil", "South America", "[See notes for Brazil](#brazil)",
   "Day 22", "Jordan", "Asia", "[See notes for Jordan](#jordan)",
   "Day 21", "Libya", "Africa", "[See notes for Libya](#libya)",
   "Day 20", "Mauritania", "Africa", "[See notes for Mauritania](#mauritania)",
@@ -46,6 +47,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Brazil
+
+Brazil’s first capital city was Salvador. Two centuries later, in the middle of the 18th century, the capital was moved to Rio de Janeiro. Although both cities have access to the Atlantic Ocean, Rio de Janeiro was a quickly growing city closer to lucrative gold and diamond mines. When Brazil became independent in 1822, the idea of a new capital city was born. The idea, however, wouldn’t become reality for more than 130 years. 
+
+Juscelino Kubitschek became Brazil’s president in 1956. During his campaign, hallmarked by the slogan ’50 years of progress in 5’, he promised to move the capital from Rio de Janeiro to a more central location in the country. The goal of this move was to develop Brazil’s interior regions, which lagged behind the more densely inhabited (and more prosperous) coastal regions. The new capital, Brasília, was to be planned and constructed from scratch. 
+
+After a public competition, the jury selected the modernist architect Lúcio Costa's design. The city has a cross-axial design, which could be visualized as an airplane or a bird. One axis hosts the political and administrative buildings, while the other contains residential buildings. Construction took place at a record speed: in only 41 months, the city was finished. 
+
+Initially designed for around half a million people, the population quickly outgrew this limit. The plan was that satellite cities, separated from the city by a 15-mile buffer zone, would accommodate the extra population. Unfortunately, the plan largely failed. Today, Brasília is frequently held up as an example of a failing city.
 
 ## Jordan
 
