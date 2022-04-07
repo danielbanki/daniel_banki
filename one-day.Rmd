@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 24", "Italy", "Europe", "[See notes for Italy](#italy)",
   "Day 23", "Brazil", "South America", "[See notes for Brazil](#brazil)",
   "Day 22", "Jordan", "Asia", "[See notes for Jordan](#jordan)",
   "Day 21", "Libya", "Africa", "[See notes for Libya](#libya)",
@@ -47,6 +48,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Italy
+
+If a country is large enough, chances are there will be conflicts between its regions. Italy, with an area of around 300,000 km2, is no different in this regard. It has a North-South divide, at least since its unification in the second half of the 19th century. The gap that existed at the unification only grew wider over time. Today, the southern part of the country, once occupied by the Kingdoms of Naples and Sicily, fares significantly worse on most economic indicators.
+
+A particularly alarming statistic in Southern Italian provinces is the high unemployment rate. When unemployment is high, economic output tends to be lower. This is reflected in the southern provinces’ significantly lower GDP per capita. For example, out of Italy’s 20 administrative regions, the bottom five by GDP per capita are in Southern Italy. When people don’t see a bright future for themselves or their children, they leave. In 2010 alone, around [134,000 people]( https://www.theguardian.com/world/2011/oct/11/economic-exodus-emigration-southern-italy) left Southern Italy---most of them finding their new home in the north.
+
+Those who stay despite the poverty, poor infrastructure, and joblessness, are exposed to the consequences of Mafia-type organized crime. According to a 2010 estimate, the yearly income of criminal organizations could reach a sum equivalent to [9% of Italy’s GDP]( https://www.telegraph.co.uk/news/worldnews/europe/italy/6957240/Italy-claims-finally-defeating-the-mafia.html). Aside from the damage to people’s livelihoods, these criminal groups were also responsible for several high-profile murders. One example of this was the Via D'Amelio bombing, which claimed the life of the distinguished anti-mafia judge Paolo Borsellino.
 
 ## Brazil
 
