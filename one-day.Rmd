@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 25", "Central African Republic", "Africa", "[See notes for the Central African Republic](#central-african-republic)",
   "Day 24", "Italy", "Europe", "[See notes for Italy](#italy)",
   "Day 23", "Brazil", "South America", "[See notes for Brazil](#brazil)",
   "Day 22", "Jordan", "Asia", "[See notes for Jordan](#jordan)",
@@ -48,6 +49,17 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Central African Republic
+
+By most statistics, the Central African Republic is one of the worst countries to live in. There is extreme poverty: the GDP per capita is around 400 dollars---or less than half the price of a new iPhone. Aside from the miserable economic conditions, its life expectancy is the lowest in the world, while its maternal mortality rate is among the highest. The majority of its population is illiterate. 
+
+Since its independence from France in 1960, the country’s history follows a pattern that’s, unfortunately, not uncommon in the region. Civil wars, coups d’états, a small glimmer of hope for democratic change, then a devastating civil war again. Although leaders in countries like the Central African Republic don’t typically rise to power through their moral standing in the community, the country produced a particularly brutal and narcissistic dictator even by regional standards. 
+
+Jean-Bédel Bokassa came to power in a coup in 1966. At the start of his regime, he suspended the constitution and dissolved the National Assembly. Not stopping there, he renamed the country the Central African Empire, declared himself president for life, and named himself the emperor. At that time, the country had approximately two million people---not the typical population of an empire. He spent an estimated 20 million dollars (equivalent to a third of the country’s annual budget) on his coronation ceremony. Eventually, he was ousted from power the same way he came to it---by a coup. 
+
+ Many years after his regime had ended, he was convicted of murders, concealing corpses, embezzlement, and other charges in a widely publicized trial.
+
 
 ## Italy
 
