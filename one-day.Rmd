@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 26", "Nigeria", "Africa", "[See notes for Nigeria](#nigeria)",
   "Day 25", "Central African Republic", "Africa", "[See notes for the Central African Republic](#central-african-republic)",
   "Day 24", "Italy", "Europe", "[See notes for Italy](#italy)",
   "Day 23", "Brazil", "South America", "[See notes for Brazil](#brazil)",
@@ -49,6 +50,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Nigeria
+
+Nigeria is Africa’s most populous country. It’s a country characterized by regional variation---in climate, ethnicity, religion, and even legal systems. 
+
+In many parts of the world, climate determines how people make a living. The climate of the southern part of the country is tropical, while the northern part is an arid steppe (and desert in the northeast). Traditionally, most were pastoralists in the north and farmers in the south. Where these groups meet, in the so-called Middle Belt (the country’s central region), the situation is susceptible to conflict.
+
+This is especially the case when ethnic, linguistic, and religious differences also abound. Nigeria is a multi-ethnic state with hundreds of ethnicities. The three largest groups dominate one region of the country each: the Hausa in the north, the Yoruba in the southwest, and the Igbo in the southeast. Not only do these groups speak different languages, but their religious affiliations are also different. The northern part of the country follows Islam, while the southern part is Christian. Reflecting its past, Nigeria's legal system has elements of common law (from its colonial past), customary law (in some indigenous regions), and Sharia law (in the north). 
+
+A country with this level of diversity is in a tricky position: it needs to maintain a common identity while allowing people to live their lives as they see fit. Nigeria is a federal country, structured in some ways like the United States. The advantage of this system is that it allows more regional variation than a unitary state. The official language is English---not one of the regional languages. If, in contrast, one of the regional languages were to become the official language, people from other linguistic groups could be alienated. 
 
 ## Central African Republic
 
