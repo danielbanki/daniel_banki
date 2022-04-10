@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 27", "Syria", "Asia", "[See notes for Syria](#syria)",
   "Day 26", "Nigeria", "Africa", "[See notes for Nigeria](#nigeria)",
   "Day 25", "Central African Republic", "Africa", "[See notes for the Central African Republic](#central-african-republic)",
   "Day 24", "Italy", "Europe", "[See notes for Italy](#italy)",
@@ -50,6 +51,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Syria
+
+The most famous family in Syria is undoubtedly the al-Assad family, having led the county for the last 50 years. Hafez al-Assad was the first nationally prominent member of the family. Born in an Alawite (minority sect of Shia Muslims) family in western Syria, his ascension to power didn’t happen overnight---it required no fewer than three coups.
+
+After a military career, he was involved in the 1963 Syrian coup d’état, when the Ba'ath Party, a movement urging the unification of the Arab world, came to power. Three years later, a power struggle broke out within the leading factions of the party, which deposed the traditional leadership and fortified al-Assad’s position.  In 1970, he ousted his last opponent, clearing the way for his regime that would last 30 years.
+
+In the mid-80s, he had some health issues, bringing the issue of his successor to the front. But some of his family members had their own plans: his brother Rifaat attempted a coup against his regime. After the failed attempt, Rifaat was exiled to France until he was allowed to return to Syria last year.
+
+The person who allowed him to return was Hafez’s second son, Bashar, the country’s current president. Ruling Syria since his father’s death in 2000, he wasn’t destined for a political career. Trained as an eye doctor in Syria and the U.K., his political involvement became clear only after his older brother, Bassel, had died in a car accident. 
 
 ## Nigeria
 
