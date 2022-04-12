@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 29", "Costa Rica", "America", "[See notes for Costa Rica](#costa-rica)",
   "Day 28", "Haiti", "America", "[See notes for Haiti](#haiti)",
   "Day 27", "Syria", "Asia", "[See notes for Syria](#syria)",
   "Day 26", "Nigeria", "Africa", "[See notes for Nigeria](#nigeria)",
@@ -52,6 +53,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Costa Rica
+
+There are only a few countries in the world that don’t have an army---Costa Rica being one of them. It had a short civil war in 1948 when disputes around election results escalated into an armed conflict. After the civil war ended, the provisional president, José Figueres, abolished the army. The funds formerly allocated to the military are now used to finance public health and education programs.
+
+Aside from abolishing the army, Figueres granted women and Costa Ricans of African origin the vote, nationalized the banking sector, and guaranteed public education for all---just to name a few of his reforms from his 18-month provisional presidency. Costa Rica’s democracy, the oldest in Central America, also dates to 1949. After his provisional presidency, Figueres served two more terms as president.
+
+As is frequently the case, his family members also held political and diplomatic positions in subsequent administrations. Most importantly, his son, José María, followed him in his footsteps, serving as the country’s president between 1994 and 1998. In this year's elections, José María unsuccessfully contested the same position again. But unlike dictatorships ruled by dynasties, Costa Rica is a democracy. Even when a country has a small population like Costa Rica does, for a family to stay politically relevant for seven decades is noteworthy. 
 
 ## Haiti 
 
