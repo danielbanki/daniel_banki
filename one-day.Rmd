@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 30", "Niger", "Africa", "[See notes for Niger](#niger)",
   "Day 29", "Costa Rica", "America", "[See notes for Costa Rica](#costa-rica)",
   "Day 28", "Haiti", "America", "[See notes for Haiti](#haiti)",
   "Day 27", "Syria", "Asia", "[See notes for Syria](#syria)",
@@ -53,6 +54,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Niger
+
+Niger is one of the poorest countries today. There are many reasons behind this, one of them being its unfortunate geography---most of the country lies in the Sahara Desert. Around the time it became independent from France, large uranium reserves were discovered in the northern part of the country. There was hope that this resource---if managed properly---could lift many Nigeriens out of poverty. 
+
+Judged by virtually all statistics, uranium didn’t bring about the large-scale changes that many were optimistic about. Since the beginning, uranium mining has been dominated by French conglomerates. According to some, the former colonizer, France, was in a position to negotiate deals that favored its nuclear industry (but not necessarily the Nigerien people). 
+
+The most significant mines are in the twin mining towns of Arlit and Akokan. Far from the country’s capital and located in the desert, Arlit is Niger’s 6th most populous city, and much of its economic life is centered around uranium. In this part of the world, water is a scarce resource. Unsurprisingly, local residents who buy water in 25-liter containers will feel resentful at foreign mining companies pumping water out of the [remaining aquifers]( https://africanarguments.org/2017/07/a-forgotten-community-the-little-town-in-niger-keeping-the-lights-on-in-france-uranium-arlit-areva/). Apart from worsening water scarcity, reports mention toxic waste and illnesses caused by the operations of the nearby mines. 
+
+Despite its many health, environmental, and fairness implications, uranium mining employs many locals. When one of the region’s longest-running mines closed last year after 47 years of operation, [hundreds lost their jobs]( https://world-nuclear-news.org/Articles/Niger-uranium-mine-ends-operations-after-47-years). In a region with very limited economic opportunities, these lost jobs will be difficult to replace.
 
 ## Costa Rica
 
