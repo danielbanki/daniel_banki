@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 31", "Panama", "America", "[See notes for Panama](#panama)",
   "Day 30", "Niger", "Africa", "[See notes for Niger](#niger)",
   "Day 29", "Costa Rica", "America", "[See notes for Costa Rica](#costa-rica)",
   "Day 28", "Haiti", "America", "[See notes for Haiti](#haiti)",
@@ -54,6 +55,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Panama
+
+Panama has a unique geographical position: it’s on a narrow strip of land connecting South and North America. If it weren't for a narrow gap in the Panamanian jungle (Darién-gap), one could travel on a single, continuous road, the Pan-American Highway, from Alaska to Patagonia. Although there had been proposals to build this missing segment, its construction never began. The missing segment would need to cross a dense jungle---a formidable engineering challenge. 
+
+Talking about engineering challenges, the most famous thing in Panama is probably the Panama Canal. Built between 1904 and 1914, it’s one of the largest and most difficult engineering projects ever undertaken. Although eventually constructed by the U.S., other countries also discovered the enormous potential of connecting the Atlantic Ocean and the Pacific Ocean. At the end of the 19th century, the French had already made an unsuccessful attempt to build it. 
+
+The Canal is 82 kilometers long. It has an artificial lake in the middle, located above sea level. At both ends, a sophisticated system lifts and lowers the ships. An engineering system of this complexity requires active maintenance. Initially maintained by the U.S., and after a period of joint management, Panama started to own and operate the Canal in 1999. 
+
+According to the government-owned operator, more than 13,000 vessels passed through the Canal last year alone. In the same year, the tolls paid by the passing vessels contributed around [2 billion USD to the government’s budget](https://www.swissinfo.ch/spa/panam%C3%A1-canal_canal-de-panam%C3%A1-entrega-2.080-millones-de-d%C3%B3lares-al-fisco-como-aporte-anual/47199818#:~:text=Indic%C3%B3%20que%20%22los%20ingresos%20por,millones%20de%20d%C3%B3lares%22%20para%202022.).
 
 ## Niger
 
