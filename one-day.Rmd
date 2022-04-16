@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 33", "El Salvador", "America", "[See notes for El Salvador](#el-salvador)",
   "Day 32", "Cyprus", "Europe", "[See notes for Cyprus](#cyprus)",
   "Day 31", "Panama", "America", "[See notes for Panama](#panama)",
   "Day 30", "Niger", "Africa", "[See notes for Niger](#niger)",
@@ -56,6 +57,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## El Salvador
+
+People all over the world use money to exchange goods and services. Money can manifest itself in many forms---anything works as money as long as you can use it to get, for example, a loaf of bread or a haircut. Before El Salvador’s colonial period, cacao beans fulfilled this important function. When the Spanish colonialists arrived, they brought their currency, the real, with them. In reality, however, the most used coins were the so-called macacos, irregularly shaped silver coins from Peru and Mexico. 
+
+El Salvador became independent in the 19th century. In 1883, it introduced the peso. Less than ten years later, it changed its name to colón, to commemorate Christopher Columbus (called Colón in Spanish). The currency’s value was linked to the U.S. dollar through a fixed exchange rate. In the 1930s, the fixed exchange rate was abandoned.
+
+The colón was the main currency until 2001 when a second currency was also added as legal tender: the U.S. dollar. Once the decision had been made to abandon its own currency, adopting the dollar was the most natural choice for El Salvador. Although surely many factors played a role in this decision, two are worth highlighting. First, the U.S. is the country’s most important trading partner. Second, many Salvadorians live in the U.S. and regularly send money to their families in El Salvador.
+
+The latest development in the monetary history of El Salvador is its embrace of the cryptocurrency Bitcoin. In a move that surprised many, El Salvador’s current president, Nayib Bukele, made it legal tender last year. 
 
 ## Cyprus
 
