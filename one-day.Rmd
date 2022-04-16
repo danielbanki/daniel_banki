@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 32", "Cyprus", "Europe", "[See notes for Cyprus](#cyprus)",
   "Day 31", "Panama", "America", "[See notes for Panama](#panama)",
   "Day 30", "Niger", "Africa", "[See notes for Niger](#niger)",
   "Day 29", "Costa Rica", "America", "[See notes for Costa Rica](#costa-rica)",
@@ -56,9 +57,17 @@ knitr::kable(posts)
 
 # Notes
 
+## Cyprus
+
+Cyprus is an island in the Mediterranean Sea, located to the south of Turkey. As an island with a strategic location, it has drawn the attention of regional powers throughout its history. More than two millennia ago, Alexander the Great conquered it and Hellenized it (i.e., made the local population adopt the Greek language and culture). Fast forward many years and different rulers, the island came under the rule of the Ottoman Empire in the 16th century. People from nearby Anatolia (the peninsula that comprises a large part of today’s Turkey) settled there. As a result of the two conquests, the island came to have a population of both Greek and Turkish Cypriots.
+
+After the Ottoman rule, the island became a British colony before finally achieving independence in 1960. The now-independent country faced a problem: its Greek and Turkish citizens wanted different things. Many Greeks, who made up around 80% of the island’s population, wanted a union with Greece---something Turkish Cypriots opposed. After bouts of intercommunal violence, a Greece-led coup d’état removed the island’s sitting president. Five days later, the Turkish army invaded the island, occupying its north-eastern part. 
+
+The territorial division remains to this day. At the time of the Turkish invasion, many Greek Cypriots lived on the occupied side. Similarly, many Turkish Cypriots lived on the Greek side. Those Greek and Turkish Cypriots who found themselves on the wrong side of the new de-facto border were forced to move. A wall was erected, and a UN buffer zone was created between the two sides. Although the border wall was demolished in 2008, and traveling between the sides became easier, reunification efforts have failed so far. 
+
 ## Panama
 
-Panama has a unique geographical position: it’s on a narrow strip of land connecting South and North America. If it weren't for a narrow gap in the Panamanian jungle (Darién-gap), one could travel on a single, continuous road, the Pan-American Highway, from Alaska to Patagonia. Although there had been proposals to build this missing segment, its construction never began. The missing segment would need to cross a dense jungle---a formidable engineering challenge. 
+Panama has a unique geographical position: it’s on a narrow strip of land connecting South and North America. If it weren't for a narrow gap in the Panamanian jungle (Darién Gap), one could travel on a single, continuous road, the Pan-American Highway, from Alaska to Patagonia. Although there had been proposals to build this missing segment, its construction never began. The missing segment would need to cross a dense jungle---a formidable engineering challenge. 
 
 Talking about engineering challenges, the most famous thing in Panama is probably the Panama Canal. Built between 1904 and 1914, it’s one of the largest and most difficult engineering projects ever undertaken. Although eventually constructed by the U.S., other countries also discovered the enormous potential of connecting the Atlantic Ocean and the Pacific Ocean. At the end of the 19th century, the French had already made an unsuccessful attempt to build it. 
 
