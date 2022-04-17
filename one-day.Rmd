@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 34", "Malawi", "Africa", "[See notes for Malawi](#malawi)",
   "Day 33", "El Salvador", "America", "[See notes for El Salvador](#el-salvador)",
   "Day 32", "Cyprus", "Europe", "[See notes for Cyprus](#cyprus)",
   "Day 31", "Panama", "America", "[See notes for Panama](#panama)",
@@ -57,6 +58,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Malawi
+
+Since its independence in 1964, Malawi (formerly Nyasaland) was ruled by one man for three decades. The ruler, Hastings Banda, was born in the central part of the country on an unknown date, sometime around the turn of the 20th century. He spent time around various missionaries in his childhood and early adulthood. These religious connections opened doors for him; he studied in the U.S. and the U.K., then became a practicing doctor in the U.K. 
+
+Some years after his return to Malawi, he became the country’s first leader upon its independence. He built an autocratic rule while maintaining a pro-Western, anti-communist stance. As is usually the case, he gradually tried to seize ever more power. First, he changed the constitution and got himself elected as the country’s president for a 5-year term. Although Malawi had been a de facto one-party state by then, he banned all parties but his---just in case. To save the hassles of being re-elected every five years, he was declared president for life before the end of his first term.
+
+In many respects, Malawi functioned as a police state. Political dissent was not tolerated, censorship was rampant, and citizens frequently reported each other. In 1983, in what became known as the Mwanza Four incident, four high-ranking government officials died under suspicious circumstances, not long after they had criticized some aspects of the regime. Many years later, no longer the president, he was charged in this case (and acquitted due to lack of evidence). 
+
+In 1993, a referendum asked Malawians if they want a one-party or a multi-party state. The multi-party side won with 65% of the votes. Put differently, 35% of the voting population favored the continuation of the existing system---a result worth thinking about. Banda contested the position of president in the country’s first multi-party elections a year later, losing to his opponent.  
 
 ## El Salvador
 
