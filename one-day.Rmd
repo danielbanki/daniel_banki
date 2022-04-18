@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 35", "Canada", "America", "[See notes for Canada](#canada)",
   "Day 34", "Malawi", "Africa", "[See notes for Malawi](#malawi)",
   "Day 33", "El Salvador", "America", "[See notes for El Salvador](#el-salvador)",
   "Day 32", "Cyprus", "Europe", "[See notes for Cyprus](#cyprus)",
@@ -58,6 +59,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Canada
+
+Immigration played an important role in Canada’s history. In the last two centuries, people from many countries found their new homes in the country. Among them, there were British Loyalists who fled the American Revolution, Scottish Highlanders who had been dispossessed of their lands at home, and Irish peasants who were trying to escape the Great Famine of Ireland.
+
+Immigration was not always equally available to all. For instance, Chinese immigrants, who had arrived in large numbers to work on construction projects like the Canadian Pacific Railway, were frequently discriminated against. In 1885, a tax was introduced that forced every Chinese person entering Canada to pay a fixed amount. Around 40 years later, this monetary burden was deemed insufficient by those wanting to limit Chinese immigration further. Except for a few cases, Chinese immigration was outright banned. 
+
+Currently, around 20% of Canada’s population are immigrants. With current yearly targets of approximately [400,000 immigrants](https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supplementary-immigration-levels-2021-2023.html), Canada’s immigrant population is likely to grow even further in the future.
+
+The country's yearly immigration plan not only determines the number of immigrants but also provides a breakdown by categories. There are four routes available to applicants; most become permanent residents by belonging to one of the following three: economic migrants, family members of permanent residents, and refugees. More than half of the entire quota is allocated to economic migrants; this category includes physicians, business people, and other skilled workers.
 
 ## Malawi
 
