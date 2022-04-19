@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 36", "Bahrain", "Asia", "[See notes for Bahrain](#bahrain)",
   "Day 35", "Canada", "America", "[See notes for Canada](#canada)",
   "Day 34", "Malawi", "Africa", "[See notes for Malawi](#malawi)",
   "Day 33", "El Salvador", "America", "[See notes for El Salvador](#el-salvador)",
@@ -59,6 +60,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Bahrain
+
+Bahrain is the smallest of the Arab states in the Persian Gulf, being the size of New York City. Also, it’s the only island. More accurately, it’s not a single island but an archipelago---a collection of many islands, the largest of which is the Bahrain Island.
+
+Being an island, Bahrain has been accessible only by sea for most of its history. The construction of the King Fahd Causeway changed this. Financed by Saudi Arabia and constructed in the 1980s, it’s a series of bridges and causeways connecting Bahrain and Saudi Arabia. It has a total length of 25 kilometers, passing through both natural and artificial islands.
+
+When the parties first raised the idea, Bahrainis were driving on the left and Saudi Arabians on the right. In 1967, Bahrain switched over to right-hand traffic (around that time, many other countries [were doing the same]( https://www.wsj.com/articles/a-brief-history-of-driving-on-the-left-1506088964)), having to worry about one fewer thing in the already challenging engineering project.
+
+Like its neighbors, Bahrain also has significant revenues from the oil trade, with refined petroleum being its most exported product. But economic life exists even beyond the oil: the country has a highly developed banking and financial services industry. Boasting a business-friendly environment, projects such as the recently launched FinHub973, a digital platform to connect fintech startups and traditional financial institutions, signal the country’s ambitions as a regional leader in the finance industry.
 
 ## Canada
 
