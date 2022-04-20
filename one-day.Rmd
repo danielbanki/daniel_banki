@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 37", "Peru", "America", "[See notes for Peru](#peru)",
   "Day 36", "Bahrain", "Asia", "[See notes for Bahrain](#bahrain)",
   "Day 35", "Canada", "America", "[See notes for Canada](#canada)",
   "Day 34", "Malawi", "Africa", "[See notes for Malawi](#malawi)",
@@ -60,6 +61,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Peru
+
+When governments are unstable, some groups step up to fill the void. In Peru, the most famous of such groups in the last four decades has been Sendero Luminoso (Shining Path), a Maoist guerrilla organization. Led by the former communist philosophy professor Abimael Guzmán, the organization had its base in the Ayacucho region, a mountainous terrain. After an initial act of burning ballots at the 1980 elections, the organization (labeled a terrorist organization by the U.S., European Union, and many other countries) turned increasingly violent. 
+
+For some years, the guerrilla group’s territorial reach and membership increased. In more neglected regions, such as Ayacucho, Apurímac, and Huancavelica, some from the local populace sympathized with the group’s message. At the same time, its brutality, the massacres and bombings it committed, and its targeted assassinations against, among others, ideologically similar groups alienated many. 
+
+Unsurprisingly, when the state can’t protect its citizens, people take things into their own hands. In some areas, peasants set up anti-rebel militias and fought against the guerrillas. National forces also joined the fight and committed their fair share of atrocities. A local population, caught between two fires, suffered.
+
+In 1992, Guzmán was captured and imprisoned, dealing a significant blow to the group. Although Shining Path’s influence has substantially diminished in the years since the 90s, its various spin-offs commit occasional terrorist acts to this day. 
 
 ## Bahrain
 
