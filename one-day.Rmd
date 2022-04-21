@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 38", "New Zealand", "Australia and Oceania", "[See notes for New Zealand](#new-zealand)",
   "Day 37", "Peru", "America", "[See notes for Peru](#peru)",
   "Day 36", "Bahrain", "Asia", "[See notes for Bahrain](#bahrain)",
   "Day 35", "Canada", "America", "[See notes for Canada](#canada)",
@@ -29,12 +30,12 @@ posts <- tidyr::tribble(
   "Day 26", "Nigeria", "Africa", "[See notes for Nigeria](#nigeria)",
   "Day 25", "Central African Republic", "Africa", "[See notes for the Central African Republic](#central-african-republic)",
   "Day 24", "Italy", "Europe", "[See notes for Italy](#italy)",
-  "Day 23", "Brazil", "South America", "[See notes for Brazil](#brazil)",
+  "Day 23", "Brazil", "America", "[See notes for Brazil](#brazil)",
   "Day 22", "Jordan", "Asia", "[See notes for Jordan](#jordan)",
   "Day 21", "Libya", "Africa", "[See notes for Libya](#libya)",
   "Day 20", "Mauritania", "Africa", "[See notes for Mauritania](#mauritania)",
   "Day 19", "Sri Lanka", "Asia", "[See notes for Sri Lanka](#sri-lanka)",
-  "Day 18", "Guyana", "South America", "[See notes for Guyana](#guyana)",
+  "Day 18", "Guyana", "America", "[See notes for Guyana](#guyana)",
   "Day 17", "Benin", "Africa", "[See notes for Benin](#benin)",
   "Day 16", "Namibia", "Africa", "[See notes for Namibia](#namibia)",
   "Day 15", "Ivory Coast", "Africa", "[See notes for Ivory Coast](#ivory-coast)",
@@ -48,7 +49,7 @@ posts <- tidyr::tribble(
   "Day 7", "Seychelles", "Africa", "[See notes for Seychelles](#seychelles)",
   "Day 6", "Malta", "Europe", "[See notes for Malta](#malta)",
   "Day 5", "Uzbekistan", "Asia", "[See notes for Uzbekistan](#uzbekistan)",
-  "Day 4", "Suriname", "South America", "[See notes for Suriname](#suriname)",
+  "Day 4", "Suriname", "America", "[See notes for Suriname](#suriname)",
   "Day 3", "Burundi", "Africa", "[See notes for Burundi](#burundi)",
   "Day 2", "Uganda", "Africa", "[See notes for Uganda](#uganda)",
   "Day 1", "Kenya", "Africa", "[See notes for Kenya](#kenya)"
@@ -61,6 +62,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## New Zealand
+
+The Māori are New Zealand’s indigenous population. Descending from Polynesian people who arrived in the country in the 14th century, they developed their own culture over the centuries. Trading with European settlers introduced many new products, including potatoes and muskets. 
+
+Before potatoes were introduced, the Māori produced a type of sweet potato that they had brought with them from Polynesia. Potatoes brought by the settlers were better suited to New Zealand’s [cooler climate]( https://www.sciencelearn.org.nz/resources/783-the-cultural-value-of-taewa-maori-potatoes), quickly overtaking the sweet potato as a staple food. This agricultural improvement benefitted the local populace---unlike muskets. 
+
+The Māori aren’t a homogeneous group. They are organized into tribes, each living in its own territory. Even before muskets were available, there had been conflicts between these tribes. Tribal fighters engaged in hand-to-hand combat, using weapons primarily made of wood, whalebone, and stone. Muskets drastically increased the lethality of warfare, and the tribes to first obtain them gained a significant advantage. 
+
+At the beginning of the 19th century, the tribes fought a series of battles against each other. This intertribal warfare, called the Musket Wars, claimed thousands of lives and redrew the boundaries of tribal territories.  
 
 ## Peru
 
