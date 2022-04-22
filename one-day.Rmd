@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 39", "Belgium", "Europe", "[See notes for Belgium](#belgium)",
   "Day 38", "New Zealand", "Australia and Oceania", "[See notes for New Zealand](#new-zealand)",
   "Day 37", "Peru", "America", "[See notes for Peru](#peru)",
   "Day 36", "Bahrain", "Asia", "[See notes for Bahrain](#bahrain)",
@@ -62,6 +63,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Belgium
+
+Around the globe, it’s common to find countries with serious internal divisions. In Europe, this phenomenon is much less frequent, Belgium being a notable exception. The division in Belgium is linguistic: the northern part of the country (Flanders) speaks Dutch, while the southern part (Walloon) speaks French.
+
+To complicate matters further, the capital, Brussels, is bilingual. It has a French-speaking majority but is located within Flanders. In practice, this means that a person who works in Brussels and lives in one of the surrounding municipalities probably needs to use both French and Dutch during the day. Although much of the conflict revolves around these two languages, a small minority of Belgians speak German---the third official language in the country.
+
+Belgium’s administrative system was designed with this linguistic division in mind. Power is distributed among three levels of government: federal, linguistic, and regional.  This situation inevitably leads to tensions around jurisdiction, as each level of government feels it should have a say over more things than it currently does. Keeping both sides happy in this complex system is a delicate task, especially when both the French-speaking and the Dutch-speaking communities have jurisdiction in the same region, as in Brussels.
 
 ## New Zealand
 
