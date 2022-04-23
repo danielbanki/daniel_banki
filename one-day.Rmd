@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 40", "Kiribati", "Australia and Oceania", "[See notes for Kiribati](#kiribati)",
   "Day 39", "Belgium", "Europe", "[See notes for Belgium](#belgium)",
   "Day 38", "New Zealand", "Australia and Oceania", "[See notes for New Zealand](#new-zealand)",
   "Day 37", "Peru", "America", "[See notes for Peru](#peru)",
@@ -63,6 +64,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Kiribati
+
+Kiribati is an island nation in the Pacific Ocean, comprising an island and several ring-shaped coral reefs, or so-called atolls. These formations are the result of volcanic activity. First, an underwater volcano emerges from the water, creating an island. In the next step, a coral reef forms around the island. Finally, the island sinks completely; where it had once been an island, now there is a lagoon. 
+
+Although the country’s total land area is under 1000 km2, its many atolls, forming three island groups, are dispersed in a large geographic area. The Line Islands are one of these archipelagoes. Formally ceded to independent Kiribati in 1979 by the U.S., the archipelago is notable because of the International Date Line, the boundary between two calendar days. It runs from the South Pole to the North Pole, approximately following the 180 degrees longitude line.
+
+Before the Line Islands were part of Kiribati, the entire country was west of this line. Put differently, it was the same calendar day in the entire country. The newly added archipelago, however, was east of this line; its residents were one day behind the rest of the country. Kiribati resolved this anomaly by moving the International Date Line to the east of the archipelago. As a result of this change, there is a single calendar day again in the country. Like putting our clocks forward an hour for Daylight Saving Time, residents on the Line Islands put their clocks forward a day, erasing a day (31 December 1994) from their calendars.
 
 ## Belgium
 
