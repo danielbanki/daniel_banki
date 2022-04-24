@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 41", "Tuvalu", "Australia and Oceania", "[See notes for Tuvalu](#tuvalu)",
   "Day 40", "Kiribati", "Australia and Oceania", "[See notes for Kiribati](#kiribati)",
   "Day 39", "Belgium", "Europe", "[See notes for Belgium](#belgium)",
   "Day 38", "New Zealand", "Australia and Oceania", "[See notes for New Zealand](#new-zealand)",
@@ -64,6 +65,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Tuvalu
+
+Before Tuvalu gained its independence, it was administered by the U.K. as part of a territory called the Gilbert and Ellice Islands. In 1974, Tuvalu’s (Ellice Islands) residents could choose, in a referendum, to separate from the Gilbert Islands. The overwhelming majority, 93% of the roughly 4000 eligible voters, voted in favor of separation. The country’s population is now around 10,000. 
+
+And it’s not just the population that's small in Tuvalu---so is the country itself. Its total land area of 26km2, distributed among various reef islands and atolls, is equivalent to around one-fifth of the Bronx. The most populous atoll, Funafuti, varies in width between 20 and 400 meters. 
+
+Besides English, Tuvalu's official language is Tuvaluan, a Polynesian language. With the language being spoken only in Tuvalu (and, to a small extent, by Tuvaluans in New Zealand), it’s at serious risk of extinction.
+
+It’s not only the country’s language, though, that’s in danger---but the country itself. Barely lying above sea level, climate change could make it uninhabitable. In this respect, a small population is a positive thing, as finding a new home in other countries for the 10,000 Tuvaluans would be a solvable challenge. 
 
 ## Kiribati
 
