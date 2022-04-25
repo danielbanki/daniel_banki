@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 42", "Sierra Leone", "Africa", "[See notes for Sierra Leone](#sierra-leone)",
   "Day 41", "Tuvalu", "Australia and Oceania", "[See notes for Tuvalu](#tuvalu)",
   "Day 40", "Kiribati", "Australia and Oceania", "[See notes for Kiribati](#kiribati)",
   "Day 39", "Belgium", "Europe", "[See notes for Belgium](#belgium)",
@@ -65,6 +66,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Sierra Leone
+
+Sierra Leone has vast mineral resources, including bauxite, gold, iron ore, rutile, and diamonds. Found mainly in the southeastern and eastern parts of the country, diamonds are mined in both large-scale (industrial) and small-scale (artisanal) operations. Some of the world’s most notable diamonds are from there, including the Star of Sierra Leone, one of the largest gem-quality diamonds ever found. 
+
+Not unusual in resource-rich but poorly governed countries, gains from mineral extraction in Sierra Leone didn’t go to the local population. Instead, they went to corrupt politicians and foreign interests. Even worse, money from the diamond trade was used to finance a devastating civil war that lasted for 11 years, ending in 2002. 
+
+Among other things, the conflict left 50,000 dead, many were internally and externally displaced, and there was significant damage to the country’s infrastructure. In a particularly gruesome attack in Freetown, the capital, rebel forces maimed, raped, and murdered thousands of civilians [indiscriminately](https://www.hrw.org/news/1999/06/24/shocking-war-crimes-sierra-leone). 
 
 ## Tuvalu
 
