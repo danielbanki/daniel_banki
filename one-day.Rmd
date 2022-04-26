@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 43", "San Marino", "Europe", "[See notes for San Marino](#san-marino)",
   "Day 42", "Sierra Leone", "Africa", "[See notes for Sierra Leone](#sierra-leone)",
   "Day 41", "Tuvalu", "Australia and Oceania", "[See notes for Tuvalu](#tuvalu)",
   "Day 40", "Kiribati", "Australia and Oceania", "[See notes for Kiribati](#kiribati)",
@@ -66,6 +67,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## San Marino
+
+San Marino is a small country enclaved by Italy. With a land area of only 61 km2, its mere existence is an interesting fact. There had been numerous small states in Italy at the beginning of the 19th century, but all disappeared (except for the Vatican) by the time the country was unified in the 1860s.
+
+One of the men who played a crucial role in Italy’s unification was Giuseppe Garibaldi. Finding refuge in San Marino during Italy’s turbulent years, he was grateful to San Marino for its hospitality. After Italy’s unification, a bilateral treaty guaranteed San Marino’s independence---welcoming Garibaldi and his men some years earlier certainly didn’t hurt.
+
+Besides Garibaldi, many others in need were taken in by the country. During World War II, when San Marino had a population of around 15,000, it harbored an estimated 100,000 Italians and Jews who were fleeing the Nazi and Italian regimes. Once a refuge, not always a refuge: today, there are practically no refugees in the country.
 
 ## Sierra Leone
 
