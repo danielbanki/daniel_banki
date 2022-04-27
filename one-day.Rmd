@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 44", "Comoros", "Africa", "[See notes for Comoros](#comoros)",
   "Day 43", "San Marino", "Europe", "[See notes for San Marino](#san-marino)",
   "Day 42", "Sierra Leone", "Africa", "[See notes for Sierra Leone](#sierra-leone)",
   "Day 41", "Tuvalu", "Australia and Oceania", "[See notes for Tuvalu](#tuvalu)",
@@ -67,6 +68,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Comoros
+
+Comoros is a small country in the Indian Ocean. Looking at its top exports, we find an interesting mix of products, such as cloves, vanilla, essential oils, and scrap vessels. Apart from the last, somewhat surprising product category, they share a common feature: they are typically used in luxury products. 
+
+Essential oils, for instance, mainly refer to the oil extracted from the ylang-ylang plant, a tropical tree with yellow flowers. After an early-morning harvest, the flowers are quickly taken to a local distillery to extract oil from them. To extract 2 liters of oil, approximately [100kg of flowers]( https://materiaaromatica.com/oil-profiles/ylang-ylang-oil) are needed. The next step is exporting the oil, primarily to France, where it serves as the main ingredient of high-quality perfumes, including the famous CHANEL N°5. 
+
+The other two products---vanilla and cloves---also come from plants. Vanilla is among the most expensive spices because it’s very labor-intensive: the vanilla orchards must be [pollinated by hand](https://88acres.com/blogs/news/all-about-vanilla), and when it’s harvest time, the beans are also hand-picked.  
+
 
 ## San Marino
 
