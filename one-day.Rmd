@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 47", "Ireland", "Europe", "[See notes for Ireland](#ireland)",
   "Day 46", "Finland", "Europe", "[See notes for Finland](#finland)",
   "Day 45", "Botswana", "Africa", "[See notes for Botswana](#botswana)",
   "Day 44", "Comoros", "Africa", "[See notes for Comoros](#comoros)",
@@ -70,6 +71,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Ireland
+
+The Irish Potato Famine was a turning point in the history of Ireland. From 1845 to 1849, hundreds of thousands of people perished due to starvation and diseases. Many of those who didn’t die emigrated, primarily to Northern America. The famine-related deaths and emigration in the following decades caused a population decline. A century after the famine, Ireland’s population was half of what it had been, starting to increase again only in the second half of the 20th century.
+
+Most famines are named after geographic regions or years (e.g., Chinese Famine, Iranian Famine, Rajputana Famine of 1869). The Irish Famine, in contrast, was named after the potato, a staple food, suggesting that the root problem was the lack of potatoes.
+
+A potato blight that infected crops throughout Europe in the 1840s reached Ireland and wreaked havoc. The country didn’t diversify its agricultural production: it relied heavily on a single crop, potatoes, to feed its population. To make matters worse, a disproportionate share of potatoes was of the same variety, the so-called Irish Lumper. Relying on a single variety of a single crop may work well in ordinary circumstances. But when something bad happens, the effects are catastrophic.
 
 ## Finland
 
