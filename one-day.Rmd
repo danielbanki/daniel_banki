@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 46", "Finland", "Europe", "[See notes for Finland](#finland)",
   "Day 45", "Botswana", "Africa", "[See notes for Botswana](#botswana)",
   "Day 44", "Comoros", "Africa", "[See notes for Comoros](#comoros)",
   "Day 43", "San Marino", "Europe", "[See notes for San Marino](#san-marino)",
@@ -69,6 +70,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Finland
+
+Famines have claimed many lives globally. This pattern wasn't any different in Finland either: the country suffered two devastating famines. The first was the Great Famine of 1695-1697, caused by harsh weather conditions. Although most territories in the Nordic and Baltic countries were affected, Finland was among the hardest hit.  According to some estimates, about a third of the Finnish population perished in two years. 
+
+Between 1866 and 1868, Finland suffered a similarly catastrophic famine, the last in its history and the last European famine that wasn't man-made. Like two centuries earlier, widely consumed crops, such as potatoes and root vegetables, rotted due to the rainy summer. The cold winter that followed prolonged people’s suffering, delaying the start of agricultural activities in the following season. 
+
+When the local population doesn't have access to its staple food, they look for alternatives. In heavily-forested countries like Finland, tree bark (e.g., pine) could fulfill this function. The inner, so-called cambium layer of the bark is ground into a kind of flour, which is then used for baking bread.
 
 ## Botswana
 
