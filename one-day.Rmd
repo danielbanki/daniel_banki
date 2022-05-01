@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 48", "Zambia", "Africa", "[See notes for Zambia](#zambia)",
   "Day 47", "Ireland", "Europe", "[See notes for Ireland](#ireland)",
   "Day 46", "Finland", "Europe", "[See notes for Finland](#finland)",
   "Day 45", "Botswana", "Africa", "[See notes for Botswana](#botswana)",
@@ -71,6 +72,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Zambia
+
+One of Zambia’s ten provinces is the Copperbelt, alluding to the region's richness in copper. It's close to the border with DR Congo and is home to some of Zambia's most important copper mines. Explorations started at the end of the 19th century. By the time it became independent in 1964, Zambia's copper production had reached 700,000 tons annually. This resource provided Zambians a relatively high living standard compared to residents of most other countries in sub-Saharan Africa. 
+
+In the 1970s, the government began to nationalize the formerly private mines. Production declined in the next two decades to a low of about [250,000 at the turn of the millennium]( https://miningforzambia.com/zambias-history-of-copper-production-part-1/). Then the government decided to privatize the mines again. Foreign private investment poured in, production increased, and new mines were opened. 
+
+Today, four mines account for about 80% of Zambia's entire production. [Two of them](https://miningforzambia.com/a-concentrated-mining-sector/) are not in the Copperbelt but in the adjacent, previously underdeveloped North-Western province. In 2020, the country’s copper production reached 880,000 tons, a [historic high](https://www.reuters.com/article/uk-zambia-copper-idUSKBN2AN0NL). Last year, the government [nationalized one of Zambia’s largest mines]( https://www.dw.com/en/nationalizing-zambias-copper-mines/a-56843152), which may be a precursor of further similar moves. 
 
 ## Ireland
 
