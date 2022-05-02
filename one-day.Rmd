@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 49", "Jamaica", "America", "[See notes for Jamaica](#jamaica)",
   "Day 48", "Zambia", "Africa", "[See notes for Zambia](#zambia)",
   "Day 47", "Ireland", "Europe", "[See notes for Ireland](#ireland)",
   "Day 46", "Finland", "Europe", "[See notes for Finland](#finland)",
@@ -72,6 +73,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Jamaica
+
+Jamaica is a small country with under 3 million people. But the size of its population is not proportionate to its cultural relevance: Jamaica made significant cultural contributions in more than one domain. Take, for instance, the internationally known Rastafari movement, a religious and political movement. It originated in Jamaica in the 1930s, combining religious elements from Christianity and mysticism with political goals. 
+
+Every movement needs some champions. Arguably, the most famous person associated with the Rastafari movement was Bob Marley. Widely considered one of the pioneers of reggae, his work increased the visibility of Jamaican music worldwide. His compilation album Legend became the bestselling reggae album ever. Interestingly, it was released three years after his death.
+
+If there is another Jamaican with similar international fame, it’s Usain Bolt. The now-retired sprinter won an astonishing 8 gold medals at the Olympics during his career. He won the 100 meters and 200 meters events at three consecutive Olympics and holds the world record in both distances. 
 
 ## Zambia
 
