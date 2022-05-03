@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 50", "Monaco", "Europe", "[See notes for Monaco](#monaco)",
   "Day 49", "Jamaica", "America", "[See notes for Jamaica](#jamaica)",
   "Day 48", "Zambia", "Africa", "[See notes for Zambia](#zambia)",
   "Day 47", "Ireland", "Europe", "[See notes for Ireland](#ireland)",
@@ -73,6 +74,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Monaco
+
+Monaco is a microstate, occupying about 2 km2 of land. Put differently, imagine that someone wants to run the whole length of Monaco's land border. They would face a bit more than a 5K run.
+
+Even though Monaco has a small population, it’s the most densely populated country. It’s not just people who are heavily concentrated, however. The country is one of the wealthiest by GDP per capita. It's also home to many famous and high-wealth individuals, including current and former Formula 1 drivers Lewis Hamilton, Nico Rosberg, and David Coulthard. Monaco has an appeal to these drivers few other places can match: it hosts the Monaco Grand Prix, one of the most important automobile races. And all three of them won the race more than once.
+
+Besides its Grand Prix, Monaco is most famous for the Monte Carlo Casino. Completed in 1863, the gambling and entertainment complex is visited by many tourists every year. Interestingly, locals are prohibited from entering the premises due to a restriction dating to the 19th century.
 
 ## Jamaica
 
