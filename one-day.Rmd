@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 51", "Malaysia", "Asia", "[See notes for Malaysia](#malaysia)",
   "Day 50", "Monaco", "Europe", "[See notes for Monaco](#monaco)",
   "Day 49", "Jamaica", "America", "[See notes for Jamaica](#jamaica)",
   "Day 48", "Zambia", "Africa", "[See notes for Zambia](#zambia)",
@@ -74,6 +75,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Malaysia
+
+Malaysia first issued identification cards in 1948. Then called the Federation of Malaya, which comprised the peninsular part of today’s Malaysia, the country's objective with the ID card was to control the movement of people. This was a pressing issue as a guerilla war raged between the military forces of the British Empire and insurgent groups. 
+
+Half a century later, the ID card has gone through many changes. In 2001, the innovative MyKad was introduced. This multipurpose plastic ID card contains the usual pieces of information and stores the person’s fingerprint. Also, there is information about the person’s ethnicity. Malaysia is a multiethnic country, with the largest ethnic group being the Malays, followed by Malaysians with Chinese and Indian heritage. Followers of Islam (about 60% of the population) also have their religion featured on the card [to help enforce Sharia law]( https://www.malaymail.com/news/malaysia/2020/01/28/why-islam-is-on-malaysian-muslims-identity-cards/1831992). 
+
+All citizens must always carry this card with them. But besides verifying their identity, [the card has other uses as well](https://www.malaysia.gov.my/portal/content/30582). For instance, it can be used for e-commerce transactions, verification of one’s identity in digital communications with various authorities, and to pay for car parks or public transport. An interesting aspect of this card is that it can store its owner’s basic health data. If needed, emergency services can access this information to provide better medical help.
 
 ## Monaco
 
