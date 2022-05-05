@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 52", "Saint Vincent and the Grenadines", "America", "[See notes for Saint Vincent and the Grenadines](#saint-vincent-and-the-grenadines)",
   "Day 51", "Malaysia", "Asia", "[See notes for Malaysia](#malaysia)",
   "Day 50", "Monaco", "Europe", "[See notes for Monaco](#monaco)",
   "Day 49", "Jamaica", "America", "[See notes for Jamaica](#jamaica)",
@@ -75,6 +76,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Saint Vincent and the Grenadines
+
+Saint Vincent and the Grenadines is a small island country consisting of the main island (Saint Vincent) and several small islands. There is volcanic activity on Saint Vincent, with La Soufrière being the largest volcano (and also the country’s highest point). Its first eruption that was confirmed by observation was in 1718. We have no official records of earlier eruptions, but radioactive dating, a technique used to estimate volcano eruption dates, suggests there had been eruptions [for many thousand years]( https://volcano.si.edu/volcano.cfm?vn=360150). 
+
+The 1812 eruption inspired English painter J.M.W. Turner. His painting, made three years later, was based on a sketch by a [British plantation owner]( https://www.theguardian.com/artanddesign/2021/jan/29/the-great-british-art-tour-liverpool-eruption-of-the-soufriere-mountains-by-jmw-turner) who had been on the island at the time of the eruption. In 1902, the volcano erupted again, claiming about 1700 lives. (In Martinique, a territory in the same Caribbean region, another volcano erupted hours later.)
+
+The latest volcanic activity was in 2020-21. This time, the authorities were prepared, and an evacuation plan was in place. About 20,000 people had to be evacuated. The [World Bank provided financing]( https://www.worldbank.org/en/news/press-release/2021/11/30/saint-vincent-and-the-grenadines-to-receive-us-40-million-from-the-world-bank) to the country to help with the post-eruption recovery.
+
 
 ## Malaysia
 
