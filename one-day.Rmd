@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 53", "Madagascar", "Africa", "[See notes for Madagascar](#madagascar)",
   "Day 52", "Saint Vincent and the Grenadines", "America", "[See notes for Saint Vincent and the Grenadines](#saint-vincent-and-the-grenadines)",
   "Day 51", "Malaysia", "Asia", "[See notes for Malaysia](#malaysia)",
   "Day 50", "Monaco", "Europe", "[See notes for Monaco](#monaco)",
@@ -76,6 +77,12 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Madagascar
+
+In the southern part of Madagascar, there has been severe food insecurity since the middle of 2021. That part of the country has a semi-arid climate. In 2021, it experienced record low rainfalls. To make the situation even worse, there are frequent cyclones and tropical storms in the northern and eastern parts of Madagascar, which also damage crops. When there is little rain, which also arrives late in the season, crop harvests will also be delayed. 
+
+The bad harvest in many parts of the country also means there is less need for labor. If only one part of the country is affected in a season, people can at least go and work in another region, using the money they earn to buy food for their families. Conversely, when various regions are simultaneously affected, people lack access to both homegrown food and labor opportunities. As they don’t earn a regular income, their purchasing power is low, and they cannot afford to purchase food from the market.
 
 ## Saint Vincent and the Grenadines
 
