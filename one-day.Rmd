@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 54", "Papua New Guinea", "Australia and Oceania", "[See notes for Papua New Guinea](#papua-new-guinea)",
   "Day 53", "Madagascar", "Africa", "[See notes for Madagascar](#madagascar)",
   "Day 52", "Saint Vincent and the Grenadines", "America", "[See notes for Saint Vincent and the Grenadines](#saint-vincent-and-the-grenadines)",
   "Day 51", "Malaysia", "Asia", "[See notes for Malaysia](#malaysia)",
@@ -77,6 +78,16 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Papua New Guinea
+
+Papua New Guinea has a difficult terrain. It’s home to mountains, tropical rainforests, and large wetlands. This makes most of the country difficult to access---a problem when one wants to govern a territory. At the end of the 19th century, the northern part of the country became a German colony, while the southern part belonged to the British Crown. 
+
+Port Moresby, the country’s capital, is located on the southern side of the Papuan Peninsula. The British wanted to establish a path connecting the capital with the other side of the Peninsula. Part of this path is the Kokoda Trail. First surveyed in 1899, it’s a narrow trail that crosses the jungle and the Owen Stanley Range, a mountain chain in the middle part of the Peninsula. 
+
+During the Second World War, a series of battles took place there. The objective of the Japanese invading forces was to seize Port Moresby. Attacking from the north coast, they used the trail for their advance. The Allied forces eventually pushed them back.
+
+After the war, the trail fell into disuse. Although some people walked the 96-km long trail in the following decades, it has only emerged as a popular trekking route in recent years. Today, hikers can choose from various tour operators to complete the trail. 
 
 ## Madagascar
 
