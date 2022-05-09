@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 55", "Antigua and Barbuda", "America", "[See notes for Antigua and Barbuda](#antigua-and-barbuda)",
   "Day 54", "Papua New Guinea", "Australia and Oceania", "[See notes for Papua New Guinea](#papua-new-guinea)",
   "Day 53", "Madagascar", "Africa", "[See notes for Madagascar](#madagascar)",
   "Day 52", "Saint Vincent and the Grenadines", "America", "[See notes for Saint Vincent and the Grenadines](#saint-vincent-and-the-grenadines)",
@@ -78,6 +79,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Antigua and Barbuda
+
+Antigua and Barbuda, as one might guess, gets its name after the two islands it comprises. Although similar in size, they are unequal in their populations: Antigua has about 97% of the population. One reason why so few people live in Barbuda may be its location. It lies in a zone very prone to hurricanes. In fact, in the last 30 years, the island has been devastated by hurricanes twice.
+
+In 1995, Hurricane Luis struck. A Category 4 hurricane, it reached speeds of 135 mph and was accompanied by heavy rainfall. The majority of the island’s infrastructure suffered damage or was destroyed. The human toll was also significant: out of the island’s about 1500 residents, 3 people died, while hundreds were injured and left homeless. 
+
+Hurricane Irma, a Category 5 hurricane, reached the island 22 years later. It left the island in shatters. It destroyed about 95% of the island's structures and vehicles, the electricity grid was damaged, and there was no drinking water. The island’s almost entire population had to be evacuated. 
 
 ## Papua New Guinea
 
