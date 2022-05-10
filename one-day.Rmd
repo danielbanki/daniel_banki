@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 56", "Iran", "Asia", "[See notes for Iran](#iran)",
   "Day 55", "Antigua and Barbuda", "America", "[See notes for Antigua and Barbuda](#antigua-and-barbuda)",
   "Day 54", "Papua New Guinea", "Australia and Oceania", "[See notes for Papua New Guinea](#papua-new-guinea)",
   "Day 53", "Madagascar", "Africa", "[See notes for Madagascar](#madagascar)",
@@ -79,6 +80,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Iran
+
+Many countries have a national sport. In Iran, that sport is wrestling. In ancient times, traditional forms of wrestling were widely practiced. Over the years, the country also developed a strong tradition of Greco-Roman and freestyle wrestling. The sport gained momentum in the 20th century: the first wrestling club was opened [in 1921 in Tehran](https://fanack.com/society-in-the-middle-east-and-north-africa/sports-and-politics-in-the-middle-east-and-north-africa/wrestling-in-iran/), with many more to follow in different parts of the country.
+
+More tha two decades later, Iran sent its first team of athletes, including wrestlers, to the 1948 Summer Olympics. Although one of the athletes, Mansour Raeisi, came close to winning a medal, the team would need to wait four more years for their first medal. Since then, Iranian wrestlers have won medals at every Olympics they attended (they boycotted the 1980 and 1984 Olympics). 
+
+Iran’s most accomplished wrestlers, like Gholamreza Takhti or Rasoul Khadem, won medals more than once. If we consider some of the top athletes, an interesting pattern emerges. Many come from the same province, Mazandaran, located in the northern part of the country. Juybar, a small city in the province, stands out even more. Despite its population of about 27,000, it produced the [majority of Iranian medallists](https://uww.org/article/joybar-irans-wrestling-capital) at the 2013 World Wrestling Championships.
 
 ## Antigua and Barbuda
 
