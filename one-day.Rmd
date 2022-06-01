@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 59", "São Tomé and Príncipe","Africa", "[See notes for São Tomé and Príncipe](#são-tomé-and-príncipe)",
   "Day 58", "Cameroon", "Africa", "[See notes for Cameroon](#cameroon)",
   "Day 57", "Slovenia", "Europe", "[See notes for Slovenia](#slovenia)",
   "Day 56", "Iran", "Asia", "[See notes for Iran](#iran)",
@@ -82,6 +83,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## São Tomé and Príncipe
+
+São Tomé and Príncipe is an island country in the Gulf of Guinea with a population of under 200 000. Despite its small population, there are various ethnic groups living in the country. The first group is the Mestiços, a multiracial group whose ancestors were Portuguese settlers and African slaves from nearby countries like Benin and Gabon. The Portuguese settlers first set foot on the island at the end of the 15th century. They soon recognized the island’s strategic location in the slave trade. But not all enslaved people were sent to the Americas---some had to toil on the island’s plantations.  
+
+Throughout the centuries, slave rebellions broke out sporadically. Portugal officially abolished slavery in 1876. The descendants of freed slaves are now called Forros, who speak a creole language called forro. Even though slavery had been abolished, various forms of forced labor continued to exist well into the 20th century.
+
+Portuguese, the country’s official language, is also spoken in other African countries. The shared language made the island a feasible destination for contract laborers from Angola, Mozambique, and Cape Verde. Descendants of people from Angola are called Angolares and speak a creole language similar to forro.
 
 ## Cameroon
 
