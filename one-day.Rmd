@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 60", "Serbia", "Europe", "[See notes for Serbia](#serbia)",
   "Day 59", "São Tomé and Príncipe","Africa", "[See notes for São Tomé and Príncipe](#são-tomé-and-príncipe)",
   "Day 58", "Cameroon", "Africa", "[See notes for Cameroon](#cameroon)",
   "Day 57", "Slovenia", "Europe", "[See notes for Slovenia](#slovenia)",
@@ -83,6 +84,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Serbia
+
+Serbia is famous for its plums. With a yearly production of over half of million tons, the country is the third-largest producer behind China and India. But plum production in Serbia is not a recent endeavor: the country already exported its prunes (dried plums) in the second half of the 19th century, eventually becoming the largest prune exporter by the turn of the 20th century. 
+
+Certain climatic and soil conditions are necessary for a high-yielding plum variety. The central part of Serbia had the ideal conditions for cultivation. Sometimes called the plum belt, the region with the highest production was the Sumadija region, but other regions to its east and west also had substantial production. It remains a well-known fruit-producing region to this day.
+
+Initially, most of the production was consumed by the farmers themselves. The fruit in its raw form was uneconomical to transport, got easily damaged in transit, and went bad quickly. If distilled, however, many of these problems disappeared. The resulting alcoholic beverage, rakija sljivovica, became Serbia’s national drink. There was national and some regional demand for this drink, but the international market was more interested in two other products: prunes and jam (pekmez in Serbian). To put things into perspective, at the turn of the century, 100 kg of wheat cost 13.65 dinars, while the equivalent weight in prunes, pekmez, and rakija commanded the higher prices of [32, 43, and 90 dinars, respectively](https://www.jstor.org/stable/2596008?seq=1). 
 
 ## São Tomé and Príncipe
 
