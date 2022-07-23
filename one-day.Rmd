@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 61", "Burkina Faso", "Africa", "[See notes for Burkina Faso](#burkina-faso)",
   "Day 60", "Serbia", "Europe", "[See notes for Serbia](#serbia)",
   "Day 59", "São Tomé and Príncipe","Africa", "[See notes for São Tomé and Príncipe](#são-tomé-and-príncipe)",
   "Day 58", "Cameroon", "Africa", "[See notes for Cameroon](#cameroon)",
@@ -84,6 +85,15 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Burkina Faso
+
+Burkina Faso, like many of its neighbors, is a multi-ethnic country. Its largest ethnic group, the Mossi people, formed kingdoms around the 15th century and governed the territory until the French colonized arrived at the end of the 19th century. Today, more than half of the country’s 21.5 million people are Mossi; further 1.3 million live in neighboring Ivory Coast and Ghana. 
+
+Among their [notable people]( https://en.wikipedia.org/wiki/Mossi_people), we can find musicians, playwrights, journalists, and members of other professions that usually make these lists. Interestingly, though, many of them are soccer players. I wonder if soccer players are indeed more common among the Mossi than elsewhere, or it’s just easier to find more information about them. 
+
+Certain surnames, especially Ouédraogo, also seem quite common among the famous. Upon inquiry, Ouédraogo must be popular among the famous because it’s popular in the general population: 1 in 11 people in the country have this surname, making it the most common Burkinabe [surname](https://forebears.io/burkina-faso/surnames). It comes from the name of the person who founded the Mossi kingdoms. I can see why it’s the most popular surname, but the level of its popularity surprised me. For example, in Germany 1 in 85 have the most common [surname](https://forebears.io/germany/surnames); the statistic is similar in [England](https://forebears.io/england/surnames) (1 in 88). Neighboring Mali has a similarly skewed [distribution](https://forebears.io/mali/surnames) as Burkina Faso (1 in 12), while another neighbor, [Ghana](https://forebears.io/ghana/surnames), is closer to the aforementioned European countries (1 in 52).
+
 
 ## Serbia
 
