@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r prepare-table}
 posts <- tidyr::tribble(
   ~Day, ~Country, ~Continent, ~Notes,
+  "Day 63", "Cambodia", "Asia", "[See notes for Cambodia](#cambodia)",
   "Day 62", "Turkmenistan", "Asia", "[See notes for Turkmenistan](#turkmenistan)",
   "Day 61", "Burkina Faso", "Africa", "[See notes for Burkina Faso](#burkina-faso)",
   "Day 60", "Serbia", "Europe", "[See notes for Serbia](#serbia)",
@@ -86,6 +87,14 @@ knitr::kable(posts)
 ```
 
 # Notes
+
+## Cambodia
+
+The Khmer Rouge, also known as the Communist Party of Kampuchea, came to power in 1975 after a devastating civil war that lasted 5 years. Both the Khmer Rouge and the opposing government forces received external support during the civil war: the Khmer Rouge from the North Vietnamese, who used the eastern part of Cambodia as a sanctuary; the government forces from the US, which was motivated to stop a communist takeover. 
+
+In a conflict with many sides, like the Cambodian Civil War, one thing is certain: people will suffer. The local populace suffered from bombardments and from atrocities perpetrated by both sides. But the worst was yet to come. After the fall of the capital, Phnom Penh, the Khmer Rouge’s power became absolute under the leadership of Pol Pot. For good measure, the one-party totalitarian state was named Democratic Kampuchea. 
+
+Pol Pot’s regime, which lasted around 4 years, committed genocide against its people on a massive scale: one-quarter of the population (2 million people) was murdered or perished due to starvation, overwork, and disease. 
 
 ## Turkmenistan
 
