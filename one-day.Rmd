@@ -6,10 +6,21 @@ title: "One day, one country"
 
 Every day I randomly pick a new country, then I read and write a bit about it. The idea is to learn something new every day about the world and get into the habit of writing regularly. As I write about a new country every day, I don't have time to research things carefully. This means there may be many inaccuracies and outright errors. Please feel free to point them out to me if you encounter any. I primarily think of these notes as a public diary in which I keep track in (almost) real-time of the things I found interesting and the questions I had as I was learning about a new country.
 
-# Overview
+# Progress
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r libraries}
+
+library(dplyr)
+library(readr)
+library(leaflet)
+# without tmap it throws an error for leaflet; I don't know why
+library(tmap)
+
+
 ```
 
 ```{r prepare-table}
@@ -82,6 +93,53 @@ posts <- tidyr::tribble(
 )
 ```
 
+```{r prepare-map}
+create_anchor <- function(country){
+  
+  country_lower <- tolower(country)
+  
+  anchor <- stringr::str_replace_all(country_lower, " ", "-")
+  
+  anchor
+}
+
+
+
+world <- readr::read_rds("world.rds") %>% 
+mutate(fill = ifelse(name %in% posts$Country, "darkgreen", "gray"),
+       content = case_when(
+         name %in% posts$Country ~ paste0("<a href=", "\'#", create_anchor(name), "\'>", name, "</a>"),
+         TRUE ~ name))
+```
+
+## Visually
+
+The countries I've already written about are highlighted in green. When you click on one of them, a popup takes you to the relevant entry.
+
+```{r show-map}
+
+leaflet() %>%
+      addProviderTiles(providers$CartoDB.PositronNoLabels) %>%
+  setView(lat = 40, lng = 4, zoom = 1) %>% 
+      addPolygons(data = world,
+        weight = 1,
+        stroke = TRUE,
+        color = "black",
+        fillColor = ~fill,
+        fillOpacity = 1,
+        popup = ~content,
+        labelOptions = labelOptions(clickable = TRUE),
+        highlightOptions = highlightOptions(
+          bringToFront = TRUE,
+          sendToBack = TRUE,
+          weight = 3
+        )
+      )
+
+```
+
+## In a list
+
 ```{r display-table}
 knitr::kable(posts)
 ```
@@ -90,44 +148,43 @@ knitr::kable(posts)
 
 ## Cambodia
 
-The Khmer Rouge, also known as the Communist Party of Kampuchea, came to power in 1975 after a devastating civil war that lasted 5 years. Both the Khmer Rouge and the opposing government forces received external support during the civil war: the Khmer Rouge from the North Vietnamese, who used the eastern part of Cambodia as a sanctuary; the government forces from the US, which was motivated to stop a communist takeover. 
+The Khmer Rouge, also known as the Communist Party of Kampuchea, came to power in 1975 after a devastating civil war that lasted 5 years. Both the Khmer Rouge and the opposing government forces received external support during the civil war: the Khmer Rouge from the North Vietnamese, who used the eastern part of Cambodia as a sanctuary; the government forces from the US, which was motivated to stop a communist takeover.
 
-In a conflict with many sides, like the Cambodian Civil War, one thing is certain: people will suffer. The local populace suffered from bombardments and from atrocities perpetrated by both sides. But the worst was yet to come. After the fall of the capital, Phnom Penh, the Khmer Rouge’s power became absolute under the leadership of Pol Pot. For good measure, the one-party totalitarian state was named Democratic Kampuchea. 
+In a conflict with many sides, like the Cambodian Civil War, one thing is certain: people will suffer. The local populace suffered from bombardments and from atrocities perpetrated by both sides. But the worst was yet to come. After the fall of the capital, Phnom Penh, the Khmer Rouge's power became absolute under the leadership of Pol Pot. For good measure, the one-party totalitarian state was named Democratic Kampuchea.
 
-Pol Pot’s regime, which lasted around 4 years, committed genocide against its people on a massive scale: one-quarter of the population (2 million people) was murdered or perished due to starvation, overwork, and disease. 
+Pol Pot's regime, which lasted around 4 years, committed genocide against its people on a massive scale: one-quarter of the population (2 million people) was murdered or perished due to starvation, overwork, and disease.
 
 ## Turkmenistan
 
-Turkmenistan is rich in natural gas. Despite a population of only around 6 million, which is less than 0.1% of the world’s population, it has [3.8% of global gas reserves](https://www.worldometers.info/gas/gas-reserves-by-country/). Starting in the early ‘90s, not long after the country emerged as an independent nation after the collapse of the Soviet Union, its government introduced free electricity, gas, water, and table salt for its citizens. The last item seems rather surprising if we consider that salt is inexpensive, which I assume even most poor people could afford. I wonder if Turkmens consider it a basic necessity, in which case providing it for free sounds like a cheap way for the government to show that it takes care of everything its people need.
+Turkmenistan is rich in natural gas. Despite a population of only around 6 million, which is less than 0.1% of the world's population, it has [3.8% of global gas reserves](https://www.worldometers.info/gas/gas-reserves-by-country/). Starting in the early '90s, not long after the country emerged as an independent nation after the collapse of the Soviet Union, its government introduced free electricity, gas, water, and table salt for its citizens. The last item seems rather surprising if we consider that salt is inexpensive, which I assume even most poor people could afford. I wonder if Turkmens consider it a basic necessity, in which case providing it for free sounds like a cheap way for the government to show that it takes care of everything its people need.
 
-Fifteen years later, and under a different leader, another free allowance was introduced. Turkmens became entitled to [120 liters of petrol per month](https://www.bbc.com/news/blogs-news-from-elsewhere-27205105). 
+Fifteen years later, and under a different leader, another free allowance was introduced. Turkmens became entitled to [120 liters of petrol per month](https://www.bbc.com/news/blogs-news-from-elsewhere-27205105).
 
-But no subsidy can be sustained indefinitely. In 2014, Turkmens had to start paying again for petrol. Three years later, the president [announced plans](https://www.rferl.org/a/turkmenistan-cuts-last-vestiges-of-program-for-free-utilities/29511308.html) to eventually eliminate all free allowances for utilities. To pay for utilities like gas, a gas meter needs to be installed, at a cost of around 60 to 75 dollars. In a country where most people earn low wages (around $300 a month), this amount is non-trivial. And let’s not forget the financial and psychological burden of seeing a monthly bill after almost three decades of free allowances.
+But no subsidy can be sustained indefinitely. In 2014, Turkmens had to start paying again for petrol. Three years later, the president [announced plans](https://www.rferl.org/a/turkmenistan-cuts-last-vestiges-of-program-for-free-utilities/29511308.html) to eventually eliminate all free allowances for utilities. To pay for utilities like gas, a gas meter needs to be installed, at a cost of around 60 to 75 dollars. In a country where most people earn low wages (around \$300 a month), this amount is non-trivial. And let's not forget the financial and psychological burden of seeing a monthly bill after almost three decades of free allowances.
 
 ## Burkina Faso
 
-Burkina Faso, like many of its neighbors, is a multi-ethnic country. Its largest ethnic group, the Mossi people, formed kingdoms around the 15th century and governed the territory until the French colonized arrived at the end of the 19th century. Today, more than half of the country’s 21.5 million people are Mossi; further 1.3 million live in neighboring Ivory Coast and Ghana. 
+Burkina Faso, like many of its neighbors, is a multi-ethnic country. Its largest ethnic group, the Mossi people, formed kingdoms around the 15th century and governed the territory until the French colonized arrived at the end of the 19th century. Today, more than half of the country's 21.5 million people are Mossi; further 1.3 million live in neighboring Ivory Coast and Ghana.
 
-Among their [notable people]( https://en.wikipedia.org/wiki/Mossi_people), we can find musicians, playwrights, journalists, and members of other professions that usually make these lists. Interestingly, though, many of them are soccer players. I wonder if soccer players are indeed more common among the Mossi than elsewhere, or it’s just easier to find more information about them. 
+Among their [notable people](https://en.wikipedia.org/wiki/Mossi_people), we can find musicians, playwrights, journalists, and members of other professions that usually make these lists. Interestingly, though, many of them are soccer players. I wonder if soccer players are indeed more common among the Mossi than elsewhere, or it's just easier to find more information about them.
 
-Certain surnames, especially Ouédraogo, also seem quite common among the famous. Upon inquiry, Ouédraogo must be popular among the famous because it’s popular in the general population: 1 in 11 people in the country have this surname, making it the most common Burkinabe [surname](https://forebears.io/burkina-faso/surnames). It comes from the name of the person who founded the Mossi kingdoms. I can see why it’s the most popular surname, but the level of its popularity surprised me. For example, in Germany 1 in 85 have the most common [surname](https://forebears.io/germany/surnames); the statistic is similar in [England](https://forebears.io/england/surnames) (1 in 88). Neighboring Mali has a similarly skewed [distribution](https://forebears.io/mali/surnames) as Burkina Faso (1 in 12), while another neighbor, [Ghana](https://forebears.io/ghana/surnames), is closer to the aforementioned European countries (1 in 52).
-
+Certain surnames, especially Ouédraogo, also seem quite common among the famous. Upon inquiry, Ouédraogo must be popular among the famous because it's popular in the general population: 1 in 11 people in the country have this surname, making it the most common Burkinabe [surname](https://forebears.io/burkina-faso/surnames). It comes from the name of the person who founded the Mossi kingdoms. I can see why it's the most popular surname, but the level of its popularity surprised me. For example, in Germany 1 in 85 have the most common [surname](https://forebears.io/germany/surnames); the statistic is similar in [England](https://forebears.io/england/surnames) (1 in 88). Neighboring Mali has a similarly skewed [distribution](https://forebears.io/mali/surnames) as Burkina Faso (1 in 12), while another neighbor, [Ghana](https://forebears.io/ghana/surnames), is closer to the aforementioned European countries (1 in 52).
 
 ## Serbia
 
-Serbia is famous for its plums. With a yearly production of over half of million tons, the country is the third-largest producer behind China and India. But plum production in Serbia is not a recent endeavor: the country already exported its prunes (dried plums) in the second half of the 19th century, eventually becoming the largest prune exporter by the turn of the 20th century. 
+Serbia is famous for its plums. With a yearly production of over half of million tons, the country is the third-largest producer behind China and India. But plum production in Serbia is not a recent endeavor: the country already exported its prunes (dried plums) in the second half of the 19th century, eventually becoming the largest prune exporter by the turn of the 20th century.
 
 Certain climatic and soil conditions are necessary for a high-yielding plum variety. The central part of Serbia had the ideal conditions for cultivation. Sometimes called the plum belt, the region with the highest production was the Sumadija region, but other regions to its east and west also had substantial production. It remains a well-known fruit-producing region to this day.
 
-Initially, most of the production was consumed by the farmers themselves. The fruit in its raw form was uneconomical to transport, got easily damaged in transit, and went bad quickly. If distilled, however, many of these problems disappeared. The resulting alcoholic beverage, rakija sljivovica, became Serbia’s national drink. There was national and some regional demand for this drink, but the international market was more interested in two other products: prunes and jam (pekmez in Serbian). To put things into perspective, at the turn of the century, 100 kg of wheat cost 13.65 dinars, while the equivalent weight in prunes, pekmez, and rakija commanded the higher prices of [32, 43, and 90 dinars, respectively](https://www.jstor.org/stable/2596008?seq=1). 
+Initially, most of the production was consumed by the farmers themselves. The fruit in its raw form was uneconomical to transport, got easily damaged in transit, and went bad quickly. If distilled, however, many of these problems disappeared. The resulting alcoholic beverage, rakija sljivovica, became Serbia's national drink. There was national and some regional demand for this drink, but the international market was more interested in two other products: prunes and jam (pekmez in Serbian). To put things into perspective, at the turn of the century, 100 kg of wheat cost 13.65 dinars, while the equivalent weight in prunes, pekmez, and rakija commanded the higher prices of [32, 43, and 90 dinars, respectively](https://www.jstor.org/stable/2596008?seq=1).
 
 ## São Tomé and Príncipe
 
-São Tomé and Príncipe is an island country in the Gulf of Guinea with a population of under 200 000. Despite its small population, there are various ethnic groups living in the country. The first group is the Mestiços, a multiracial group whose ancestors were Portuguese settlers and African slaves from nearby countries like Benin and Gabon. The Portuguese settlers first set foot on the island at the end of the 15th century. They soon recognized the island’s strategic location in the slave trade. But not all enslaved people were sent to the Americas---some had to toil on the island’s plantations.  
+São Tomé and Príncipe is an island country in the Gulf of Guinea with a population of under 200 000. Despite its small population, there are various ethnic groups living in the country. The first group is the Mestiços, a multiracial group whose ancestors were Portuguese settlers and African slaves from nearby countries like Benin and Gabon. The Portuguese settlers first set foot on the island at the end of the 15th century. They soon recognized the island's strategic location in the slave trade. But not all enslaved people were sent to the Americas---some had to toil on the island's plantations.
 
 Throughout the centuries, slave rebellions broke out sporadically. Portugal officially abolished slavery in 1876. The descendants of freed slaves are now called Forros, who speak a creole language called forro. Even though slavery had been abolished, various forms of forced labor continued to exist well into the 20th century.
 
-Portuguese, the country’s official language, is also spoken in other African countries. The shared language made the island a feasible destination for contract laborers from Angola, Mozambique, and Cape Verde. Descendants of people from Angola are called Angolares and speak a creole language similar to forro.
+Portuguese, the country's official language, is also spoken in other African countries. The shared language made the island a feasible destination for contract laborers from Angola, Mozambique, and Cape Verde. Descendants of people from Angola are called Angolares and speak a creole language similar to forro.
 
 ## Cameroon
 
