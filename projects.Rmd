@@ -33,7 +33,7 @@ project_table %>%
 
 other_project_table <- dplyr::tribble(
   ~Name, ~Description,
-  "[One day, one country](one-day.html)", "I read and write about a new country every day."
+  "[One day, one country](one-day.html)", "I read and write about a new country every couple of days."
   )
   
 

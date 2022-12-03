@@ -4,8 +4,8 @@
       "path": "about.html",
       "title": "About this blog",
       "author": [],
-      "contents": "\r\nI’m Daniel Banki, a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making. I use this blog to share some of the things I work on in my free time.\r\nContact\r\nPlease feel free to reach out to me at @banki_daniel or drop me an email at daniel at danielbanki dot com.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-02T01:25:28+02:00"
+      "contents": "\r\nI’m Daniel Banki, a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making. I use this blog to share some of the things I work on in my free time.\r\nSocial things\r\nI run an in-person, non-fiction book club in Barcelona. More information about it here: Barcelona Bibliophiles\r\nI organize Geoguessr parties. Basically, we are staring at an image for some time, trying to figure out where we are in the world. If you are also this type of weird, get in touch to join our group.\r\nContact\r\nFeel free to reach out to me at @banki_daniel or drop me an email at daniel at danielbanki dot com.\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-03T15:26:30+01:00"
     },
     {
       "path": "index.html",
@@ -25,8 +25,8 @@
       "path": "projects.html",
       "title": "Projects",
       "author": [],
-      "contents": "\r\nShiny apps\r\n\r\nName\r\nDescription\r\nNameguessR\r\nA game in which you guess a person’s nationality from their name.\r\nBarcelona house price explorer\r\nAn interactive app to visualise house prices in Barcelona.\r\n\r\nOther things\r\n\r\nName\r\nDescription\r\nOne day, one country\r\nI read and write about a new country every day.\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-02T01:25:35+02:00"
+      "contents": "\r\nShiny apps\r\n\r\nName\r\nDescription\r\nNameguessR\r\nA game in which you guess a person’s nationality from their name.\r\nBarcelona house price explorer\r\nAn interactive app to visualise house prices in Barcelona.\r\n\r\nOther things\r\n\r\nName\r\nDescription\r\nOne day, one country\r\nI read and write about a new country every couple of days.\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-03T15:28:05+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
