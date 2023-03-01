@@ -41,7 +41,7 @@ We would expect such a unit of account in a high-inflation environment.
 But there wasn't particularly high inflation in Uruguay in the last 20 years or so.
 Why have the UR then?
 
-If we look at the chart below, we see that inflation reached [very high levels in 1968](https://tradingeconomics.com/chile/inflation-cpi).
+If we look at the chart below, we see that inflation reached [very high levels in 1968](https://tradingeconomics.com/uruguay/inflation-cpi).
 Not coincidentally, the UR unit was introduced the same year.
 Even though it seems to have lost its purpose over time, it's difficult to get rid of something that has been around for half a century.
 Beyond the usual status quo bias and inertia, some financial instruments like pensions or mortgages might be denominated in UR, which makes changing the current system politically sensitive.
