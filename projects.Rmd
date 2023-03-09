@@ -6,7 +6,7 @@ title: "Projects"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Shiny apps
+## Web apps
 
 ```{r include=FALSE}
 library(gt)
@@ -27,7 +27,7 @@ project_table %>%
 
 ```
 
-## Other things
+## Other
 ```{r include=FALSE}
 
 

@@ -1,16 +1,14 @@
 name: "daniel-banki"
-title: "Daniel Banki's blog"
+title: "Daniel Banki's website"
 theme: theme.css
 description: |
-  Daniel Banki's blog
+  Daniel Banki's website
 base_url: https://danielbanki.com/
 output_dir: "_site"
 navbar:
   right:
-    - text: "Home"
-      href: index.html
     - text: "About"
-      href: about.html
+      href: index.html
     - text: "Projects"
       href: projects.html
     - icon: fa fa-twitter

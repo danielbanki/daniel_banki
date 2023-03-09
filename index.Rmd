@@ -1,5 +1,25 @@
 ---
-title: "Posts"
-site: distill::distill_website
-listing: posts
+title: "About"
+
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+I'm Daniel Banki, a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making. 
+
+## Writing
+
+You can follow my writing on my [Substack page](https://joyofdiscovery.substack.com/). 
+
+## Social things
+
+I run an in-person, non-fiction book club in Barcelona. More information about it here: [Barcelona Bibliophiles](https://sites.google.com/view/barcelona-bibliophiles/)
+
+I organize [Geoguessr](https://www.geoguessr.com/) parties. Basically, we are staring at Google Street View for some time, trying to figure out where we are in the world. If you are also this type of weird, get in touch to join our group.
+
+## Contact
+
+Feel free to reach out to me at [`@banki_daniel`](https://twitter.com/banki_daniel) or drop me an email at daniel at danielbanki dot com.

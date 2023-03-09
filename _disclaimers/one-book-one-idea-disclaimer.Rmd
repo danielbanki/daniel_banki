@@ -1,8 +1,0 @@
----
-title: "one-book-one-idea-disclaimer"
-author: "Daniel Banki"
-date: "29/09/2021"
-output: html_document
----
-<br><br><br>
-*In this series, I reflect on some of my readings. Typically, I pick a single idea from the book that resonated with me and think about it a bit further. Sometimes it's unclear (even to me) whether I'm rephrasing what had already been said in the book or contributing something new. If in doubt, always assume that the parts you like are ideas from the book, and the parts that don't make too much sense are my contributions. Also, please feel free to get in touch if you have any comments, suggestions, or a story that you would like to share with me.*

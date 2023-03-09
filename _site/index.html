@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://danielbanki.com/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -87,26 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Daniel Banki's blog: Posts</title>
+  <title>Daniel Banki's website: About</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Daniel Banki&#39;s blog: Posts"/>
+  <meta property="og:title" content="Daniel Banki&#39;s website: About"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Daniel Banki&#39;s blog"/>
+  <meta property="og:site_name" content="Daniel Banki&#39;s website"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Daniel Banki&#39;s blog: Posts"/>
+  <meta property="twitter:title" content="Daniel Banki&#39;s website: About"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["About"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2365,12 +2364,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Posts","authors":[]}
+{"title":"About","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2378,12 +2377,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Daniel Banki's blog</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+<a href="index.html" class="title">Daniel Banki's website</a>
 </div>
 <div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
+<a href="index.html">About</a>
 <a href="projects.html">Projects</a>
 <a href="https://twitter.com/banki_daniel">
 <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -2401,447 +2398,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
-<a href="posts/2023-03-01-virtual-tour-of-latin-america-i/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 28, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2023-03-01-virtual-tour-of-latin-america-i/latam1-preview.jpg"/>
-</div>
-<div class="description">
-<h2>Virtual Tour of Three Latin American Capitals</h2>
-<div class="dt-tags"></div>
-<p>I browse the websites of three capitals (Montevideo, Buenos Aires, and Santiago) and share some interesting things I discovered.</p>
-</div>
-</a>
-<a href="posts/2023-02-05-one-book-at-least-one-idea-5-junkyard-planet-by-adam-minter/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["book reflections"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 5, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2023-02-05-one-book-at-least-one-idea-5-junkyard-planet-by-adam-minter/junkyard-preview.jpg"/>
-</div>
-<div class="description">
-<h2>One book, (at least) one idea 5: Junkyard Planet by Adam Minter</h2>
-<div class="dt-tags">
-<div class="dt-tag">book reflections</div>
-</div>
-<p>Finding general lessons about human nature in unexpected places.</p>
-</div>
-</a>
-<a href="posts/2022-06-06-one-book-at-least-one-idea-no-good-men-among-the-living-by-anand-gopal/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["book reflections"]}</script>
-<div class="metadata">
-<div class="publishedDate">June 6, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2022-06-06-one-book-at-least-one-idea-no-good-men-among-the-living-by-anand-gopal/no-good-men-book-cover.jpg"/>
-</div>
-<div class="description">
-<h2>One book, (at least) one idea 4: No good men among the living by Anand Gopal</h2>
-<div class="dt-tags">
-<div class="dt-tag">book reflections</div>
-</div>
-<p>Black and white thinking, and what to do about it.</p>
-</div>
-</a>
-<a href="posts/2022-02-07-one-book-at-least-one-idea-3-faria-by-nacho-carretero/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["book reflections"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 7, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2022-02-07-one-book-at-least-one-idea-3-faria-by-nacho-carretero/farina-book-cover.jpg"/>
-</div>
-<div class="description">
-<h2>One book, (at least) one idea 3: Fariña by Nacho Carretero</h2>
-<div class="dt-tags">
-<div class="dt-tag">book reflections</div>
-</div>
-<p>A reflection about the Matthew effect in an unexpected place.</p>
-</div>
-</a>
-<a href="posts/2022-01-23-around-the-world-4-ethiopia/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","ggplot2","Around the world","shiny"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 23, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2022-01-23-around-the-world-4-ethiopia/preview-ethiopia.jpg"/>
-</div>
-<div class="description">
-<h2>Around the world 4: Ethiopia</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">ggplot2</div>
-<div class="dt-tag">Around the world</div>
-<div class="dt-tag">shiny</div>
-</div>
-<p>Ethiopian long-distance runners at the Olympics.</p>
-</div>
-</a>
-<a href="posts/2021-12-05-one-book-at-least-one-idea-book-wars-by-john-b-thompson/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["book reflections"]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 5, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-12-05-one-book-at-least-one-idea-book-wars-by-john-b-thompson/book-wars-book-cover.jpg"/>
-</div>
-<div class="description">
-<h2>One book, (at least) one idea 2: Book wars by John B. Thompson</h2>
-<div class="dt-tags">
-<div class="dt-tag">book reflections</div>
-</div>
-<p>A reflection about hindsight bias and what we can do about it.</p>
-</div>
-</a>
-<a href="posts/2021-10-30-around-the-world-3-armenia/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","ggplot2","Around the world"]}</script>
-<div class="metadata">
-<div class="publishedDate">Oct. 31, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-10-30-around-the-world-3-armenia/world-export-plot.png"/>
-</div>
-<div class="description">
-<h2>Around the world 3: Armenia</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">ggplot2</div>
-<div class="dt-tag">Around the world</div>
-</div>
-<p>What can we learn from brandy exports?</p>
-</div>
-</a>
-<a href="posts/2021-09-29-one-book-at-least-one-idea-1-complications-by-atul-gawande/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["book reflections"]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 29, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-09-29-one-book-at-least-one-idea-1-complications-by-atul-gawande/complications-book-cover.jpg"/>
-</div>
-<div class="description">
-<h2>One book, (at least) one idea 1: Complications by Atul Gawande</h2>
-<div class="dt-tags">
-<div class="dt-tag">book reflections</div>
-</div>
-<p>A reflection about trade-offs in surgery.</p>
-</div>
-</a>
-<a href="posts/2021-08-27-around-the-world-2-chile/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","ggplot2","gganimate","Around the world"]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 16, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-08-27-around-the-world-2-chile/around-the-world-2-chile_files/figure-html5/show-chile-1.gif"/>
-</div>
-<div class="description">
-<h2>Around the world 2: Chile</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">ggplot2</div>
-<div class="dt-tag">gganimate</div>
-<div class="dt-tag">Around the world</div>
-</div>
-<p>In this post, I visualise copper production in Chile.</p>
-</div>
-</a>
-<a href="posts/2021-08-12-around-the-world-1-ecuador/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","ggplot2","Around the world"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 12, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-08-12-around-the-world-1-ecuador/preview.png"/>
-</div>
-<div class="description">
-<h2>Around the world 1: Ecuador</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">ggplot2</div>
-<div class="dt-tag">Around the world</div>
-</div>
-<p>In this post, I visualise the number of hospital beds in the provinces of Ecuador.</p>
-</div>
-</a>
-<a href="posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["gganimate","R"]}</script>
-<div class="metadata">
-<div class="publishedDate">July 31, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-05-24-popularity-of-first-names-over-time-with-gganimate/preview.png"/>
-</div>
-<div class="description">
-<h2>Popularity of first names over time with gganimate</h2>
-<div class="dt-tags">
-<div class="dt-tag">gganimate</div>
-<div class="dt-tag">R</div>
-</div>
-<p>How popular are the popular names?</p>
-</div>
-</a>
-<a href="posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 9, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-05-24-learning-about-street-names-using-r-an-example-from-budapest/preview.png"/>
-</div>
-<div class="description">
-<h2>Learning about street names using R</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-</div>
-<p>A tale about street names in Budapest.</p>
-</div>
-</a>
-<a href="posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["leaflet","R"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 19, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Daniel Banki</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-05-24-estimating-ambulance-waiting-times-with-isochrones/preview.png"/>
-</div>
-<div class="description">
-<h2>Estimating ambulance waiting times with isochrones</h2>
-<div class="dt-tags">
-<div class="dt-tag">leaflet</div>
-<div class="dt-tag">R</div>
-</div>
-<p>How quickly does emergency medical help arrive in Hungary?</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(13)</span>
-</li>
-<li>
-<a href="#category:Around_the_world">Around the world</a>
-<span class="category-count">(4)</span>
-</li>
-<li>
-<a href="#category:book_reflections">book reflections</a>
-<span class="category-count">(5)</span>
-</li>
-<li>
-<a href="#category:gganimate">gganimate</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:ggplot2">ggplot2</a>
-<span class="category-count">(4)</span>
-</li>
-<li>
-<a href="#category:leaflet">leaflet</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:R">R</a>
-<span class="category-count">(7)</span>
-</li>
-<li>
-<a href="#category:shiny">shiny</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Posts</h1>
+<h1>About</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2849,6 +2408,14 @@ function init_posts_list() {
 
 
 <div class="d-article">
+<p>I’m Daniel Banki, a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making.</p>
+<h2 id="writing">Writing</h2>
+<p>You can follow my writing on my <a href="https://joyofdiscovery.substack.com/">Substack page</a>.</p>
+<h2 id="social-things">Social things</h2>
+<p>I run an in-person, non-fiction book club in Barcelona. More information about it here: <a href="https://sites.google.com/view/barcelona-bibliophiles/">Barcelona Bibliophiles</a></p>
+<p>I organize <a href="https://www.geoguessr.com/">Geoguessr</a> parties. Basically, we are staring at Google Street View for some time, trying to figure out where we are in the world. If you are also this type of weird, get in touch to join our group.</p>
+<h2 id="contact">Contact</h2>
+<p>Feel free to reach out to me at <a href="https://twitter.com/banki_daniel"><code>@banki_daniel</code></a> or drop me an email at daniel at danielbanki dot com.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2868,4 +2435,4 @@ function init_posts_list() {
 
 </body>
 
-</ht
+</html>
