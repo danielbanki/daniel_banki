@@ -1,5 +1,16 @@
 ---
-title: "About"
+title: "Daniel Banki"
+image: "Daniel_Banki.png"
+links:
+  - label: GitHub
+    url: "https://github.com/danielbanki"
+  - label: Email
+    url: "mailto:bankidaniel@gmail.com"
+  - label: Twitter
+    url: "https://twitter.com/banki_daniel"
+site: distill::distill_website
+output:
+  postcards::trestles
 
 ---
 
@@ -8,17 +19,18 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-I'm Daniel Banki, a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. I work on topics related to judgment and decision making. 
+
+I'm a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. Some academic topics close to my heart include judgment and decision making, the predictability of behavioural science, external validity, and second-order effects.
 
 ## Writing
 
-You can follow my writing on my [Substack page](https://joyofdiscovery.substack.com/). 
+My non-academic writing is on [Substack](https://joyofdiscovery.substack.com/). I write about human behaviour, using (typically) quite unconventional sources like manuals from intelligence agencies or old opinion polls.
 
 ## Social things
 
-I run an in-person, non-fiction book club in Barcelona. More information about it here: [Barcelona Bibliophiles](https://sites.google.com/view/barcelona-bibliophiles/)
+I run an in-person, non-fiction book club in Barcelona. More information about it here: [Barcelona Bibliophiles](https://sites.google.com/view/barcelona-bibliophiles/).
 
-I organize [Geoguessr](https://www.geoguessr.com/) parties. Basically, we are staring at Google Street View for some time, trying to figure out where we are in the world. If you are also this type of weird, get in touch to join our group.
+I organize [GEOGUESSR](https://www.geoguessr.com/) parties. Basically, we are staring at Google Street View for some time, trying to figure out where we are in the world. If you are also this type of weird, get in touch to join our group.
 
 ## Free mentoring
 
@@ -32,4 +44,4 @@ If you speak decent Hungarian as a non-native speaker and want to get better, I 
 
 ## Contact
 
-I like getting to know interesting people. I'm happy to go for a coffee or a walk with anybody in Barcelona. If you want to chat, I'm [`@banki_daniel`](https://twitter.com/banki_daniel) on Twitter, you can reach me via Substack, or drop me an email at daniel at danielbanki dot com.
+If you find what I do interesting, drop me a line. I'm always open to meeting new people—both online and in person. I'm based in Barcelona and am happy to go for a coffee or a walk with anybody who reaches out.
