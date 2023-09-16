@@ -2,12 +2,12 @@
 title: "Daniel Banki"
 image: "Daniel_Banki.png"
 links:
-  - label: GitHub
-    url: "https://github.com/danielbanki"
   - label: Email
     url: "mailto:bankidaniel@gmail.com"
   - label: Twitter
     url: "https://twitter.com/banki_daniel"
+  - label: GitHub
+    url: "https://github.com/danielbanki"
 site: distill::distill_website
 output:
   postcards::trestles
@@ -18,7 +18,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
+## About
 
 I'm a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. Some academic topics close to my heart include judgment and decision making, the predictability of behavioural science, external validity, and second-order effects.
 
