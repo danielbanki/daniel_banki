@@ -14,6 +14,7 @@ library(dplyr)
 
 project_table <- dplyr::tribble(
   ~Name, ~Description,
+  "[CountryMappR](https://countrymappr-ea560d8a41a8.herokuapp.com/)", "An app to track the countries (and regions in some countries) I've visited.",
   "[NameguessR](https://nameguessr.herokuapp.com/)", "A game in which you guess a person's nationality from their name.",
   "[Barcelona house price explorer](https://danielbanki.shinyapps.io/barcelona-house-prices-explorer/)", "An interactive app to visualise house prices in Barcelona."
   
@@ -33,7 +34,7 @@ project_table %>%
 
 other_project_table <- dplyr::tribble(
   ~Name, ~Description,
-  "[One day, one country](one-day.html)", "I read and write about a new country every couple of days."
+  "[One day, one country](one-day.html)", "I wrote a couple of paragraphs about a new country every day for some time. I then pulled the plug on the project, focusing on other types of writing instead."
   )
   
 
