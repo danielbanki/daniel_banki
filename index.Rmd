@@ -20,11 +20,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## About
 
-I'm a PhD student in Economics at Universitat Pompeu Fabra in Barcelona, Spain. Some academic topics close to my heart include judgment and decision making, the predictability of behavioural science, external validity, and second-order effects.
+I'm a postdoc in behavioral science at Esade in Barcelona, Spain. Some academic topics close to my heart include judgment and decision making, methodology, the predictability of behavioral science, and external validity.
 
 ## Writing
 
-My non-academic writing is on [Substack](https://joyofdiscovery.substack.com/). I write about human behaviour, using (typically) quite unconventional sources like manuals from intelligence agencies or old opinion polls.
+My non-academic writing is on [Substack](https://joyofdiscovery.substack.com/). I write about human behaviour, frequently using quite unconventional sources like manuals from intelligence agencies or old opinion polls.
 
 ## Social things
 
