@@ -14,9 +14,9 @@ library(dplyr)
 
 project_table <- dplyr::tribble(
   ~Name, ~Description,
-  "[CountryMappR](https://countrymappr-ea560d8a41a8.herokuapp.com/)", "An app to track the countries (and regions in some countries) I've visited.",
-  "[NameguessR](https://nameguessr.herokuapp.com/)", "A game in which you guess a person's nationality from their name.",
-  "[Barcelona house price explorer](https://danielbanki.shinyapps.io/barcelona-house-prices-explorer/)", "An interactive app to visualise house prices in Barcelona."
+  "[CountryMappR](https://danielbanki.shinyapps.io/countries-visited/)", "An app to track the countries (and regions in some countries) I've visited.",
+  "[NameguessR](https://danielbanki.shinyapps.io/nameguessr/)", "A game in which you guess a person's nationality from their name.",
+  "[Barcelona house price explorer](https://danielbanki.shinyapps.io/barcelona-house-prices-explorer/)", "An interactive app to visualise 2021 house prices in Barcelona."
   
 )
 ```
